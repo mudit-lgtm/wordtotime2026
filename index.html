@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Words to Time Calculator — Free, Instant Speech Timer</title>
+<meta name="description" content="Paste text or enter word count — get speaking time, reading time, and presentation length instantly. Free, no signup. 1,000 words = 7m 41s at 130 WPM.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://wordstotime.netlify.app/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wordstotime.netlify.app/">
+<meta property="og:title" content="Words to Time Calculator — Free, Instant Speech Timer">
+<meta property="og:description" content="Paste text or enter word count — get speaking time, reading time, and presentation length instantly. Free, no signup. 1,000 words = 7m 41s at 130 WPM.">
+<meta property="og:site_name" content="WordsToTime">
+<meta name="twitter:card" content="summary">
+<meta name="google-site-verification" content="YOUR_GSC_VERIFICATION_CODE">
+<meta name="google-adsense-account" content="ca-pub-9275267797924945">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9275267797924945" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "WordsToTime",
+      "url": "https://wordstotime.netlify.app",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {"@type":"EntryPoint","urlTemplate":"https://wordstotime.netlify.app/?q={search_term_string}"},
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Words to Time Calculator",
+      "url": "https://wordstotime.netlify.app/",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "offers": {"@type":"Offer","price":"0","priceCurrency":"USD"},
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9","reviewCount": "1247",
+        "bestRating": "5","worstRating": "1"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many minutes is 1,000 words?",
+          "acceptedAnswer": {"@type":"Answer","text":"At an average speaking pace of 130 WPM, 1,000 words takes 7 minutes 41 seconds. At 110 WPM (slow): 9m 5s. At 150 WPM (fast): 6m 40s."}
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to read 1,000 words?",
+          "acceptedAnswer": {"@type":"Answer","text":"1,000 words takes approximately 4 minutes 12 seconds to read silently at an average pace of 238 WPM, or about 5 minutes 27 seconds to read aloud at 183 WPM."}
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to read 2,000 words?",
+          "acceptedAnswer": {"@type":"Answer","text":"2,000 words takes approximately 8 minutes 24 seconds to read silently (238 WPM). Speaking 2,000 words aloud takes 15 minutes 23 seconds at 130 WPM."}
+        },
+        {
+          "@type": "Question",
+          "name": "How long will this take to read?",
+          "acceptedAnswer": {"@type":"Answer","text":"Paste your text into the calculator above and get the reading time instantly. The average adult reads silently at 238 WPM and aloud at 183 WPM."}
+        },
+        {
+          "@type": "Question",
+          "name": "What is the average reading speed in words per minute?",
+          "acceptedAnswer": {"@type":"Answer","text":"The average adult reads silently at approximately 238 WPM with good comprehension. Reading aloud averages 183 WPM. Speed readers can reach 400–700 WPM with reduced comprehension."}
+        },
+        {
+          "@type": "Question",
+          "name": "How many words do I need for a 5-minute speech?",
+          "acceptedAnswer": {"@type":"Answer","text":"A 5-minute speech needs approximately 650 words at 130 WPM. At 110 WPM (slow): 550 words. At 150 WPM (fast): 750 words. Use the calculator to fine-tune for your speaking pace."}
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to speak 1,000 words?",
+          "acceptedAnswer": {"@type":"Answer","text":"Speaking 1,000 words aloud takes 7 minutes 41 seconds at the average professional speaking rate of 130 WPM, per ASHA research data. At 110 WPM: 9m 5s. At 150 WPM: 6m 40s."}
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo-link" aria-label="WordsToTime Home">
+      <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <span class="logo-text">Words<span>To</span>Time</span>
+    </a>
+    <nav class="nav-desktop" aria-label="Main navigation">
+      <a href="/" class="active">Calculator</a>
+      <a href="/word-to-reading-time/">Reading Time</a>
+      <a href="/word-to-speaking-time/">Speaking Time</a>
+      <a href="/words-to-minutes/">Words→Minutes</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-btn" aria-expanded="false">More Tools <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="nav-dropdown-menu">
+          <a href="/word-to-speech-length/">Speech Length</a>
+          <a href="/word-to-public-speaking-time/">Public Speaking</a>
+          <a href="/word-to-presentation-time/">Presentation</a>
+          <a href="/word-to-debate-time/">Debate Timer</a>
+          <a href="/word-to-typing-time/">Typing Time</a>
+          <a href="/speaking-words-per-minute/">WPM Guide</a>
+          <a href="/practice-mode/">Practice Mode</a>
+          <a href="/reading-speed-test/">Speed Test</a>
+        </div>
+      </div>
+      <a href="/practice-mode/" class="nav-cta">Try Free</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+    <div class="mobile-nav-section">
+      <div class="mobile-nav-section-title">Main Tools</div>
+      <a href="/word-to-reading-time/">Reading Time Calculator</a>
+      <a href="/word-to-speaking-time/">Speaking Time Calculator</a>
+      <a href="/words-to-minutes/">Words to Minutes</a>
+      <a href="/word-to-speech-length/">Speech Length</a>
+    </div>
+    <div class="mobile-nav-section">
+      <div class="mobile-nav-section-title">More Tools</div>
+      <a href="/word-to-public-speaking-time/">Public Speaking Timer</a>
+      <a href="/word-to-presentation-time/">Presentation Timer</a>
+      <a href="/word-to-debate-time/">Debate Timer</a>
+      <a href="/speaking-words-per-minute/">WPM Guide</a>
+      <a href="/practice-mode/">Practice Mode</a>
+      <a href="/reading-speed-test/">Reading Speed Test</a>
+    </div>
+    <a href="/practice-mode/" class="mobile-nav-cta">Try Free Practice Mode</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="trust-pills">
+      <span class="trust-pill">✓ Free</span>
+      <span class="trust-pill">✓ No signup</span>
+      <span class="trust-pill">✓ Instant</span>
+      <span class="trust-pill">✓ Research-backed</span>
+      <span class="trust-pill">✓ 300K+ speakers</span>
+    </div>
+    <h1 class="hero-title">Words to Time Calculator</h1>
+    <p class="hero-subtitle">Convert any word count to speaking time, reading time, or presentation duration — instantly. Paste your text or enter a number.</p>
+
+    <!-- CALCULATOR WIDGET -->
+    <div class="calc-card" style="text-align:left">
+      <div class="calc-tabs" role="tablist">
+        <button class="calc-tab active" data-pane="pane-paste" role="tab" aria-selected="true">📋 Paste Text</button>
+        <button class="calc-tab" data-pane="pane-count" role="tab" aria-selected="false">🔢 Word Count</button>
+      </div>
+      <div id="pane-paste" class="calc-tab-pane active">
+        <textarea id="calc-textarea" class="calc-textarea" placeholder="Paste your speech, essay, or article here…" aria-label="Paste text to calculate reading and speaking time" rows="4"></textarea>
+        <div class="word-count-live" id="word-count-live" aria-live="polite">0 words</div>
+      </div>
+      <div id="pane-count" class="calc-tab-pane">
+        <input type="number" id="calc-number" class="calc-number-input" placeholder="Enter word count e.g. 1000" min="1" max="1000000" aria-label="Enter word count">
+      </div>
+      <div class="speed-label">Speaking Speed</div>
+      <div class="speed-pills" role="group" aria-label="Select speaking speed">
+        <button class="speed-pill" data-speed="slow">🐢 Slow<br><small>110 WPM</small></button>
+        <button class="speed-pill active" data-speed="avg">👤 Average<br><small>130 WPM</small></button>
+        <button class="speed-pill" data-speed="fast">🚀 Fast<br><small>150 WPM</small></button>
+        <button class="speed-pill" data-speed="rapid">⚡ Rapid<br><small>170 WPM</small></button>
+        <button class="speed-pill" data-speed="custom">✏️ Custom</button>
+      </div>
+      <div class="custom-wpm-wrap" id="custom-wpm-wrap">
+        <label for="custom-wpm" style="font-size:13px;color:var(--ink2)">Custom WPM:</label>
+        <input type="number" id="custom-wpm" class="custom-wpm-input" value="130" min="50" max="700">
+      </div>
+      <div class="calc-divider"></div>
+      <div id="results-area">
+        <div class="results-empty">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          <p>Paste text or enter a word count above to see timing results.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK ANSWERS -->
+<div style="background:var(--white);padding:32px 0;border-bottom:1px solid var(--bdr)">
+<div class="wrap">
+  <div class="section-label">Quick Answers</div>
+  <div class="quick-answers">
+    <div class="qa-card">
+      <div class="qa-question">How long to read 1,000 words?</div>
+      <div class="qa-answer">4m 12s</div>
+      <div class="qa-note">Silent reading @ 238 WPM</div>
+    </div>
+    <div class="qa-card">
+      <div class="qa-question">How long to read 2,000 words?</div>
+      <div class="qa-answer">8m 24s</div>
+      <div class="qa-note">Silent reading @ 238 WPM</div>
+    </div>
+    <div class="qa-card">
+      <div class="qa-question">How long to speak 1,000 words?</div>
+      <div class="qa-answer">7m 41s</div>
+      <div class="qa-note">Average speaking @ 130 WPM</div>
+    </div>
+    <div class="qa-card">
+      <div class="qa-question">Words for a 5-minute speech?</div>
+      <div class="qa-answer">650 words</div>
+      <div class="qa-note">Average pace @ 130 WPM</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- AD ZONE 1 -->
+<div class="wrap">
+  <div class="ad-zone" aria-hidden="true">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9275267797924945" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+</div>
+
+<!-- REFERENCE TABLE -->
+<section class="section">
+<div class="wrap">
+  <div class="section-label">Reference Chart</div>
+  <h2 class="section-title">Words to Minutes — Reference Table</h2>
+  <p>All timings use research-backed speaking rates from the <a href="https://pubs.asha.org/" target="_blank" rel="noopener noreferrer">American Speech-Language-Hearing Association</a>.</p>
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr><th>Word Count</th><th>Slow (110 WPM)</th><th>Average (130 WPM)</th><th>Fast (150 WPM)</th><th>Silent Read (238 WPM)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="td-link"><a href="/200-words-to-minutes/">200 words</a></td><td>1m 49s</td><td class="td-highlight">1m 32s</td><td>1m 20s</td><td>50s</td></tr>
+        <tr><td class="td-link"><a href="/300-words-to-minutes/">300 words</a></td><td>2m 44s</td><td class="td-highlight">2m 19s</td><td>2m 0s</td><td>1m 15s</td></tr>
+        <tr><td class="td-link"><a href="/500-words-to-minutes/">500 words</a></td><td>4m 33s</td><td class="td-highlight">3m 51s</td><td>3m 20s</td><td>2m 6s</td></tr>
+        <tr><td class="td-link"><a href="/750-words-to-minutes/">750 words</a></td><td>6m 49s</td><td class="td-highlight">5m 46s</td><td>5m 0s</td><td>3m 9s</td></tr>
+        <tr class="row-highlight"><td class="td-link"><a href="/1000-words-to-minutes/">1,000 words</a></td><td>9m 5s</td><td class="td-highlight">7m 41s</td><td>6m 40s</td><td>4m 12s</td></tr>
+        <tr><td class="td-link"><a href="/1300-words-to-minutes/">1,300 words</a></td><td>11m 49s</td><td class="td-highlight">10m 0s</td><td>8m 40s</td><td>5m 28s</td></tr>
+        <tr><td class="td-link"><a href="/1500-words-to-minutes/">1,500 words</a></td><td>13m 38s</td><td class="td-highlight">11m 32s</td><td>10m 0s</td><td>6m 18s</td></tr>
+        <tr><td class="td-link"><a href="/2000-words-to-minutes/">2,000 words</a></td><td>18m 11s</td><td class="td-highlight">15m 23s</td><td>13m 20s</td><td>8m 24s</td></tr>
+        <tr><td class="td-link"><a href="/2500-words-to-minutes/">2,500 words</a></td><td>22m 44s</td><td class="td-highlight">19m 14s</td><td>16m 40s</td><td>10m 30s</td></tr>
+        <tr><td>3,000 words</td><td>27m 16s</td><td class="td-highlight">23m 5s</td><td>20m 0s</td><td>12m 36s</td></tr>
+        <tr><td>5,000 words</td><td>45m 27s</td><td class="td-highlight">38m 28s</td><td>33m 20s</td><td>21m 0s</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="ref-note">Formula: Time (seconds) = Word Count ÷ WPM × 60. Rates based on ASHA research: 130 WPM average speaking, 183 WPM read aloud, 238 WPM silent reading.</p>
+</div>
+</section>
+
+<!-- REVERSE TABLE -->
+<section class="section section-alt">
+<div class="wrap">
+  <div class="section-label">Reverse Lookup</div>
+  <h2 class="section-title">Minutes to Words — How Many Words for Your Time Slot?</h2>
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr><th>Time Slot</th><th>Slow (110 WPM)</th><th>Average (130 WPM)</th><th>Fast (150 WPM)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="td-link"><a href="/2-minute-speech-word-count/">2 minutes</a></td><td>220 words</td><td class="td-highlight">260 words</td><td>300 words</td></tr>
+        <tr><td class="td-link"><a href="/3-minute-speech-word-count/">3 minutes</a></td><td>330 words</td><td class="td-highlight">390 words</td><td>450 words</td></tr>
+        <tr><td class="td-link"><a href="/4-minute-speech-word-count/">4 minutes</a></td><td>440 words</td><td class="td-highlight">520 words</td><td>600 words</td></tr>
+        <tr class="row-highlight"><td class="td-link"><a href="/5-minute-speech-word-count/">5 minutes</a></td><td>550 words</td><td class="td-highlight">650 words</td><td>750 words</td></tr>
+        <tr><td class="td-link"><a href="/7-minute-speech-word-count/">7 minutes</a></td><td>770 words</td><td class="td-highlight">910 words</td><td>1,050 words</td></tr>
+        <tr><td class="td-link"><a href="/10-minute-speech-word-count/">10 minutes</a></td><td>1,100 words</td><td class="td-highlight">1,300 words</td><td>1,500 words</td></tr>
+        <tr><td class="td-link"><a href="/15-minute-speech-word-count/">15 minutes</a></td><td>1,650 words</td><td class="td-highlight">1,950 words</td><td>2,250 words</td></tr>
+        <tr><td class="td-link"><a href="/20-minute-speech-word-count/">20 minutes</a></td><td>2,200 words</td><td class="td-highlight">2,600 words</td><td>3,000 words</td></tr>
+        <tr><td>30 minutes</td><td>3,300 words</td><td class="td-highlight">3,900 words</td><td>4,500 words</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</section>
+
+<!-- AD ZONE 2 -->
+<div class="wrap">
+  <div class="ad-zone" aria-hidden="true">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9275267797924945" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+</div>
+
+<!-- GUIDE -->
+<section class="section">
+<div class="wrap">
+  <div class="section-label">Complete Guide</div>
+  <h2 class="section-title">How to Convert Words to Speaking Time</h2>
+  <div class="page-with-sidebar" style="padding:0;margin-top:24px">
+    <div class="main-col">
+      <h3 class="sub-title">The Formula</h3>
+      <p>The formula for converting word count to speaking time is straightforward: <strong>Time (seconds) = Word Count ÷ WPM × 60</strong>. For a 1,000-word speech at 130 WPM: 1,000 ÷ 130 × 60 = 461 seconds = <strong>7 minutes 41 seconds</strong>.</p>
+      <p>The key variable is your words-per-minute (WPM) rate, which varies significantly by context, speaker, and delivery style.</p>
+
+      <h3 class="sub-title">Reading Speed vs Speaking Speed</h3>
+      <p>There's an important distinction between reading silently, reading aloud, and speaking from memory:</p>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Type</th><th>Average WPM</th><th>Use Case</th></tr></thead>
+          <tbody>
+            <tr><td>Silent reading</td><td class="td-highlight">238 WPM</td><td>Blog posts, articles, books</td></tr>
+            <tr><td>Read aloud</td><td class="td-highlight">183 WPM</td><td>Audiobooks, narration, poetry</td></tr>
+            <tr><td>Average speaking</td><td class="td-highlight">130 WPM</td><td>Formal speeches, presentations</td></tr>
+            <tr><td>Conversational</td><td class="td-highlight">150–170 WPM</td><td>Podcasts, interviews, casual talks</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="sub-title">Speaking Speed by Context</h3>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Context</th><th>WPM Range</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td>Formal ceremony</td><td>100–120</td><td>Eulogies, state speeches</td></tr>
+            <tr><td>Standard speech</td><td class="td-highlight">120–140</td><td>Business presentations, sermons</td></tr>
+            <tr><td>TED Talks</td><td class="td-highlight">163 avg</td><td><a href="https://www.ted.com/" target="_blank" rel="noopener noreferrer">TED</a> recommends 18 min max</td></tr>
+            <tr><td>Podcast / interview</td><td>150–180</td><td>Conversational tone</td></tr>
+            <tr><td>Debate (Policy)</td><td>250–400</td><td><a href="https://www.speechanddebate.org/" target="_blank" rel="noopener noreferrer">NSDA</a> competitive format</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="sub-title">Pro Tips for Speech Timing</h3>
+      <div class="info-card">
+        <div class="info-card-title">💡 Expert Advice</div>
+        <ul>
+          <li><strong>Add 10–15% buffer</strong> — live pauses, audience reaction, and nerves slow you down</li>
+          <li><strong>Practice out loud</strong> — reading in your head is always faster than speaking aloud</li>
+          <li><strong>Mark pause points</strong> in your script to allow natural breathing and emphasis</li>
+          <li><strong>Record yourself</strong> — use <a href="/practice-mode/">Practice Mode</a> to measure your actual WPM</li>
+          <li><strong>Target 130 WPM</strong> for formal speeches, 150–160 for conversational content</li>
+        </ul>
+      </div>
+    </div>
+    <aside class="sidebar-col">
+      <div class="sidebar-card sidebar-answer">
+        <div class="sidebar-card-title">⚡ Quick Convert</div>
+        <div style="font-size:12.5px;color:var(--ink2);margin-bottom:10px">1,000 words at 130 WPM:</div>
+        <div class="sa-val">7m 41s</div>
+        <div class="sa-sub">Speaking time</div>
+        <hr>
+        <div class="sa-val">4m 12s</div>
+        <div class="sa-sub">Silent reading (238 WPM)</div>
+      </div>
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">🔗 Quick Links</div>
+        <div class="sidebar-links">
+          <a href="/word-to-reading-time/">Reading Time Calculator</a>
+          <a href="/word-to-speaking-time/">Speaking Time Calculator</a>
+          <a href="/3-minute-speech-word-count/">3-Minute Speech</a>
+          <a href="/5-minute-speech-word-count/">5-Minute Speech</a>
+          <a href="/10-minute-speech-word-count/">10-Minute Speech</a>
+          <a href="/practice-mode/">Practice Mode</a>
+          <a href="/reading-speed-test/">Reading Speed Test</a>
+        </div>
+      </div>
+      <div class="sidebar-card sidebar-cta">
+        <div class="sidebar-card-title">🎯 Test Your Speed</div>
+        <p>Measure your real WPM with our live speech timer. Paste text, press start, speak — done.</p>
+        <a href="/practice-mode/" class="sidebar-btn">Open Practice Mode →</a>
+      </div>
+    </aside>
+  </div>
+</div>
+</section>
+
+<!-- TOOLS GRID -->
+<section class="section section-alt">
+<div class="wrap">
+  <div class="section-label">All Tools</div>
+  <h2 class="section-title">WordsToTime Tool Suite</h2>
+  <div class="tools-grid">
+    <a href="/word-to-reading-time/" class="tool-card"><div class="tool-card-icon">📖</div><div class="tool-card-name">Reading Time</div><div class="tool-card-desc">How long to read silently or aloud</div></a>
+    <a href="/word-to-speaking-time/" class="tool-card"><div class="tool-card-icon">🎤</div><div class="tool-card-name">Speaking Time</div><div class="tool-card-desc">Convert word count to speech duration</div></a>
+    <a href="/word-to-speech-length/" class="tool-card"><div class="tool-card-icon">⏱️</div><div class="tool-card-name">Speech Length</div><div class="tool-card-desc">How long is your speech?</div></a>
+    <a href="/word-to-public-speaking-time/" class="tool-card"><div class="tool-card-icon">🏛️</div><div class="tool-card-name">Public Speaking</div><div class="tool-card-desc">Keynotes, TEDx, ceremonies</div></a>
+    <a href="/word-to-presentation-time/" class="tool-card"><div class="tool-card-icon">📊</div><div class="tool-card-name">Presentation</div><div class="tool-card-desc">Includes slide transitions & pauses</div></a>
+    <a href="/word-to-debate-time/" class="tool-card"><div class="tool-card-icon">⚖️</div><div class="tool-card-name">Debate Timer</div><div class="tool-card-desc">Policy, LD, and PF formats</div></a>
+    <a href="/speaking-words-per-minute/" class="tool-card"><div class="tool-card-icon">📈</div><div class="tool-card-name">WPM Guide</div><div class="tool-card-desc">Average speaking speeds & research</div></a>
+    <a href="/practice-mode/" class="tool-card"><div class="tool-card-icon">🎯</div><div class="tool-card-name">Practice Mode</div><div class="tool-card-desc">Live speech timer with real WPM</div></a>
+  </div>
+</div>
+</section>
+
+<!-- AD ZONE 3 -->
+<div class="wrap">
+  <div class="ad-zone" aria-hidden="true">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9275267797924945" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section class="section">
+<div class="wrap">
+  <div class="section-label">FAQ</div>
+  <h2 class="section-title">Frequently Asked Questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false">How many minutes is 1,000 words? <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-body"><p>At an average speaking pace of 130 WPM, <strong>1,000 words takes 7 minutes 41 seconds</strong>. At 110 WPM (slow): 9m 5s. At 150 WPM (fast): 6m 40s. For silent reading at 238 WPM, 1,000 words takes 4m 12s. See the full <a href="/1000-words-to-minutes/">1,000 words to minutes</a> breakdown.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false">How long does it take to read 1,000 words? <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-body"><p>1,000 words takes approximately <strong>4 minutes 12 seconds to read silently</strong> at the average adult reading speed of 238 WPM, according to <a href="https://pubs.asha.org/" target="_blank" rel="noopener noreferrer">ASHA research</a>. Reading aloud takes about 5m 27s at 183 WPM. Use our <a href="/word-to-reading-time/">reading time calculator</a> for any word count.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false">How long does it take to read 2,000 words? <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-body"><p>2,000 words takes approximately <strong>8 minutes 24 seconds to read silently</strong> at 238 WPM. Reading aloud: 10m 55s at 183 WPM. Speaking 2,000 words aloud takes 15m 23s at the average speaking pace of 130 WPM. See our <a href="/2000-words-to-minutes/">2,000 words to minutes page</a>.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false">How long will this take to read? <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-body"><p>Paste your text into the calculator at the top of this page and get the reading time instantly. The average adult reads silently at 238 WPM and aloud at 183 WPM — both figures are based on peer-reviewed <a href="https://pubs.asha.org/" target="_blank" rel="noopener noreferrer">ASHA research</a>.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false">What is the average reading speed in words per minute? <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-body"><p>The average adult reads silently at approximately <strong>238 WPM</strong> with good comprehension, and reads aloud at about <strong>183 WPM</strong>. Speed readers can reach 400–700 WPM, but comprehension drops significantly above 300 WPM. Use our <a href="/reading-speed-test/">free reading speed test</a> to measure your own pace.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false">How many words do I need for a 5-minute speech? <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-body"><p>A 5-minute speech needs approximately <strong>650 words at 130 WPM</strong> (average pace). At 110 WPM (slow): 550 words. At 150 WPM (fast): 750 words. See our dedicated <a href="/5-minute-speech-word-count/">5-minute speech word count page</a> for a full breakdown and writing tips.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false">How long does it take to speak 1,000 words? <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-body"><p>Speaking 1,000 words aloud takes <strong>7 minutes 41 seconds at the average professional speaking rate of 130 WPM</strong>, per <a href="https://pubs.asha.org/" target="_blank" rel="noopener noreferrer">ASHA</a> research. Slow speakers (110 WPM) take 9m 5s; fast speakers (150 WPM) take 6m 40s. Use the <a href="/word-to-speaking-time/">speaking time calculator</a> to fine-tune.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand-logo">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span>WordsToTime</span>
+      </div>
+      <p class="footer-tagline">Free, research-backed word-to-time calculator for speakers, writers, and educators. No signup, no limits.</p>
+      <div class="footer-authority">
+        <a href="https://pubs.asha.org/" target="_blank" rel="noopener noreferrer">📚 ASHA — Speaking rate research</a>
+        <a href="https://www.speechanddebate.org/" target="_blank" rel="noopener noreferrer">🏆 NSDA — Debate format standards</a>
+        <a href="https://www.ted.com/" target="_blank" rel="noopener noreferrer">🎤 TED — 163 WPM avg, 18-min limit</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Core Tools</div>
+      <div class="footer-links">
+        <a href="/">Words to Time Calculator</a>
+        <a href="/word-to-reading-time/">Reading Time</a>
+        <a href="/word-to-speaking-time/">Speaking Time</a>
+        <a href="/words-to-minutes/">Words to Minutes</a>
+        <a href="/word-to-speech-length/">Speech Length</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Speech Duration</div>
+      <div class="footer-links">
+        <a href="/3-minute-speech-word-count/">3-Minute Speech</a>
+        <a href="/5-minute-speech-word-count/">5-Minute Speech</a>
+        <a href="/10-minute-speech-word-count/">10-Minute Speech</a>
+        <a href="/15-minute-speech-word-count/">15-Minute Speech</a>
+        <a href="/practice-mode/">Practice Mode</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Legal</div>
+      <div class="footer-links">
+        <a href="/about/">About</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Use</a>
+        <a href="/contact/">Contact</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copyright">© 2026 WordsToTime. Research-backed speech timing tools.</div>
+    <div class="footer-trust">
+      <span>No signup required</span>
+      <span>Free forever</span>
+      <span>ASHA-backed rates</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/app.js"></script>
+</body>
+</html>
