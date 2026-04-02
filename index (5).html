@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Words to Time Calculator — Free Speech & Reading Timer</title>
+  <meta name="description" content="Free words to time calculator. Convert word count to speaking time or reading time instantly. 1,000 words = 7m 41s speech. 500+ 0 = 3m 51s read. Trusted by speakers, writers & students.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://wordstotime.netlify.app/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wordstotime.netlify.app/">
+  <meta property="og:title" content="Words to Time Calculator — Free Speech & Reading Timer">
+  <meta property="og:description" content="Convert any word count to speaking or reading time. 1,000 words = 7m 41s speech | 4m 12s reading. Free, instant, no signup.">
+  <meta property="og:image" content="https://wordstotime.netlify.app/og-image.png">
+  <meta property="og:site_name" content="Words to Time">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Words to Time Calculator — Free Speech & Reading Timer">
+  <meta name="twitter:description" content="Convert word count to speaking time or reading time. Free, instant calculator used by speakers, writers & students worldwide.">
+  <meta name="twitter:image" content="https://wordstotime.netlify.app/og-image.png">
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9275267797924945" crossorigin="anonymous"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Schema: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Words to Time Calculator",
+    "url": "https://wordstotime.netlify.app/",
+    "description": "Free tools to convert word count to speaking time, reading time and speech duration.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://wordstotime.netlify.app/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- Schema: WebApplication (main calculator) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Words to Time Calculator",
+    "url": "https://wordstotime.netlify.app/",
+    "description": "Convert any word count to speaking time, reading time or speech duration instantly. Free, no signup required.",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "All",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "featureList": [
+      "Words to speaking time calculator",
+      "Words to reading time calculator",
+      "Reverse: time to word count",
+      "Paste text word count",
+      "Multiple WPM presets",
+      "Speech word count guides"
+    ]
+  }
+  </script>
+
+  <!-- Schema: SiteNavigationElement -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SiteNavigationElement",
+    "name": ["Words to Minutes","Reading Time Calculator","Speaking Time Calculator","Speech Length Calculator","Practice Mode"],
+    "url": [
+      "https://wordstotime.netlify.app/words-to-minutes/",
+      "https://wordstotime.netlify.app/word-to-reading-time/",
+      "https://wordstotime.netlify.app/word-to-speaking-time/",
+      "https://wordstotime.netlify.app/word-to-speech-length/",
+      "https://wordstotime.netlify.app/practice-mode/"
+    ]
+  }
+  </script>
+
+  <!-- Schema: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long does it take to say 500 words?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "500 words takes 3 minutes 51 seconds to say at the average speaking pace of 130 WPM. At a conversational pace of 150 WPM it takes 3 minutes 20 seconds. For a formal speech at 110 WPM, allow 4 minutes 33 seconds. Use our speaking time calculator for custom speeds."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to speak 1,000 words?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "1,000 words takes 7 minutes 41 seconds to speak at 130 WPM average pace. At slow formal speech (110 WPM): 9 minutes 5 seconds. At conversational pace (150 WPM): 6 minutes 40 seconds. This is a typical 7-8 minute speech length."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many minutes is 1,000 words?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "1,000 words is 7 minutes 41 seconds when spoken aloud at 130 WPM average. For reading silently (238 WPM), 1,000 words takes 4 minutes 12 seconds. For a typed presentation at 130 WPM with slide transitions, allow 8-9 minutes total."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many words is a 5-minute speech?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A 5-minute speech is approximately 650 words at the average speaking pace of 130 WPM. At a faster conversational pace (150 WPM): 750 words. At a slow, deliberate pace (110 WPM): 550 words. See our 5-minute speech word count guide for a complete breakdown."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many words is a 10-minute speech?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A 10-minute speech is approximately 1,300 words at 130 WPM average pace. At 150 WPM: 1,500 words. At a slow 110 WPM: 1,100 words. Always add a 10% buffer for pauses and transitions. See our 10-minute speech word count guide."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many words is a 3-minute speech?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A 3-minute speech is approximately 390 words at 130 WPM average. At 150 WPM: 450 words. At 110 WPM: 330 words. Common for wedding toasts, award speeches, and short presentations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long is a 500-word speech?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A 500-word speech takes 3 minutes 51 seconds at 130 WPM average. At 150 WPM: 3 minutes 20 seconds. At 110 WPM: 4 minutes 33 seconds. This is common for 3-4 minute presentation segments."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long is a 1,000-word speech?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A 1,000-word speech takes 7 minutes 41 seconds at the average speaking pace of 130 WPM. At 150 WPM: 6 minutes 40 seconds. At 110 WPM: 9 minutes 5 seconds. Add 10% buffer for audience interaction and pauses."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ===== DESIGN SYSTEM ===== */
+    :root {
+      --primary:       #2563EB;
+      --primary-dark:  #1d4ed8;
+      --primary-light: #dbeafe;
+      --secondary:     #0ea5e9;
+      --dark:          #0f172a;
+      --dark-card:     #1e293b;
+      --dark-border:   #334155;
+      --bg:            #f1f5f9;
+      --white:         #ffffff;
+      --border:        #e2e8f0;
+      --text:          #1e293b;
+      --text-muted:    #64748b;
+      --text-light:    #94a3b8;
+      --success:       #10b981;
+      --success-light: #d1fae5;
+      --warning:       #f59e0b;
+      --warning-light: #fef3c7;
+      --teal:          #0d9488;
+      --teal-light:    #ccfbf1;
+      --purple:        #7c3aed;
+      --purple-light:  #ede9fe;
+      --radius:        12px;
+      --radius-sm:     8px;
+      --shadow:        0 1px 3px rgba(0,0,0,.1), 0 1px 2px rgba(0,0,0,.06);
+      --shadow-md:     0 4px 6px rgba(0,0,0,.07), 0 2px 4px rgba(0,0,0,.06);
+      --shadow-lg:     0 10px 25px rgba(0,0,0,.1), 0 4px 10px rgba(0,0,0,.05);
+      --font:          'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --max-w:         1100px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.6; font-size: 16px; }
+    img { max-width: 100%; display: block; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* HEADER */
+    .site-header { background: var(--dark); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--dark-border); }
+    .header-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 20px; height: 62px; display: flex; align-items: center; justify-content: space-between; }
+    .site-logo { font-size: 1.2rem; font-weight: 800; color: #fff; text-decoration: none; display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+    .site-logo span.logo-icon { background: var(--primary); color: #fff; width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; }
+    .site-nav { display: flex; align-items: center; gap: 4px; }
+    .site-nav a { color: #cbd5e1; font-size: 0.875rem; font-weight: 500; padding: 6px 12px; border-radius: 6px; text-decoration: none; transition: all .15s; white-space: nowrap; }
+    .site-nav a:hover, .site-nav a.active { background: rgba(255,255,255,.1); color: #fff; }
+    .nav-cta { background: var(--primary) !important; color: #fff !important; margin-left: 8px; }
+    .nav-cta:hover { background: var(--primary-dark) !important; }
+    .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 6px; flex-direction: column; gap: 5px; }
+    .nav-toggle span { display: block; width: 22px; height: 2px; background: #fff; border-radius: 2px; }
+    @media(max-width:768px){
+      .site-nav { display: none; position: absolute; top: 62px; left: 0; right: 0; background: var(--dark); flex-direction: column; padding: 12px 20px 20px; gap: 4px; border-bottom: 1px solid var(--dark-border); }
+      .site-nav.open { display: flex; }
+      .site-nav a { padding: 10px 12px; width: 100%; }
+      .nav-cta { margin-left: 0; margin-top: 8px; text-align: center; }
+      .nav-toggle { display: flex; }
+    }
+
+    /* HERO */
+    .hero { background: linear-gradient(135deg, var(--dark) 0%, #1e3a5f 55%, #1d4ed8 100%); padding: 52px 20px 0; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 70% 50%, rgba(37,99,235,.25) 0%, transparent 70%); pointer-events: none; }
+    .hero-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; position: relative; }
+    .hero-text { color: #fff; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(37,99,235,.3); border: 1px solid rgba(37,99,235,.5); border-radius: 20px; padding: 5px 14px; font-size: 0.78rem; font-weight: 700; color: #93c5fd; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 16px; }
+    .hero h1 { font-size: clamp(1.75rem, 4vw, 2.6rem); font-weight: 800; line-height: 1.15; margin-bottom: 14px; }
+    .hero h1 em { font-style: normal; color: #60a5fa; }
+    .hero-sub { color: #94a3b8; font-size: 1rem; line-height: 1.7; margin-bottom: 24px; max-width: 480px; }
+    .hero-stats { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 28px; }
+    .hero-stat { text-align: center; }
+    .hero-stat .hs-val { font-size: 1.35rem; font-weight: 800; color: #fff; }
+    .hero-stat .hs-label { font-size: 0.72rem; color: #64748b; text-transform: uppercase; letter-spacing: .06em; }
+    .hero-stat-divider { width: 1px; background: var(--dark-border); align-self: stretch; }
+    .hero-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 6px; background: var(--primary); color: #fff; padding: 11px 22px; border-radius: var(--radius-sm); font-weight: 700; font-size: 0.9rem; text-decoration: none; transition: background .15s; border: none; cursor: pointer; font-family: var(--font); }
+    .btn-primary:hover { background: var(--primary-dark); text-decoration: none; }
+    .btn-ghost { display: inline-flex; align-items: center; gap: 6px; background: transparent; color: #cbd5e1; padding: 11px 22px; border-radius: var(--radius-sm); font-weight: 600; font-size: 0.9rem; text-decoration: none; transition: all .15s; border: 1px solid var(--dark-border); cursor: pointer; font-family: var(--font); }
+    .btn-ghost:hover { border-color: #94a3b8; color: #fff; text-decoration: none; }
+
+    /* HERO CALCULATOR PANEL */
+    .hero-calc { background: var(--white); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow-lg); position: relative; top: 0; }
+    .hero-calc-title { font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+    .hero-calc-title::before { content: "&#9201;"; }
+    .hc-tabs { display: flex; border: 1px solid var(--border); border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 18px; }
+    .hc-tab { flex: 1; padding: 9px 6px; font-size: 0.8rem; font-weight: 600; text-align: center; cursor: pointer; background: var(--white); color: var(--text-muted); border: none; transition: .15s; font-family: var(--font); }
+    .hc-tab.active { background: var(--primary); color: #fff; }
+    .hc-panel { display: none; }
+    .hc-panel.active { display: block; }
+    .hc-input { width: 100%; padding: 11px 14px; border: 1.5px solid var(--border); border-radius: var(--radius-sm); font-family: var(--font); font-size: 1rem; color: var(--text); background: var(--bg); transition: border-color .15s; margin-bottom: 12px; }
+    .hc-input:focus { outline: none; border-color: var(--primary); background: var(--white); }
+    .hc-input::placeholder { color: var(--text-light); }
+    .speed-row { display: grid; grid-template-columns: repeat(4,1fr); gap: 6px; margin-bottom: 12px; }
+    .sp-btn { padding: 7px 4px; border: 1.5px solid var(--border); border-radius: 6px; background: var(--white); cursor: pointer; text-align: center; font-family: var(--font); transition: .15s; }
+    .sp-btn.active { border-color: var(--primary); background: var(--primary-light); }
+    .sp-btn:hover:not(.active) { border-color: var(--primary); }
+    .sp-btn .sp-lab { font-size: 0.62rem; font-weight: 700; color: var(--text-muted); display: block; text-transform: uppercase; }
+    .sp-btn .sp-val { font-size: 0.82rem; font-weight: 700; color: var(--text); display: block; }
+    .sp-btn.active .sp-lab, .sp-btn.active .sp-val { color: var(--primary-dark); }
+    .hc-btn { width: 100%; padding: 12px; background: var(--primary); color: #fff; border: none; border-radius: var(--radius-sm); font-family: var(--font); font-size: 0.95rem; font-weight: 700; cursor: pointer; transition: background .15s; }
+    .hc-btn:hover { background: var(--primary-dark); }
+    .hc-result { display: none; margin-top: 14px; background: var(--dark); border-radius: var(--radius-sm); padding: 16px; text-align: center; }
+    .hc-result.show { display: block; }
+    .hc-result-main { font-size: 1.8rem; font-weight: 800; color: #fff; }
+    .hc-result-sub { font-size: 0.75rem; color: #64748b; margin-top: 4px; }
+    .hc-result-breakdown { display: flex; justify-content: center; gap: 12px; margin-top: 12px; flex-wrap: wrap; }
+    .hcr-item .hcr-val { font-size: 0.85rem; font-weight: 700; color: #e2e8f0; }
+    .hcr-item .hcr-lab { font-size: 0.65rem; color: #64748b; }
+
+    .hero-wave { display: block; width: 100%; margin-top: 40px; }
+    @media(max-width:768px){ .hero-inner { grid-template-columns: 1fr; gap: 24px; } .hero-wave { margin-top: 24px; } }
+
+    /* LAYOUT */
+    .page-body { max-width: var(--max-w); margin: 0 auto; padding: 36px 20px 60px; display: grid; grid-template-columns: 1fr 300px; gap: 28px; align-items: start; }
+    @media(max-width:900px){ .page-body { grid-template-columns: 1fr; } .sidebar { order: 3; } }
+
+    /* CARDS */
+    .card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); }
+    .card + .card { margin-top: 20px; }
+    .section-title { font-size: 1.2rem; font-weight: 700; color: var(--text); margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
+    .section-title::after { content: ''; flex: 1; height: 2px; background: var(--border); border-radius: 2px; }
+
+    /* TOOLS GRID */
+    .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px,1fr)); gap: 12px; }
+    .tool-card { background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius-sm); padding: 16px; text-decoration: none; transition: all .2s; display: block; position: relative; overflow: hidden; }
+    .tool-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--primary); transform: scaleX(0); transform-origin: left; transition: transform .2s; }
+    .tool-card:hover { border-color: var(--primary); box-shadow: var(--shadow-md); transform: translateY(-2px); text-decoration: none; }
+    .tool-card:hover::before { transform: scaleX(1); }
+    .tool-card .tc-icon { font-size: 1.6rem; margin-bottom: 8px; }
+    .tool-card .tc-name { font-size: 0.875rem; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .tool-card .tc-desc { font-size: 0.78rem; color: var(--text-muted); line-height: 1.45; }
+    .tool-card .tc-badge { position: absolute; top: 10px; right: 10px; font-size: 0.6rem; font-weight: 700; padding: 2px 7px; border-radius: 10px; text-transform: uppercase; background: var(--success-light); color: #065f46; }
+
+    /* QUICK ANSWERS GRID */
+    .answers-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px,1fr)); gap: 10px; }
+    .answer-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 13px; text-decoration: none; transition: all .15s; display: block; }
+    .answer-card:hover { border-color: var(--primary); box-shadow: var(--shadow); text-decoration: none; }
+    .answer-card .ac-wc { font-size: 0.72rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 6px; }
+    .answer-card .ac-row { display: flex; justify-content: space-between; align-items: center; padding: 3px 0; font-size: 0.82rem; border-bottom: 1px solid var(--border); }
+    .answer-card .ac-row:last-of-type { border-bottom: none; }
+    .answer-card .ac-mode { color: var(--text-muted); font-size: 0.78rem; }
+    .answer-card .ac-speak { color: var(--primary-dark); font-weight: 700; }
+    .answer-card .ac-read { color: var(--teal); font-weight: 700; }
+
+    /* REFERENCE TABLE */
+    .table-wrap { overflow-x: auto; border-radius: var(--radius-sm); border: 1px solid var(--border); }
+    .data-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+    .data-table thead tr { background: var(--dark); }
+    .data-table thead th { padding: 10px 12px; color: #e2e8f0; font-weight: 600; text-align: left; font-size: 0.78rem; text-transform: uppercase; letter-spacing: .05em; }
+    .data-table tbody tr { border-bottom: 1px solid var(--border); transition: background .1s; }
+    .data-table tbody tr:hover { background: var(--bg); }
+    .data-table tbody tr:last-child { border-bottom: none; }
+    .data-table td { padding: 9px 12px; }
+    .data-table td:first-child { font-weight: 600; }
+    .data-table .col-speak { color: var(--primary-dark); font-weight: 600; }
+    .data-table .col-read { color: var(--teal); font-weight: 600; }
+    .data-table .col-link a { color: var(--primary); font-size: 0.8rem; text-decoration: none; }
+    .data-table .col-link a:hover { text-decoration: underline; }
+    .table-note { font-size: 0.75rem; color: var(--text-muted); margin-top: 8px; }
+
+    /* SPEECH WORD COUNT CARDS */
+    .speech-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px,1fr)); gap: 10px; }
+    .speech-card { background: var(--dark); border-radius: var(--radius-sm); padding: 14px; text-decoration: none; display: block; text-align: center; transition: all .15s; }
+    .speech-card:hover { background: var(--dark-card); transform: translateY(-2px); box-shadow: var(--shadow-md); text-decoration: none; }
+    .speech-card .sc-dur { font-size: 1.4rem; font-weight: 800; color: #60a5fa; }
+    .speech-card .sc-label { font-size: 0.7rem; color: #94a3b8; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 4px; }
+    .speech-card .sc-words { font-size: 0.85rem; font-weight: 700; color: #e2e8f0; margin-top: 4px; }
+    .speech-card .sc-range { font-size: 0.72rem; color: #64748b; margin-top: 2px; }
+
+    /* FAQ */
+    .faq-item { border: 1px solid var(--border); border-radius: var(--radius-sm); margin-bottom: 10px; overflow: hidden; }
+    .faq-question { padding: 14px 18px; font-weight: 600; font-size: 0.95rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--white); transition: background .15s; gap: 12px; }
+    .faq-question:hover { background: var(--bg); }
+    .faq-question.open { background: var(--primary-light); color: var(--primary-dark); border-bottom: 1px solid var(--border); }
+    .faq-icon { width: 20px; height: 20px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: var(--text-muted); transition: transform .2s; }
+    .faq-question.open .faq-icon { transform: rotate(45deg); color: var(--primary); }
+    .faq-answer { display: none; padding: 14px 18px; font-size: 0.9rem; line-height: 1.75; color: var(--text-muted); background: var(--white); }
+    .faq-answer.open { display: block; }
+    .faq-answer a { color: var(--primary); }
+
+    /* SIDEBAR */
+    .sidebar { display: flex; flex-direction: column; gap: 20px; }
+    .sidebar-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); }
+    .sidebar-card h3 { font-size: 0.95rem; font-weight: 700; color: var(--text); margin-bottom: 14px; }
+    .sidebar-links { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+    .sidebar-links li a { display: flex; align-items: center; gap: 8px; font-size: 0.84rem; color: var(--text-muted); text-decoration: none; padding: 6px 8px; border-radius: 6px; transition: .15s; }
+    .sidebar-links li a:hover { background: var(--bg); color: var(--primary); text-decoration: none; }
+    .sl-icon { width: 22px; height: 22px; background: var(--primary-light); color: var(--primary-dark); border-radius: 5px; display: flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 700; flex-shrink: 0; }
+    .sl-icon.teal { background: var(--teal-light); color: var(--teal); }
+    .sl-icon.green { background: var(--success-light); color: #065f46; }
+
+    .sidebar-qref table { width: 100%; font-size: 0.8rem; border-collapse: collapse; }
+    .sidebar-qref tr { border-bottom: 1px solid var(--border); }
+    .sidebar-qref tr:last-child { border-bottom: none; }
+    .sidebar-qref td { padding: 7px 4px; }
+    .sidebar-qref td:first-child { color: var(--text-muted); }
+    .sidebar-qref .col-sp { color: var(--primary-dark); font-weight: 700; text-align: right; }
+    .sidebar-qref .col-rd { color: var(--teal); font-weight: 700; text-align: right; }
+
+    /* AD */
+    .ad-unit { background: var(--white); border: 1px dashed var(--border); border-radius: var(--radius-sm); min-height: 90px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+
+    /* INFO BOX */
+    .info-box { background: var(--primary-light); border-left: 4px solid var(--primary); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 13px 16px; font-size: 0.9rem; color: var(--dark); margin: 16px 0; }
+    .info-box strong { color: var(--primary-dark); }
+
+    /* FOOTER */
+    .site-footer { background: var(--dark); color: #94a3b8; margin-top: 60px; }
+    .footer-top { max-width: var(--max-w); margin: 0 auto; padding: 44px 20px; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px; }
+    .footer-brand .site-logo { margin-bottom: 12px; }
+    .footer-brand p { font-size: 0.85rem; line-height: 1.75; max-width: 300px; }
+    .footer-col h4 { color: #e2e8f0; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 14px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-col ul li a { color: #94a3b8; font-size: 0.83rem; text-decoration: none; transition: color .15s; }
+    .footer-col ul li a:hover { color: #fff; }
+    .footer-bottom { border-top: 1px solid var(--dark-border); max-width: var(--max-w); margin: 0 auto; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; flex-wrap: wrap; gap: 8px; }
+    .footer-bottom a { color: #94a3b8; }
+    .footer-bottom a:hover { color: #fff; }
+    @media(max-width:768px){ .footer-top { grid-template-columns: 1fr 1fr; } .footer-brand { grid-column: 1/-1; } }
+    @media(max-width:480px){ .footer-top { grid-template-columns: 1fr; } .speed-row { grid-template-columns: repeat(2,1fr); } }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><span class="logo-icon">&#9201;</span>WordsToTime</a>
+    <nav class="site-nav" id="mainNav">
+      <a href="/" class="active">Home</a>
+      <a href="/words-to-minutes/">Words to Min</a>
+      <a href="/word-to-reading-time/">Reading Time</a>
+      <a href="/word-to-speaking-time/">Speaking Time</a>
+      <a href="/word-to-speech-length/">Speech Length</a>
+      <a href="/practice-mode/" class="nav-cta">Practice Mode</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-badge">&#9889; Free Tool &mdash; No Signup</div>
+      <h1>Convert <em>Words to Time</em><br>in Seconds</h1>
+      <p class="hero-sub">Instantly calculate how long your speech, article, or script will take to deliver. Used by speakers, bloggers, teachers, and students worldwide.</p>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="hs-val">1,000</div><div class="hs-label">words = 7m 41s</div></div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat"><div class="hs-val">500</div><div class="hs-label">words = 3m 51s</div></div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat"><div class="hs-val">130</div><div class="hs-label">avg WPM (speech)</div></div>
+      </div>
+      <div class="hero-btns">
+        <a href="/words-to-minutes/" class="btn-primary">&#9201; Words to Minutes</a>
+        <a href="/word-to-reading-time/" class="btn-ghost">&#128064; Reading Time</a>
+      </div>
+    </div>
+
+    <!-- HERO CALCULATOR -->
+    <div class="hero-calc">
+      <div class="hero-calc-title">Words to Time Calculator</div>
+      <div class="hc-tabs">
+        <button class="hc-tab active" onclick="hcSwitch('speak',this)">&#127908; Speaking</button>
+        <button class="hc-tab" onclick="hcSwitch('read',this)">&#128064; Reading</button>
+        <button class="hc-tab" onclick="hcSwitch('rev',this)">&#8635; Reverse</button>
+      </div>
+
+      <!-- Panel: Speaking -->
+      <div class="hc-panel active" id="hc-speak">
+        <input class="hc-input" type="number" id="hcWords" placeholder="Enter word count (e.g. 1000)" min="1">
+        <div class="speed-row" id="spRow1">
+          <div class="sp-btn" onclick="hcSpeed(110,'1',this)"><span class="sp-lab">Slow</span><span class="sp-val">110</span></div>
+          <div class="sp-btn active" onclick="hcSpeed(130,'1',this)"><span class="sp-lab">Avg</span><span class="sp-val">130</span></div>
+          <div class="sp-btn" onclick="hcSpeed(150,'1',this)"><span class="sp-lab">Fast</span><span class="sp-val">150</span></div>
+          <div class="sp-btn" onclick="hcSpeed(180,'1',this)"><span class="sp-lab">Rapid</span><span class="sp-val">180</span></div>
+        </div>
+        <button class="hc-btn" onclick="hcCalcSpeak()">Calculate Speaking Time</button>
+        <div class="hc-result" id="hcr1">
+          <div class="hc-result-main" id="hcr1-main">—</div>
+          <div class="hc-result-sub" id="hcr1-sub"></div>
+          <div class="hc-result-breakdown" id="hcr1-bd"></div>
+        </div>
+      </div>
+
+      <!-- Panel: Reading -->
+      <div class="hc-panel" id="hc-read">
+        <input class="hc-input" type="number" id="hcWords2" placeholder="Enter word count (e.g. 1000)" min="1">
+        <div class="speed-row" id="spRow2">
+          <div class="sp-btn" onclick="hcSpeed(150,'2',this)"><span class="sp-lab">Slow</span><span class="sp-val">150</span></div>
+          <div class="sp-btn active" onclick="hcSpeed(238,'2',this)"><span class="sp-lab">Avg</span><span class="sp-val">238</span></div>
+          <div class="sp-btn" onclick="hcSpeed(350,'2',this)"><span class="sp-lab">Fast</span><span class="sp-val">350</span></div>
+          <div class="sp-btn" onclick="hcSpeed(130,'2',this)"><span class="sp-lab">Aloud</span><span class="sp-val">130</span></div>
+        </div>
+        <button class="hc-btn" onclick="hcCalcRead()">Calculate Reading Time</button>
+        <div class="hc-result" id="hcr2">
+          <div class="hc-result-main" id="hcr2-main">—</div>
+          <div class="hc-result-sub" id="hcr2-sub"></div>
+          <div class="hc-result-breakdown" id="hcr2-bd"></div>
+        </div>
+      </div>
+
+      <!-- Panel: Reverse -->
+      <div class="hc-panel" id="hc-rev">
+        <input class="hc-input" type="number" id="hcMins" placeholder="Minutes (e.g. 5)" min="0">
+        <input class="hc-input" type="number" id="hcSecs" placeholder="Seconds optional (e.g. 30)" min="0" max="59">
+        <div class="speed-row" id="spRow3">
+          <div class="sp-btn" onclick="hcSpeed(110,'3',this)"><span class="sp-lab">Slow</span><span class="sp-val">110</span></div>
+          <div class="sp-btn active" onclick="hcSpeed(130,'3',this)"><span class="sp-lab">Avg</span><span class="sp-val">130</span></div>
+          <div class="sp-btn" onclick="hcSpeed(150,'3',this)"><span class="sp-lab">Fast</span><span class="sp-val">150</span></div>
+          <div class="sp-btn" onclick="hcSpeed(238,'3',this)"><span class="sp-lab">Silent</span><span class="sp-val">238</span></div>
+        </div>
+        <button class="hc-btn" onclick="hcCalcRev()">Get Word Count</button>
+        <div class="hc-result" id="hcr3">
+          <div class="hc-result-main" id="hcr3-main">—</div>
+          <div class="hc-result-sub" id="hcr3-sub"></div>
+          <div class="hc-result-breakdown" id="hcr3-bd"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <svg class="hero-wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 40" preserveAspectRatio="none" style="height:40px;display:block;"><path fill="#f1f5f9" d="M0,32 C360,0 1080,64 1440,32 L1440,40 L0,40 Z"/></svg>
+</section>
+
+<!-- AD: TOP LEADERBOARD -->
+<div style="max-width:var(--max-w);margin:20px auto;padding:0 20px;">
+  <div class="ad-unit">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9275267797924945" data-ad-slot="auto" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+</div>
+
+<!-- MAIN BODY -->
+<div class="page-body">
+<main style="min-width:0;">
+
+  <!-- ALL TOOLS -->
+  <div class="card">
+    <h2 class="section-title">&#128295; All Free Tools</h2>
+    <div class="tools-grid">
+      <a href="/words-to-minutes/" class="tool-card"><div class="tc-icon">&#9201;</div><div class="tc-name">Words to Minutes</div><div class="tc-desc">Speech duration from any word count</div><span class="tc-badge">Popular</span></a>
+      <a href="/word-to-reading-time/" class="tool-card"><div class="tc-icon">&#128064;</div><div class="tc-name">Reading Time</div><div class="tc-desc">Silent & aloud reading estimates</div></a>
+      <a href="/word-to-speaking-time/" class="tool-card"><div class="tc-icon">&#127908;</div><div class="tc-name">Speaking Time</div><div class="tc-desc">Precise speech delivery timer</div></a>
+      <a href="/word-to-speech-length/" class="tool-card"><div class="tc-icon">&#128203;</div><div class="tc-name">Speech Length</div><div class="tc-desc">Check if your speech hits target time</div></a>
+      <a href="/word-to-typing-time/" class="tool-card"><div class="tc-icon">&#9000;</div><div class="tc-name">Typing Time</div><div class="tc-desc">How long to type any word count</div></a>
+      <a href="/word-to-presentation-time/" class="tool-card"><div class="tc-icon">&#128190;</div><div class="tc-name">Presentation Time</div><div class="tc-desc">Slides + speech combined timer</div></a>
+      <a href="/word-to-public-speaking-time/" class="tool-card"><div class="tc-icon">&#127919;</div><div class="tc-name">Public Speaking</div><div class="tc-desc">Formal delivery pace calculator</div></a>
+      <a href="/speaking-words-per-minute/" class="tool-card"><div class="tc-icon">&#128202;</div><div class="tc-name">WPM Guide</div><div class="tc-desc">Speaking pace reference & standards</div></a>
+      <a href="/speech-time-calculator/" class="tool-card"><div class="tc-icon">&#128337;</div><div class="tc-name">Speech Timer</div><div class="tc-desc">Full-featured speech time calculator</div></a>
+      <a href="/speaking-time-calculator/" class="tool-card"><div class="tc-icon">&#127775;</div><div class="tc-name">Speaking Timer</div><div class="tc-desc">Advanced speaking time tool</div></a>
+      <a href="/text-to-speech-time/" class="tool-card"><div class="tc-icon">&#128483;</div><div class="tc-name">Text to Speech</div><div class="tc-desc">TTS duration estimator</div></a>
+      <a href="/practice-mode/" class="tool-card"><div class="tc-icon">&#9654;</div><div class="tc-name">Practice Mode</div><div class="tc-desc">Live timer for speech rehearsal</div><span class="tc-badge">Live</span></a>
+    </div>
+  </div>
+
+  <!-- WORD COUNT QUICK ANSWERS -->
+  <div class="card">
+    <h2 class="section-title">&#9889; Quick Answers by Word Count</h2>
+    <p style="font-size:.9rem;color:var(--text-muted);margin-bottom:16px;">Speaking time at 130 WPM avg &bull; Reading time at 238 WPM avg. Click any card for a full dedicated guide.</p>
+    <div class="answers-grid">
+      <a href="/200-words-to-minutes/" class="answer-card"><div class="ac-wc">200 Words</div><div class="ac-row"><span class="ac-mode">&#127908; Speak</span><span class="ac-speak">1m 32s</span></div><div class="ac-row"><span class="ac-mode">&#128064; Read</span><span class="ac-read">50s</span></div></a>
+      <a href="/300-words-to-minutes/" class="answer-card"><div class="ac-wc">300 Words</div><div class="ac-row"><span class="ac-mode">&#127908; Speak</span><span class="ac-speak">2m 18s</span></div><div class="ac-row"><span class="ac-mode">&#128064; Read</span><span class="ac-read">1m 16s</span></div></a>
+      <a href="/400-words-to-minutes/" class="answer-card"><div class="ac-wc">400 Words</div><div class="ac-row"><span class="ac-mode">&#127908; Speak</span><span class="ac-speak">3m 05s</span></div><div class="ac-row"><span class="ac-mode">&#128064; Read</span><span class="ac-read">1m 41s</span></div></a>
+      <a href="/500-words-to-minutes/" class="answer-card"><div class="ac-wc">500 Words</div><div class="ac-row"><span class="ac-mode">&#127908; Speak</span><span class="ac-speak">3m 51s</span></div><div class="ac-row"><span class="ac-mode">&#128064; Read</span><span class="ac-read">2m 06s</span></div></a>
+      <a href="/600-words-to-minutes/" class="answer-card"><div class="ac-wc">600 Words</div><div class="ac-row"><span class="ac-mode">&#127908; Speak</span><span class="ac-speak">4m 37s</span></div><div class="ac-row"><span class="ac-mode">&#128064; Read</span><span class="ac-read">2m 31s</span></div></a>
+      <a href="/700-words-to-minutes/" class="answer-card"><div class="ac-wc">700 Words</div><div class="ac-row"><span class="ac-mode">&#127908; Speak</span><span class="ac-speak">5m 23s</span></div><div class="ac-row"><span class="ac-mode">&#128064; Read</span><span class="ac-read">2m 57s</span></div></a>
+      <a href="/800-words-to-minutes/" class="answer-card"><div class="ac-wc">800 Words</div><div class="ac-row"><span class="ac-mode">&#127908; Speak</span><span class="ac-speak">6m 09s</span></div><div class="ac-row"><span class="ac-mode">&#128064; Read</span><span class="ac-read">3m 22s</span></div></a>
+      <a href="/1000-words-to-minutes/" class="answer-card"><div class="ac-wc">1,000 Words</div><div class="ac-row"><span class="ac-mode">&#127908; Speak</span><span class="ac-speak" style="color:#1d4ed8;font-size:.9rem;">7m 41s</span></div><div class="ac-row"><span class="ac-mode">&#128064; Read</span><span class="ac-read">4m 12s</span></div></a>
+      <a href="/1200-words-to-minutes/" class="answer-card"><div class="ac-wc">1,200 Words</div><div class="ac-row"><span class="ac-mode">&#127908; Speak</span><span class="ac-speak">9m 14s</span></div><div class="ac-row"><span class="ac-mode">&#128064; Read</span><span class="ac-read">5m 03s</span></div></a>
+      <a href="/1500-words-to-minutes/" class="answer-card"><div class="ac-wc">1,500 Words</div><div class="ac-row"><span class="ac-mode">&#127908; Speak</span><span class="ac-speak">11m 32s</span></div><div class="ac-row"><span class="ac-mode">&#128064; Read</span><span class="ac-read">6m 18s</span></div></a>
+      <a href="/2000-words-to-minutes/" class="answer-card"><div class="ac-wc">2,000 Words</div><div class="ac-row"><span class="ac-mode">&#127908; Speak</span><span class="ac-speak">15m 23s</span></div><div class="ac-row"><span class="ac-mode">&#128064; Read</span><span class="ac-read">8m 24s</span></div></a>
+      <a href="/2500-words-to-minutes/" class="answer-card"><div class="ac-wc">2,500 Words</div><div class="ac-row"><span class="ac-mode">&#127908; Speak</span><span class="ac-speak">19m 14s</span></div><div class="ac-row"><span class="ac-mode">&#128064; Read</span><span class="ac-read">10m 30s</span></div></a>
+    </div>
+  </div>
+
+  <!-- AD: MID -->
+  <div class="ad-unit" style="margin:20px 0;">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9275267797924945" data-ad-slot="auto" data-ad-format="rectangle" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <!-- REFERENCE TABLE -->
+  <div class="card">
+    <h2 class="section-title">&#128203; Complete Words to Time Table</h2>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Word Count</th>
+            <th>&#127908; Speaking (130 WPM)</th>
+            <th>&#128064; Silent Read (238 WPM)</th>
+            <th>&#128484; Read Aloud (130 WPM)</th>
+            <th>Dedicated Guide</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>200 words</td><td class="col-speak">1m 32s</td><td class="col-read">50s</td><td>1m 32s</td><td class="col-link"><a href="/200-words-to-minutes/">200 words guide &#8250;</a></td></tr>
+          <tr><td>300 words</td><td class="col-speak">2m 18s</td><td class="col-read">1m 16s</td><td>2m 18s</td><td class="col-link"><a href="/300-words-to-minutes/">300 words guide &#8250;</a></td></tr>
+          <tr><td>400 words</td><td class="col-speak">3m 05s</td><td class="col-read">1m 41s</td><td>3m 05s</td><td class="col-link"><a href="/400-words-to-minutes/">400 words guide &#8250;</a></td></tr>
+          <tr><td>500 words</td><td class="col-speak">3m 51s</td><td class="col-read">2m 06s</td><td>3m 51s</td><td class="col-link"><a href="/500-words-to-minutes/">500 words guide &#8250;</a></td></tr>
+          <tr><td>600 words</td><td class="col-speak">4m 37s</td><td class="col-read">2m 31s</td><td>4m 37s</td><td class="col-link"><a href="/600-words-to-minutes/">600 words guide &#8250;</a></td></tr>
+          <tr><td>750 words</td><td class="col-speak">5m 46s</td><td class="col-read">3m 09s</td><td>5m 46s</td><td class="col-link"><a href="/750-words-to-minutes/">750 words guide &#8250;</a></td></tr>
+          <tr><td>1,000 words</td><td class="col-speak" style="font-weight:800;color:#1d4ed8;">7m 41s</td><td class="col-read" style="font-weight:800;">4m 12s</td><td>7m 41s</td><td class="col-link"><a href="/1000-words-to-minutes/">1,000 words guide &#8250;</a></td></tr>
+          <tr><td>1,200 words</td><td class="col-speak">9m 14s</td><td class="col-read">5m 03s</td><td>9m 14s</td><td class="col-link"><a href="/1200-words-to-minutes/">1,200 words guide &#8250;</a></td></tr>
+          <tr><td>1,500 words</td><td class="col-speak">11m 32s</td><td class="col-read">6m 18s</td><td>11m 32s</td><td class="col-link"><a href="/1500-words-to-minutes/">1,500 words guide &#8250;</a></td></tr>
+          <tr><td>2,000 words</td><td class="col-speak">15m 23s</td><td class="col-read">8m 24s</td><td>15m 23s</td><td class="col-link"><a href="/2000-words-to-minutes/">2,000 words guide &#8250;</a></td></tr>
+          <tr><td>2,500 words</td><td class="col-speak">19m 14s</td><td class="col-read">10m 30s</td><td>19m 14s</td><td class="col-link"><a href="/2500-words-to-minutes/">2,500 words guide &#8250;</a></td></tr>
+          <tr><td>3,000 words</td><td class="col-speak">23m 04s</td><td class="col-read">12m 36s</td><td>23m 04s</td><td class="col-link"><a href="/3000-words-to-minutes/">3,000 words guide &#8250;</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">Speaking: 130 WPM per <a href="https://www.asha.org/public/speech/development/rate/" target="_blank" rel="noopener">ASHA</a> &bull; Silent reading: 238 WPM per <a href="https://www.nichd.nih.gov/research/supported/nrp" target="_blank" rel="noopener">National Reading Panel</a> &bull; Individual rates vary &#177;20%.</p>
+  </div>
+
+  <!-- SPEECH WORD COUNT PAGES -->
+  <div class="card">
+    <h2 class="section-title">&#127908; Speech Length Word Count Guides</h2>
+    <p style="font-size:.9rem;color:var(--text-muted);margin-bottom:18px;">How many words do you need for a speech of any length? Click for the complete guide with word ranges, tips and scripts.</p>
+    <div class="speech-grid">
+      <a href="/1-minute-speech-word-count/" class="speech-card"><div class="sc-label">Speech</div><div class="sc-dur">1 Min</div><div class="sc-words">~130 words</div><div class="sc-range">110&ndash;150 words</div></a>
+      <a href="/2-minute-speech-word-count/" class="speech-card"><div class="sc-label">Speech</div><div class="sc-dur">2 Min</div><div class="sc-words">~260 words</div><div class="sc-range">220&ndash;300 words</div></a>
+      <a href="/3-minute-speech-word-count/" class="speech-card"><div class="sc-label">Speech</div><div class="sc-dur">3 Min</div><div class="sc-words">~390 words</div><div class="sc-range">330&ndash;450 words</div></a>
+      <a href="/4-minute-speech-word-count/" class="speech-card"><div class="sc-label">Speech</div><div class="sc-dur">4 Min</div><div class="sc-words">~520 words</div><div class="sc-range">440&ndash;600 words</div></a>
+      <a href="/5-minute-speech-word-count/" class="speech-card"><div class="sc-label">Speech</div><div class="sc-dur">5 Min</div><div class="sc-words">~650 words</div><div class="sc-range">550&ndash;750 words</div></a>
+      <a href="/7-minute-speech-word-count/" class="speech-card"><div class="sc-label">Speech</div><div class="sc-dur">7 Min</div><div class="sc-words">~910 words</div><div class="sc-range">770&ndash;1,050 words</div></a>
+      <a href="/10-minute-speech-word-count/" class="speech-card"><div class="sc-label">Speech</div><div class="sc-dur">10 Min</div><div class="sc-words">~1,300 words</div><div class="sc-range">1,100&ndash;1,500 words</div></a>
+      <a href="/15-minute-speech-word-count/" class="speech-card"><div class="sc-label">Speech</div><div class="sc-dur">15 Min</div><div class="sc-words">~1,950 words</div><div class="sc-range">1,650&ndash;2,250 words</div></a>
+      <a href="/20-minute-speech-word-count/" class="speech-card"><div class="sc-label">Speech</div><div class="sc-dur">20 Min</div><div class="sc-words">~2,600 words</div><div class="sc-range">2,200&ndash;3,000 words</div></a>
+      <a href="/30-minute-speech-word-count/" class="speech-card"><div class="sc-label">Speech</div><div class="sc-dur">30 Min</div><div class="sc-words">~3,900 words</div><div class="sc-range">3,300&ndash;4,500 words</div></a>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="card">
+    <h2 class="section-title">&#10067; Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="faqToggle(this)">How long does it take to say 500 words?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">500 words takes <strong>3 minutes 51 seconds</strong> at the average speaking pace of 130 WPM. At a slow formal pace (110 WPM): 4 minutes 33 seconds. At conversational pace (150 WPM): 3 minutes 20 seconds. Use our <a href="/words-to-minutes/">words to minutes calculator</a> to get a precise result at your own pace. See also: <a href="/500-words-to-minutes/">500 words to minutes complete guide</a>.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="faqToggle(this)">How long does it take to speak 1,000 words?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">1,000 words takes <strong>7 minutes 41 seconds</strong> to speak at the average pace of 130 WPM. At slow pace (110 WPM): 9 minutes 5 seconds. At fast pace (150 WPM): 6 minutes 40 seconds. See our full <a href="/1000-words-to-minutes/">1,000 words to minutes guide</a> for more breakdowns.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="faqToggle(this)">How many minutes is 1,000 words?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">1,000 words is <strong>7 minutes 41 seconds</strong> when spoken at average pace (130 WPM) and <strong>4 minutes 12 seconds</strong> when read silently (238 WPM). For a presentation with pauses, allow 8&ndash;9 minutes. Use our <a href="/words-to-minutes/">words to minutes calculator</a> for custom WPM settings.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="faqToggle(this)">How many words is a 5-minute speech?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">A 5-minute speech is approximately <strong>650 words</strong> at 130 WPM average. At fast pace (150 WPM): 750 words. At slow pace (110 WPM): 550 words. See our dedicated <a href="/5-minute-speech-word-count/">5-minute speech word count guide</a> for tips, examples and a full script template.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="faqToggle(this)">How many words is a 10-minute speech?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">A 10-minute speech is approximately <strong>1,300 words</strong> at 130 WPM average. At 150 WPM: 1,500 words. Always add 10% buffer for pauses, emphasis, and audience interaction. See our <a href="/10-minute-speech-word-count/">10-minute speech word count guide</a> for full details.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="faqToggle(this)">How many words is a 3-minute speech?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">A 3-minute speech is approximately <strong>390 words</strong> at 130 WPM average. Range: 330&ndash;450 words depending on speaking pace. Common for wedding toasts, award introductions, and short conference presentations. See our <a href="/3-minute-speech-word-count/">3-minute speech word count guide</a>.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="faqToggle(this)">How long is a 500-word speech?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">A 500-word speech takes <strong>3 minutes 51 seconds</strong> at 130 WPM average. This is a typical length for a 3&ndash;4 minute keynote segment, a wedding toast, or a short class presentation. Use the <a href="/words-to-minutes/">words to minutes calculator</a> above to adjust for your exact pace.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="faqToggle(this)">How many words is a 4-minute speech?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">A 4-minute speech is approximately <strong>520 words</strong> at 130 WPM average. Range: 440&ndash;600 words depending on delivery speed. See our <a href="/4-minute-speech-word-count/">4-minute speech word count guide</a>.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="faqToggle(this)">How many words is 8 minutes?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">8 minutes of speaking equals approximately <strong>1,040 words</strong> at 130 WPM average. At 150 WPM: 1,200 words. At 110 WPM: 880 words. Use the reverse calculator tab above: enter 8 minutes and your preferred speaking pace to get an exact word count.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="faqToggle(this)">How many words is 4 minutes?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">4 minutes of speaking equals approximately <strong>520 words</strong> at 130 WPM average. At 150 WPM: 600 words. At 110 WPM: 440 words. Use the reverse calculator tab above to calculate your target word count from any time duration.</div>
+    </div>
+  </div>
+
+</main>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="sidebar-card sidebar-qref">
+    <h3>&#9889; Quick Reference</h3>
+    <table>
+      <thead><tr>
+        <th style="font-size:.72rem;color:var(--text-muted);">Words</th>
+        <th style="font-size:.72rem;color:var(--primary-dark);text-align:right;">&#127908; Speak</th>
+        <th style="font-size:.72rem;color:var(--teal);text-align:right;">&#128064; Read</th>
+      </tr></thead>
+      <tbody>
+        <tr><td><a href="/500-words-to-minutes/">500</a></td><td class="col-sp">3m 51s</td><td class="col-rd">2m 06s</td></tr>
+        <tr><td><a href="/1000-words-to-minutes/">1,000</a></td><td class="col-sp">7m 41s</td><td class="col-rd">4m 12s</td></tr>
+        <tr><td><a href="/1500-words-to-minutes/">1,500</a></td><td class="col-sp">11m 32s</td><td class="col-rd">6m 18s</td></tr>
+        <tr><td><a href="/2000-words-to-minutes/">2,000</a></td><td class="col-sp">15m 23s</td><td class="col-rd">8m 24s</td></tr>
+        <tr><td><a href="/2500-words-to-minutes/">2,500</a></td><td class="col-sp">19m 14s</td><td class="col-rd">10m 30s</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:.7rem;color:var(--text-light);margin-top:10px;">Speak: 130 WPM avg &bull; Read: 238 WPM avg</p>
+  </div>
+
+  <div class="ad-unit" style="min-height:250px;">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9275267797924945" data-ad-slot="auto" data-ad-format="rectangle" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <div class="sidebar-card">
+    <h3>&#127908; Speech Guides</h3>
+    <ul class="sidebar-links">
+      <li><a href="/3-minute-speech-word-count/"><span class="sl-icon">3m</span>3-Minute Speech</a></li>
+      <li><a href="/5-minute-speech-word-count/"><span class="sl-icon">5m</span>5-Minute Speech</a></li>
+      <li><a href="/10-minute-speech-word-count/"><span class="sl-icon">10m</span>10-Minute Speech</a></li>
+      <li><a href="/15-minute-speech-word-count/"><span class="sl-icon">15m</span>15-Minute Speech</a></li>
+      <li><a href="/speaking-words-per-minute/"><span class="sl-icon teal">wpm</span>WPM Standards</a></li>
+    </ul>
+  </div>
+
+  <div class="sidebar-card">
+    <h3>&#128064; Reading Tools</h3>
+    <ul class="sidebar-links">
+      <li><a href="/word-to-reading-time/"><span class="sl-icon teal">rt</span>Reading Time Calc</a></li>
+      <li><a href="/words-to-minutes/"><span class="sl-icon">w&#8594;m</span>Words to Minutes</a></li>
+      <li><a href="/word-to-speaking-time/"><span class="sl-icon">&#127908;</span>Speaking Time</a></li>
+      <li><a href="/practice-mode/"><span class="sl-icon green">&#9654;</span>Practice Mode</a></li>
+    </ul>
+  </div>
+
+  <div class="ad-unit" style="min-height:250px;">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9275267797924945" data-ad-slot="auto" data-ad-format="rectangle" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <div class="sidebar-card">
+    <h3>&#127760; Other Languages</h3>
+    <ul class="sidebar-links">
+      <li><a href="/palabras-a-minutos/"><span class="sl-icon">ES</span>Palabras a Minutos</a></li>
+      <li><a href="/lesezeit-rechner/"><span class="sl-icon">DE</span>Lesezeit Rechner</a></li>
+    </ul>
+  </div>
+</aside>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="/" class="site-logo"><span class="logo-icon">&#9201;</span>WordsToTime</a>
+      <p>Free speech and reading time calculators. Convert word count to time for speeches, articles, essays, and scripts. Used by speakers, bloggers, students, and presenters worldwide.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Calculators</h4>
+      <ul>
+        <li><a href="/words-to-minutes/">Words to Minutes</a></li>
+        <li><a href="/word-to-reading-time/">Reading Time</a></li>
+        <li><a href="/word-to-speaking-time/">Speaking Time</a></li>
+        <li><a href="/word-to-speech-length/">Speech Length</a></li>
+        <li><a href="/word-to-typing-time/">Typing Time</a></li>
+        <li><a href="/word-to-presentation-time/">Presentation Time</a></li>
+        <li><a href="/speech-time-calculator/">Speech Timer</a></li>
+        <li><a href="/speaking-time-calculator/">Speaking Timer</a></li>
+        <li><a href="/text-to-speech-time/">Text to Speech</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Speech Guides</h4>
+      <ul>
+        <li><a href="/1-minute-speech-word-count/">1-Min Speech</a></li>
+        <li><a href="/2-minute-speech-word-count/">2-Min Speech</a></li>
+        <li><a href="/3-minute-speech-word-count/">3-Min Speech</a></li>
+        <li><a href="/4-minute-speech-word-count/">4-Min Speech</a></li>
+        <li><a href="/5-minute-speech-word-count/">5-Min Speech</a></li>
+        <li><a href="/7-minute-speech-word-count/">7-Min Speech</a></li>
+        <li><a href="/10-minute-speech-word-count/">10-Min Speech</a></li>
+        <li><a href="/15-minute-speech-word-count/">15-Min Speech</a></li>
+        <li><a href="/20-minute-speech-word-count/">20-Min Speech</a></li>
+        <li><a href="/30-minute-speech-word-count/">30-Min Speech</a></li>
+        <li><a href="/speaking-words-per-minute/">WPM Guide</a></li>
+        <li><a href="/practice-mode/">Practice Mode</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Word Count Guides</h4>
+      <ul>
+        <li><a href="/200-words-to-minutes/">200 Words</a></li>
+        <li><a href="/300-words-to-minutes/">300 Words</a></li>
+        <li><a href="/400-words-to-minutes/">400 Words</a></li>
+        <li><a href="/500-words-to-minutes/">500 Words</a></li>
+        <li><a href="/600-words-to-minutes/">600 Words</a></li>
+        <li><a href="/1000-words-to-minutes/">1,000 Words</a></li>
+        <li><a href="/1500-words-to-minutes/">1,500 Words</a></li>
+        <li><a href="/2000-words-to-minutes/">2,000 Words</a></li>
+        <li><a href="/2500-words-to-minutes/">2,500 Words</a></li>
+        <li><a href="/palabras-a-minutos/">Palabras a Min</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/privacy/">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&#169; 2026 WordsToTime.netlify.app &mdash; Free Speech &amp; Reading Time Tools</span>
+    <span><a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a> &middot; <a href="/about/">About</a></span>
+  </div>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+  var sp = {'1': 130, '2': 238, '3': 130};
+
+  document.getElementById('navToggle').addEventListener('click', function(){
+    document.getElementById('mainNav').classList.toggle('open');
+  });
+
+  function hcSwitch(tab, btn){
+    document.querySelectorAll('.hc-tab').forEach(function(t){t.classList.remove('active');});
+    document.querySelectorAll('.hc-panel').forEach(function(p){p.classList.remove('active');});
+    btn.classList.add('active');
+    document.getElementById('hc-'+tab).classList.add('active');
+  }
+
+  function hcSpeed(v, panel, el){
+    sp[panel] = v;
+    var row = el.closest('.speed-row');
+    row.querySelectorAll('.sp-btn').forEach(function(b){b.classList.remove('active');});
+    el.classList.add('active');
+  }
+
+  function fmt(sec){
+    if(sec < 60) return sec + 's';
+    var m = Math.floor(sec/60), s = sec%60;
+    return m + 'm ' + (s<10?'0'+s:s) + 's';
+  }
+
+  function hcCalcSpeak(){
+    var w = parseInt(document.getElementById('hcWords').value);
+    if(!w||w<1){alert('Enter a word count.');return;}
+    var s = sp['1'], t = Math.round((w/s)*60);
+    var box = document.getElementById('hcr1');
+    box.classList.add('show');
+    document.getElementById('hcr1-main').textContent = fmt(t);
+    document.getElementById('hcr1-sub').textContent = w.toLocaleString() + ' words @ ' + s + ' WPM';
+    var rates = [{l:'110 WPM',v:110},{l:'130 WPM',v:130},{l:'150 WPM',v:150},{l:'180 WPM',v:180}];
+    var b = ''; rates.forEach(function(r){var t2=Math.round((w/r.v)*60); b+='<div class="hcr-item"><div class="hcr-val">'+fmt(t2)+'</div><div class="hcr-lab">'+r.l+'</div></div>';});
+    document.getElementById('hcr1-bd').innerHTML = b;
+  }
+
+  function hcCalcRead(){
+    var w = parseInt(document.getElementById('hcWords2').value);
+    if(!w||w<1){alert('Enter a word count.');return;}
+    var s = sp['2'], t = Math.round((w/s)*60);
+    var box = document.getElementById('hcr2');
+    box.classList.add('show');
+    document.getElementById('hcr2-main').textContent = fmt(t);
+    document.getElementById('hcr2-sub').textContent = w.toLocaleString() + ' words @ ' + s + ' WPM';
+    var rates = [{l:'Silent (238)',v:238},{l:'Aloud (130)',v:130},{l:'Slow (150)',v:150},{l:'Fast (350)',v:350}];
+    var b = ''; rates.forEach(function(r){var t2=Math.round((w/r.v)*60); b+='<div class="hcr-item"><div class="hcr-val">'+fmt(t2)+'</div><div class="hcr-lab">'+r.l+'</div></div>';});
+    document.getElementById('hcr2-bd').innerHTML = b;
+  }
+
+  function hcCalcRev(){
+    var m = parseFloat(document.getElementById('hcMins').value)||0;
+    var s2 = parseFloat(document.getElementById('hcSecs').value)||0;
+    if(m===0&&s2===0){alert('Enter a time.');return;}
+    var tm = m+(s2/60), spd = sp['3'], words = Math.round(tm*spd);
+    var box = document.getElementById('hcr3');
+    box.classList.add('show');
+    document.getElementById('hcr3-main').textContent = words.toLocaleString() + ' words';
+    document.getElementById('hcr3-sub').textContent = 'For '+m+'m '+s2+'s @ '+spd+' WPM';
+    var rates = [{l:'110 WPM',v:110},{l:'130 WPM',v:130},{l:'150 WPM',v:150},{l:'238 WPM',v:238}];
+    var b = ''; rates.forEach(function(r){var w2=Math.round(tm*r.v); b+='<div class="hcr-item"><div class="hcr-val">'+w2.toLocaleString()+'</div><div class="hcr-lab">'+r.l+'</div></div>';});
+    document.getElementById('hcr3-bd').innerHTML = b;
+  }
+
+  function faqToggle(el){
+    var ans = el.nextElementSibling, isOpen = el.classList.contains('open');
+    document.querySelectorAll('.faq-question').forEach(function(q){q.classList.remove('open');});
+    document.querySelectorAll('.faq-answer').forEach(function(a){a.classList.remove('open');});
+    if(!isOpen){el.classList.add('open'); ans.classList.add('open');}
+  }
+</script>
+</body>
+</html>
