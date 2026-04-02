@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reading Time Calculator — How Long to Read Any Text Online</title>
+  <meta name="description" content="Free reading time calculator. How long does it take to read 1,000 words? Silently: 4m 12s. Aloud: 7m 41s. Covers 500 to 5,000 words with full reference table.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://wordstotime.netlify.app/word-to-reading-time/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wordstotime.netlify.app/word-to-reading-time/">
+  <meta property="og:title" content="Reading Time Calculator — How Long to Read Any Text Online">
+  <meta property="og:description" content="How long to read 1,000 words? Silently: 4 min 12 sec. Aloud: 7 min 41 sec. Free calculator with full table for 500–5,000 words.">
+  <meta property="og:image" content="https://wordstotime.netlify.app/og-image.png">
+  <meta property="og:site_name" content="Words to Time">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Reading Time Calculator">
+  <meta name="twitter:description" content="How long to read 1,000 words? Silently: 4m 12s. Aloud: 7m 41s. Free reading time calculator.">
+  <meta name="twitter:image" content="https://wordstotime.netlify.app/og-image.png">
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9275267797924945" crossorigin="anonymous"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Schema: WebApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Reading Time Calculator",
+    "url": "https://wordstotime.netlify.app/word-to-reading-time/",
+    "description": "Calculate how long it takes to read any text, silently or aloud. Covers 500 to 5,000 words with multiple reading speed settings.",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "All",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "featureList": [
+      "Silent reading time calculation",
+      "Reading aloud time calculation",
+      "Paste text to auto-count words",
+      "Reverse: time to word count",
+      "Multiple reading speed options"
+    ]
+  }
+  </script>
+
+  <!-- Schema: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://wordstotime.netlify.app/" },
+      { "@type": "ListItem", "position": 2, "name": "Reading Time Calculator", "item": "https://wordstotime.netlify.app/word-to-reading-time/" }
+    ]
+  }
+  </script>
+
+  <!-- Schema: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long does it take to read 1,000 words?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "1,000 words takes 4 minutes 12 seconds to read silently at an average reading speed of 238 WPM. Reading aloud at 130 WPM takes 7 minutes 41 seconds. A slow reader at 150 WPM (silent) takes about 6 minutes 40 seconds."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to read 2,000 words?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "2,000 words takes 8 minutes 24 seconds to read silently at average reading speed of 238 WPM. Reading aloud at 130 WPM takes 15 minutes 23 seconds. A fast reader at 350 WPM takes about 5 minutes 43 seconds."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to read 500 words?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "500 words takes 2 minutes 6 seconds to read silently at average reading speed of 238 WPM. Reading aloud takes 3 minutes 51 seconds at 130 WPM. This is the typical length of a short blog post or news article."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to read 3,000 words?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "3,000 words takes 12 minutes 36 seconds to read silently at 238 WPM. Reading aloud takes 23 minutes 4 seconds at 130 WPM. This is the typical length of a long-form article or detailed guide."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the average reading speed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The average silent reading speed for an adult is 238 WPM, based on research by the National Reading Panel. Reading aloud averages 130 WPM per ASHA. Speed readers can reach 700+ WPM. Children read at 75–150 WPM depending on age."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to read 1,500 words?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "1,500 words takes 6 minutes 18 seconds to read silently at 238 WPM. Reading aloud takes 11 minutes 32 seconds at 130 WPM. This is a typical length for a medium blog post or article."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to read 2,500 words?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "2,500 words takes 10 minutes 30 seconds to read silently at 238 WPM. Reading aloud at 130 WPM takes 19 minutes 14 seconds. This is common for research reports and detailed essays."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate reading time from word count?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use this formula: Reading Time (seconds) = Word Count ÷ WPM × 60. For silent reading use 238 WPM, for reading aloud use 130 WPM. Example: 1,000 ÷ 238 × 60 = 252 seconds = 4 minutes 12 seconds. Or use the free reading time calculator above."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ===== DESIGN SYSTEM — SAME ACROSS ALL PAGES ===== */
+    :root {
+      --primary:       #2563EB;
+      --primary-dark:  #1d4ed8;
+      --primary-light: #dbeafe;
+      --secondary:     #0ea5e9;
+      --dark:          #0f172a;
+      --dark-card:     #1e293b;
+      --dark-border:   #334155;
+      --bg:            #f1f5f9;
+      --white:         #ffffff;
+      --border:        #e2e8f0;
+      --text:          #1e293b;
+      --text-muted:    #64748b;
+      --text-light:    #94a3b8;
+      --success:       #10b981;
+      --success-light: #d1fae5;
+      --warning:       #f59e0b;
+      --warning-light: #fef3c7;
+      --teal:          #0d9488;
+      --teal-light:    #ccfbf1;
+      --radius:        12px;
+      --radius-sm:     8px;
+      --shadow:        0 1px 3px rgba(0,0,0,.1), 0 1px 2px rgba(0,0,0,.06);
+      --shadow-md:     0 4px 6px rgba(0,0,0,.07), 0 2px 4px rgba(0,0,0,.06);
+      --font:          'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --max-w:         1100px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.6; font-size: 16px; }
+    img { max-width: 100%; display: block; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* HEADER */
+    .site-header { background: var(--dark); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--dark-border); }
+    .header-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 20px; height: 62px; display: flex; align-items: center; justify-content: space-between; }
+    .site-logo { font-size: 1.2rem; font-weight: 800; color: #fff; text-decoration: none; display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+    .site-logo span.logo-icon { background: var(--primary); color: #fff; width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; }
+    .site-nav { display: flex; align-items: center; gap: 4px; }
+    .site-nav a { color: #cbd5e1; font-size: 0.875rem; font-weight: 500; padding: 6px 12px; border-radius: 6px; text-decoration: none; transition: all .15s; white-space: nowrap; }
+    .site-nav a:hover, .site-nav a.active { background: rgba(255,255,255,.1); color: #fff; }
+    .nav-cta { background: var(--primary) !important; color: #fff !important; margin-left: 8px; }
+    .nav-cta:hover { background: var(--primary-dark) !important; }
+    .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 6px; flex-direction: column; gap: 5px; }
+    .nav-toggle span { display: block; width: 22px; height: 2px; background: #fff; border-radius: 2px; transition: .3s; }
+    @media(max-width:768px){
+      .site-nav { display: none; position: absolute; top: 62px; left: 0; right: 0; background: var(--dark); flex-direction: column; padding: 12px 20px 20px; gap: 4px; border-bottom: 1px solid var(--dark-border); }
+      .site-nav.open { display: flex; }
+      .site-nav a { padding: 10px 12px; width: 100%; }
+      .nav-cta { margin-left: 0; margin-top: 8px; text-align: center; }
+      .nav-toggle { display: flex; }
+    }
+
+    /* BREADCRUMB */
+    .breadcrumb { background: var(--white); border-bottom: 1px solid var(--border); padding: 10px 20px; font-size: 0.8rem; color: var(--text-muted); }
+    .breadcrumb-inner { max-width: var(--max-w); margin: 0 auto; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+    .breadcrumb a { color: var(--text-muted); }
+    .breadcrumb a:hover { color: var(--primary); text-decoration: none; }
+    .breadcrumb-sep { color: var(--text-light); }
+    .breadcrumb-current { color: var(--text); font-weight: 500; }
+
+    /* LAYOUT */
+    .page-container { max-width: var(--max-w); margin: 0 auto; padding: 32px 20px 60px; display: grid; grid-template-columns: 1fr 300px; gap: 28px; align-items: start; }
+    .main-content { min-width: 0; }
+    .sidebar { display: flex; flex-direction: column; gap: 20px; }
+    @media(max-width:900px){ .page-container { grid-template-columns: 1fr; } .sidebar { order: 3; } }
+
+    /* CARDS */
+    .card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); }
+    .card + .card { margin-top: 20px; }
+
+    /* PAGE HERO */
+    .page-hero { background: linear-gradient(135deg, #064e3b 0%, #065f46 50%, #047857 100%); color: #fff; padding: 40px 20px; border-radius: var(--radius); margin-bottom: 20px; }
+    .page-hero h1 { font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 800; line-height: 1.2; margin-bottom: 10px; }
+    .page-hero .hero-sub { color: #a7f3d0; font-size: 1rem; margin-bottom: 24px; }
+
+    .quick-answers-row { display: flex; gap: 12px; flex-wrap: wrap; }
+    .quick-answer-box { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.15); border-radius: var(--radius-sm); padding: 14px 18px; flex: 1; min-width: 190px; }
+    .quick-answer-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: #a7f3d0; margin-bottom: 4px; }
+    .quick-answer-value { font-size: 1.5rem; font-weight: 800; color: #fff; line-height: 1.1; }
+    .quick-answer-note { font-size: 0.75rem; color: #a7f3d0; margin-top: 4px; }
+
+    /* MODE BADGES */
+    .mode-badge { display: inline-flex; align-items: center; gap: 5px; font-size: 0.72rem; font-weight: 700; padding: 3px 10px; border-radius: 20px; letter-spacing: .05em; text-transform: uppercase; }
+    .badge-silent { background: var(--primary-light); color: var(--primary-dark); }
+    .badge-aloud { background: var(--teal-light); color: var(--teal); }
+
+    /* CALCULATOR */
+    .calculator-section { margin-bottom: 24px; }
+    .calc-tabs { display: flex; gap: 0; border: 1px solid var(--border); border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 20px; }
+    .calc-tab { flex: 1; padding: 10px; font-size: 0.875rem; font-weight: 600; text-align: center; cursor: pointer; background: var(--white); color: var(--text-muted); border: none; transition: .15s; }
+    .calc-tab.active { background: var(--primary); color: #fff; }
+    .calc-tab:hover:not(.active) { background: var(--bg); }
+    .calc-panel { display: none; }
+    .calc-panel.active { display: block; }
+
+    .input-group { margin-bottom: 16px; }
+    .input-group label { display: block; font-size: 0.875rem; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+    .input-group input[type="number"], .input-group textarea { width: 100%; padding: 12px 14px; border: 1.5px solid var(--border); border-radius: var(--radius-sm); font-family: var(--font); font-size: 1rem; color: var(--text); background: var(--bg); transition: border-color .15s; }
+    .input-group input:focus, .input-group textarea:focus { outline: none; border-color: var(--primary); background: var(--white); }
+    .input-group textarea { min-height: 100px; resize: vertical; }
+    .input-note { font-size: 0.75rem; color: var(--text-muted); margin-top: 4px; }
+
+    /* READING SPEED SELECTOR */
+    .speed-selector { display: grid; grid-template-columns: repeat(4,1fr); gap: 8px; margin-bottom: 16px; }
+    .speed-btn { padding: 8px 6px; border: 1.5px solid var(--border); border-radius: var(--radius-sm); background: var(--white); cursor: pointer; text-align: center; transition: .15s; }
+    .speed-btn.active { border-color: var(--primary); background: var(--primary-light); }
+    .speed-btn:hover:not(.active) { border-color: var(--primary); }
+    .speed-btn .sb-label { font-size: 0.68rem; font-weight: 700; color: var(--text-muted); display: block; text-transform: uppercase; letter-spacing: .04em; }
+    .speed-btn .sb-value { font-size: 0.88rem; font-weight: 700; color: var(--text); display: block; }
+    .speed-btn.active .sb-label, .speed-btn.active .sb-value { color: var(--primary-dark); }
+
+    .custom-wpm-row { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; font-size: 0.875rem; color: var(--text-muted); }
+    .custom-wpm-row input { width: 80px; padding: 8px 10px; border: 1.5px solid var(--border); border-radius: var(--radius-sm); font-family: var(--font); font-size: 0.9rem; color: var(--text); text-align: center; }
+    .custom-wpm-row input:focus { outline: none; border-color: var(--primary); }
+
+    .calc-btn { width: 100%; padding: 13px; background: var(--primary); color: #fff; border: none; border-radius: var(--radius-sm); font-family: var(--font); font-size: 1rem; font-weight: 700; cursor: pointer; transition: background .15s; letter-spacing: .01em; }
+    .calc-btn:hover { background: var(--primary-dark); }
+
+    .result-box { display: none; margin-top: 16px; background: linear-gradient(135deg, #064e3b 0%, #1e293b 100%); border-radius: var(--radius-sm); padding: 20px; color: #fff; text-align: center; }
+    .result-box.visible { display: block; }
+    .result-primary { font-size: 2.2rem; font-weight: 800; color: #fff; line-height: 1; }
+    .result-label { font-size: 0.8rem; color: #a7f3d0; margin-bottom: 8px; text-transform: uppercase; letter-spacing: .08em; }
+    .result-breakdown { display: flex; justify-content: center; gap: 16px; margin-top: 14px; flex-wrap: wrap; }
+    .result-breakdown-item { text-align: center; }
+    .result-breakdown-item .rb-val { font-size: 0.95rem; font-weight: 700; color: #e2e8f0; }
+    .result-breakdown-item .rb-label { font-size: 0.68rem; color: #94a3b8; }
+
+    /* SECTION TITLE */
+    .section-title { font-size: 1.25rem; font-weight: 700; color: var(--text); margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+    .section-title::after { content: ''; flex: 1; height: 2px; background: var(--border); border-radius: 2px; }
+
+    /* TABLES */
+    .data-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+    .data-table thead tr { background: var(--dark); }
+    .data-table thead th { padding: 11px 12px; color: #e2e8f0; font-weight: 600; text-align: left; font-size: 0.78rem; text-transform: uppercase; letter-spacing: .05em; }
+    .data-table tbody tr { border-bottom: 1px solid var(--border); transition: background .1s; }
+    .data-table tbody tr:hover { background: var(--bg); }
+    .data-table tbody tr:last-child { border-bottom: none; }
+    .data-table tbody td { padding: 9px 12px; color: var(--text); }
+    .data-table tbody td:first-child { font-weight: 600; }
+    .data-table .silent-col { color: var(--primary-dark); font-weight: 600; background: rgba(37,99,235,.04); }
+    .data-table .aloud-col { color: var(--teal); font-weight: 600; background: rgba(13,148,136,.04); }
+    .data-table .highlight-row td { background: var(--primary-light) !important; font-weight: 700; }
+    .table-wrap { overflow-x: auto; border-radius: var(--radius-sm); border: 1px solid var(--border); }
+    .table-note { font-size: 0.75rem; color: var(--text-muted); margin-top: 8px; }
+    .col-legend { display: flex; gap: 16px; margin-bottom: 10px; font-size: 0.8rem; flex-wrap: wrap; }
+    .col-legend span { display: flex; align-items: center; gap: 6px; }
+    .legend-dot { width: 10px; height: 10px; border-radius: 50%; }
+
+    /* ANSWERS GRID */
+    .answers-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px,1fr)); gap: 12px; margin-top: 4px; }
+    .answer-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px; }
+    .answer-card .ac-words { font-size: 0.78rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 8px; }
+    .answer-card .ac-row { display: flex; justify-content: space-between; align-items: center; padding: 4px 0; border-bottom: 1px solid var(--border); font-size: 0.82rem; }
+    .answer-card .ac-row:last-of-type { border-bottom: none; }
+    .answer-card .ac-mode { color: var(--text-muted); }
+    .answer-card .ac-time-silent { color: var(--primary-dark); font-weight: 700; }
+    .answer-card .ac-time-aloud { color: var(--teal); font-weight: 700; }
+
+    /* INFO BOX */
+    .info-box { background: var(--primary-light); border-left: 4px solid var(--primary); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 14px 16px; font-size: 0.9rem; color: var(--dark); margin: 16px 0; }
+    .info-box strong { color: var(--primary-dark); }
+    .info-box-green { background: var(--teal-light); border-left-color: var(--teal); }
+    .info-box-green strong { color: var(--teal); }
+
+    /* READER PROFILES */
+    .profiles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); gap: 12px; }
+    .profile-card { border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 16px; background: var(--white); }
+    .profile-card .pc-tag { display: inline-block; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; padding: 3px 8px; border-radius: 20px; margin-bottom: 8px; }
+    .profile-card .pc-wpm { font-size: 1.15rem; font-weight: 800; color: var(--text); margin-bottom: 4px; }
+    .profile-card .pc-desc { font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; }
+    .tag-blue { background: var(--primary-light); color: var(--primary-dark); }
+    .tag-green { background: var(--success-light); color: #065f46; }
+    .tag-teal { background: var(--teal-light); color: var(--teal); }
+    .tag-amber { background: var(--warning-light); color: #92400e; }
+    .tag-purple { background: #ede9fe; color: #5b21b6; }
+
+    /* FAQ */
+    .faq-item { border: 1px solid var(--border); border-radius: var(--radius-sm); margin-bottom: 10px; overflow: hidden; }
+    .faq-question { padding: 15px 18px; font-weight: 600; font-size: 0.95rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--white); transition: background .15s; gap: 12px; }
+    .faq-question:hover { background: var(--bg); }
+    .faq-question.open { background: var(--primary-light); color: var(--primary-dark); border-bottom: 1px solid var(--border); }
+    .faq-icon { width: 20px; height: 20px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: var(--text-muted); transition: transform .2s; }
+    .faq-question.open .faq-icon { transform: rotate(45deg); color: var(--primary); }
+    .faq-answer { display: none; padding: 15px 18px; font-size: 0.9rem; line-height: 1.7; color: var(--text-muted); background: var(--white); }
+    .faq-answer.open { display: block; }
+    .faq-answer a { color: var(--primary); }
+
+    /* TOOLS GRID */
+    .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(175px,1fr)); gap: 10px; }
+    .tool-card { background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius-sm); padding: 14px; text-decoration: none; transition: all .15s; display: block; }
+    .tool-card:hover { border-color: var(--primary); box-shadow: var(--shadow-md); text-decoration: none; transform: translateY(-2px); }
+    .tool-card .tc-icon { font-size: 1.5rem; margin-bottom: 6px; }
+    .tool-card .tc-name { font-size: 0.85rem; font-weight: 700; color: var(--text); margin-bottom: 2px; }
+    .tool-card .tc-desc { font-size: 0.75rem; color: var(--text-muted); line-height: 1.4; }
+
+    /* SIDEBAR */
+    .sidebar-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); }
+    .sidebar-card h3 { font-size: 0.95rem; font-weight: 700; color: var(--text); margin-bottom: 14px; }
+    .sidebar-links { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .sidebar-links li a { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--text-muted); text-decoration: none; padding: 6px 8px; border-radius: 6px; transition: .15s; }
+    .sidebar-links li a:hover { background: var(--bg); color: var(--primary); text-decoration: none; }
+    .sl-icon { width: 20px; height: 20px; background: var(--primary-light); color: var(--primary); border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; flex-shrink: 0; }
+
+    .sidebar-quick-ref table { width: 100%; font-size: 0.8rem; border-collapse: collapse; }
+    .sidebar-quick-ref tr { border-bottom: 1px solid var(--border); }
+    .sidebar-quick-ref tr:last-child { border-bottom: none; }
+    .sidebar-quick-ref td { padding: 7px 4px; }
+    .sidebar-quick-ref td:first-child { color: var(--text-muted); }
+    .sidebar-quick-ref td.silent { color: var(--primary-dark); font-weight: 700; text-align: right; }
+    .sidebar-quick-ref td.aloud { color: var(--teal); font-weight: 700; text-align: right; }
+
+    /* AD */
+    .ad-unit { background: var(--white); border: 1px dashed var(--border); border-radius: var(--radius-sm); min-height: 90px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+
+    /* FOOTER */
+    .site-footer { background: var(--dark); color: #94a3b8; margin-top: 60px; }
+    .footer-top { max-width: var(--max-w); margin: 0 auto; padding: 40px 20px; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px; }
+    .footer-brand .site-logo { margin-bottom: 12px; }
+    .footer-brand p { font-size: 0.85rem; line-height: 1.7; }
+    .footer-col h4 { color: #e2e8f0; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 14px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-col ul li a { color: #94a3b8; font-size: 0.85rem; text-decoration: none; transition: color .15s; }
+    .footer-col ul li a:hover { color: #fff; }
+    .footer-bottom { border-top: 1px solid var(--dark-border); max-width: var(--max-w); margin: 0 auto; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; flex-wrap: wrap; gap: 8px; }
+    .footer-bottom a { color: #94a3b8; }
+    .footer-bottom a:hover { color: #fff; }
+    @media(max-width:768px){ .footer-top { grid-template-columns: 1fr 1fr; } .footer-brand { grid-column: 1/-1; } }
+    @media(max-width:480px){ .footer-top { grid-template-columns: 1fr; } .speed-selector { grid-template-columns: repeat(2,1fr); } .answers-grid { grid-template-columns: repeat(2,1fr); } .quick-answers-row { flex-direction: column; } }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><span class="logo-icon">&#9201;</span>WordsToTime</a>
+    <nav class="site-nav" id="mainNav">
+      <a href="/">Home</a>
+      <a href="/words-to-minutes/">Words to Min</a>
+      <a href="/word-to-reading-time/" class="active">Reading Time</a>
+      <a href="/word-to-speaking-time/">Speaking Time</a>
+      <a href="/word-to-speech-length/">Speech Length</a>
+      <a href="/practice-mode/" class="nav-cta">Practice Mode</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- BREADCRUMB -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">&#8250;</span>
+    <span class="breadcrumb-current">Reading Time Calculator</span>
+  </div>
+</nav>
+
+<!-- MAIN PAGE -->
+<div class="page-container">
+<main class="main-content">
+
+  <!-- HERO -->
+  <div class="page-hero">
+    <h1>Reading Time Calculator</h1>
+    <p class="hero-sub">Instantly find out how long it takes to read any text &#8212; silently or aloud</p>
+    <div class="quick-answers-row">
+      <div class="quick-answer-box">
+        <div class="quick-answer-label">&#128064; 1,000 Words — Silent</div>
+        <div class="quick-answer-value">4m 12s</div>
+        <div class="quick-answer-note">238 WPM avg &nbsp;&#183;&nbsp; Aloud: 7m 41s</div>
+      </div>
+      <div class="quick-answer-box">
+        <div class="quick-answer-label">&#128064; 2,000 Words — Silent</div>
+        <div class="quick-answer-value">8m 24s</div>
+        <div class="quick-answer-note">238 WPM avg &nbsp;&#183;&nbsp; Aloud: 15m 23s</div>
+      </div>
+      <div class="quick-answer-box">
+        <div class="quick-answer-label">&#128064; 3,000 Words — Silent</div>
+        <div class="quick-answer-value">12m 36s</div>
+        <div class="quick-answer-note">238 WPM avg &nbsp;&#183;&nbsp; Aloud: 23m 04s</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AD: TOP -->
+  <div class="ad-unit" style="margin-bottom:20px;">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9275267797924945" data-ad-slot="auto" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <!-- CALCULATOR -->
+  <div class="card calculator-section">
+    <div class="calc-tabs">
+      <button class="calc-tab active" onclick="switchTab('words',this)">Words &#8594; Time</button>
+      <button class="calc-tab" onclick="switchTab('paste',this)">Paste Text</button>
+      <button class="calc-tab" onclick="switchTab('reverse',this)">Time &#8594; Words</button>
+    </div>
+
+    <!-- Tab 1: Words to Time -->
+    <div class="calc-panel active" id="panel-words">
+      <div class="input-group">
+        <label for="wordCount">Word Count</label>
+        <input type="number" id="wordCount" placeholder="e.g. 1000" min="1" max="200000">
+        <div class="input-note">Enter total word count of your text</div>
+      </div>
+      <div class="input-group">
+        <label>Reading Speed</label>
+        <div class="speed-selector" id="speedSel1">
+          <div class="speed-btn" onclick="selectSpeed(150,'1',this)"><span class="sb-label">Slow Read</span><span class="sb-value">150 WPM</span></div>
+          <div class="speed-btn active" onclick="selectSpeed(238,'1',this)"><span class="sb-label">&#128064; Silent Avg</span><span class="sb-value">238 WPM</span></div>
+          <div class="speed-btn" onclick="selectSpeed(130,'1',this)"><span class="sb-label">&#128484; Aloud</span><span class="sb-value">130 WPM</span></div>
+          <div class="speed-btn" onclick="selectSpeed(350,'1',this)"><span class="sb-label">Fast Read</span><span class="sb-value">350 WPM</span></div>
+        </div>
+      </div>
+      <div class="custom-wpm-row">
+        <span>Custom WPM:</span>
+        <input type="number" id="customWpm1" placeholder="e.g. 200" min="50" max="1000" oninput="customSpeedChanged('1')">
+      </div>
+      <button class="calc-btn" onclick="calculateWords()">Calculate Reading Time</button>
+      <div class="result-box" id="result1">
+        <div class="result-label">Estimated Reading Time</div>
+        <div class="result-primary" id="result1-main">—</div>
+        <div class="result-breakdown" id="result1-breakdown"></div>
+      </div>
+    </div>
+
+    <!-- Tab 2: Paste Text -->
+    <div class="calc-panel" id="panel-paste">
+      <div class="input-group">
+        <label for="pasteText">Paste Your Text</label>
+        <textarea id="pasteText" placeholder="Paste your article, blog post, essay or any text here..."></textarea>
+        <div class="input-note">Word count is counted automatically from your pasted text</div>
+      </div>
+      <div class="input-group">
+        <label>Reading Speed</label>
+        <div class="speed-selector" id="speedSel2">
+          <div class="speed-btn" onclick="selectSpeed(150,'2',this)"><span class="sb-label">Slow Read</span><span class="sb-value">150 WPM</span></div>
+          <div class="speed-btn active" onclick="selectSpeed(238,'2',this)"><span class="sb-label">&#128064; Silent Avg</span><span class="sb-value">238 WPM</span></div>
+          <div class="speed-btn" onclick="selectSpeed(130,'2',this)"><span class="sb-label">&#128484; Aloud</span><span class="sb-value">130 WPM</span></div>
+          <div class="speed-btn" onclick="selectSpeed(350,'2',this)"><span class="sb-label">Fast Read</span><span class="sb-value">350 WPM</span></div>
+        </div>
+      </div>
+      <button class="calc-btn" onclick="calculatePaste()">Calculate from Text</button>
+      <div class="result-box" id="result2">
+        <div class="result-label">Reading Time</div>
+        <div class="result-primary" id="result2-main">—</div>
+        <div class="result-breakdown" id="result2-breakdown"></div>
+      </div>
+    </div>
+
+    <!-- Tab 3: Reverse -->
+    <div class="calc-panel" id="panel-reverse">
+      <div class="input-group">
+        <label for="revMinutes">Minutes</label>
+        <input type="number" id="revMinutes" placeholder="e.g. 5" min="0" max="300">
+      </div>
+      <div class="input-group">
+        <label for="revSeconds">Seconds (optional)</label>
+        <input type="number" id="revSeconds" placeholder="e.g. 30" min="0" max="59">
+      </div>
+      <div class="input-group">
+        <label>Reading Speed</label>
+        <div class="speed-selector" id="speedSel3">
+          <div class="speed-btn" onclick="selectSpeed(150,'3',this)"><span class="sb-label">Slow Read</span><span class="sb-value">150 WPM</span></div>
+          <div class="speed-btn active" onclick="selectSpeed(238,'3',this)"><span class="sb-label">&#128064; Silent Avg</span><span class="sb-value">238 WPM</span></div>
+          <div class="speed-btn" onclick="selectSpeed(130,'3',this)"><span class="sb-label">&#128484; Aloud</span><span class="sb-value">130 WPM</span></div>
+          <div class="speed-btn" onclick="selectSpeed(350,'3',this)"><span class="sb-label">Fast Read</span><span class="sb-value">350 WPM</span></div>
+        </div>
+      </div>
+      <button class="calc-btn" onclick="calculateReverse()">Calculate Word Count</button>
+      <div class="result-box" id="result3">
+        <div class="result-label">Required Word Count</div>
+        <div class="result-primary" id="result3-main">—</div>
+        <div class="result-breakdown" id="result3-breakdown"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- REFERENCE TABLE -->
+  <div class="card">
+    <h2 class="section-title">Reading Time Reference Table</h2>
+    <div class="col-legend">
+      <span><span class="legend-dot" style="background:#2563EB;"></span> Silent reading (238 WPM avg)</span>
+      <span><span class="legend-dot" style="background:#0d9488;"></span> Reading aloud (130 WPM avg)</span>
+    </div>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Word Count</th>
+            <th>&#128064; Silent (238)</th>
+            <th>Slow Silent (150)</th>
+            <th>&#128484; Aloud (130)</th>
+            <th>Fast Read (350)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>200 words</td><td class="silent-col">50s</td><td>1m 20s</td><td class="aloud-col">1m 32s</td><td>34s</td></tr>
+          <tr><td>300 words</td><td class="silent-col">1m 16s</td><td>2m 00s</td><td class="aloud-col">2m 18s</td><td>51s</td></tr>
+          <tr><td>400 words</td><td class="silent-col">1m 41s</td><td>2m 40s</td><td class="aloud-col">3m 05s</td><td>1m 09s</td></tr>
+          <tr><td>500 words</td><td class="silent-col">2m 06s</td><td>3m 20s</td><td class="aloud-col">3m 51s</td><td>1m 26s</td></tr>
+          <tr><td>600 words</td><td class="silent-col">2m 31s</td><td>4m 00s</td><td class="aloud-col">4m 37s</td><td>1m 43s</td></tr>
+          <tr><td>700 words</td><td class="silent-col">2m 57s</td><td>4m 40s</td><td class="aloud-col">5m 23s</td><td>2m 00s</td></tr>
+          <tr><td>800 words</td><td class="silent-col">3m 22s</td><td>5m 20s</td><td class="aloud-col">6m 09s</td><td>2m 17s</td></tr>
+          <tr><td>1,000 words</td><td class="silent-col" style="font-weight:800;color:#1d4ed8;">4m 12s</td><td>6m 40s</td><td class="aloud-col" style="font-weight:800;">7m 41s</td><td>2m 51s</td></tr>
+          <tr><td>1,200 words</td><td class="silent-col">5m 03s</td><td>8m 00s</td><td class="aloud-col">9m 14s</td><td>3m 26s</td></tr>
+          <tr><td>1,500 words</td><td class="silent-col">6m 18s</td><td>10m 00s</td><td class="aloud-col">11m 32s</td><td>4m 17s</td></tr>
+          <tr><td>2,000 words</td><td class="silent-col" style="font-weight:800;color:#1d4ed8;">8m 24s</td><td>13m 20s</td><td class="aloud-col" style="font-weight:800;">15m 23s</td><td>5m 43s</td></tr>
+          <tr><td>2,500 words</td><td class="silent-col">10m 30s</td><td>16m 40s</td><td class="aloud-col">19m 14s</td><td>7m 09s</td></tr>
+          <tr><td>3,000 words</td><td class="silent-col">12m 36s</td><td>20m 00s</td><td class="aloud-col">23m 04s</td><td>8m 34s</td></tr>
+          <tr><td>4,000 words</td><td class="silent-col">16m 48s</td><td>26m 40s</td><td class="aloud-col">30m 46s</td><td>11m 26s</td></tr>
+          <tr><td>5,000 words</td><td class="silent-col">21m 00s</td><td>33m 20s</td><td class="aloud-col">38m 28s</td><td>14m 17s</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">Formula: Time = Words &#247; WPM &#215; 60. Silent reading: 238 WPM per <a href="https://www.nichd.nih.gov/research/supported/nrp" target="_blank" rel="noopener">National Reading Panel</a>. Speaking aloud: 130 WPM per <a href="https://www.asha.org/public/speech/development/rate/" target="_blank" rel="noopener">ASHA</a>. Individual rates vary &#177;20%.</p>
+  </div>
+
+  <!-- AD: MID -->
+  <div class="ad-unit" style="margin:20px 0;">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9275267797924945" data-ad-slot="auto" data-ad-format="rectangle" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <!-- QUICK WORD COUNT ANSWERS -->
+  <div class="card">
+    <h2 class="section-title">Reading Time by Word Count</h2>
+    <p style="margin-bottom:16px;font-size:0.9rem;color:var(--text-muted);">Quick answers at average speeds — silent (238 WPM) vs reading aloud (130 WPM).</p>
+    <div class="answers-grid">
+      <div class="answer-card">
+        <div class="ac-words">500 Words</div>
+        <div class="ac-row"><span class="ac-mode">&#128064; Silent</span><span class="ac-time-silent">2m 06s</span></div>
+        <div class="ac-row"><span class="ac-mode">&#128484; Aloud</span><span class="ac-time-aloud">3m 51s</span></div>
+      </div>
+      <div class="answer-card">
+        <div class="ac-words">600 Words</div>
+        <div class="ac-row"><span class="ac-mode">&#128064; Silent</span><span class="ac-time-silent">2m 31s</span></div>
+        <div class="ac-row"><span class="ac-mode">&#128484; Aloud</span><span class="ac-time-aloud">4m 37s</span></div>
+      </div>
+      <div class="answer-card">
+        <div class="ac-words">700 Words</div>
+        <div class="ac-row"><span class="ac-mode">&#128064; Silent</span><span class="ac-time-silent">2m 57s</span></div>
+        <div class="ac-row"><span class="ac-mode">&#128484; Aloud</span><span class="ac-time-aloud">5m 23s</span></div>
+      </div>
+      <div class="answer-card">
+        <div class="ac-words">800 Words</div>
+        <div class="ac-row"><span class="ac-mode">&#128064; Silent</span><span class="ac-time-silent">3m 22s</span></div>
+        <div class="ac-row"><span class="ac-mode">&#128484; Aloud</span><span class="ac-time-aloud">6m 09s</span></div>
+      </div>
+      <div class="answer-card">
+        <div class="ac-words">1,000 Words</div>
+        <div class="ac-row"><span class="ac-mode">&#128064; Silent</span><span class="ac-time-silent" style="color:#1d4ed8;">4m 12s</span></div>
+        <div class="ac-row"><span class="ac-mode">&#128484; Aloud</span><span class="ac-time-aloud">7m 41s</span></div>
+      </div>
+      <div class="answer-card">
+        <div class="ac-words">1,200 Words</div>
+        <div class="ac-row"><span class="ac-mode">&#128064; Silent</span><span class="ac-time-silent">5m 03s</span></div>
+        <div class="ac-row"><span class="ac-mode">&#128484; Aloud</span><span class="ac-time-aloud">9m 14s</span></div>
+      </div>
+      <div class="answer-card">
+        <div class="ac-words">1,500 Words</div>
+        <div class="ac-row"><span class="ac-mode">&#128064; Silent</span><span class="ac-time-silent">6m 18s</span></div>
+        <div class="ac-row"><span class="ac-mode">&#128484; Aloud</span><span class="ac-time-aloud">11m 32s</span></div>
+      </div>
+      <div class="answer-card">
+        <div class="ac-words">2,000 Words</div>
+        <div class="ac-row"><span class="ac-mode">&#128064; Silent</span><span class="ac-time-silent" style="color:#1d4ed8;">8m 24s</span></div>
+        <div class="ac-row"><span class="ac-mode">&#128484; Aloud</span><span class="ac-time-aloud">15m 23s</span></div>
+      </div>
+      <div class="answer-card">
+        <div class="ac-words">2,500 Words</div>
+        <div class="ac-row"><span class="ac-mode">&#128064; Silent</span><span class="ac-time-silent">10m 30s</span></div>
+        <div class="ac-row"><span class="ac-mode">&#128484; Aloud</span><span class="ac-time-aloud">19m 14s</span></div>
+      </div>
+      <div class="answer-card">
+        <div class="ac-words">3,000 Words</div>
+        <div class="ac-row"><span class="ac-mode">&#128064; Silent</span><span class="ac-time-silent">12m 36s</span></div>
+        <div class="ac-row"><span class="ac-mode">&#128484; Aloud</span><span class="ac-time-aloud">23m 04s</span></div>
+      </div>
+      <div class="answer-card">
+        <div class="ac-words">4,000 Words</div>
+        <div class="ac-row"><span class="ac-mode">&#128064; Silent</span><span class="ac-time-silent">16m 48s</span></div>
+        <div class="ac-row"><span class="ac-mode">&#128484; Aloud</span><span class="ac-time-aloud">30m 46s</span></div>
+      </div>
+      <div class="answer-card">
+        <div class="ac-words">5,000 Words</div>
+        <div class="ac-row"><span class="ac-mode">&#128064; Silent</span><span class="ac-time-silent">21m 00s</span></div>
+        <div class="ac-row"><span class="ac-mode">&#128484; Aloud</span><span class="ac-time-aloud">38m 28s</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- READER SPEED PROFILES -->
+  <div class="card">
+    <h2 class="section-title">Reading Speed Profiles</h2>
+    <p style="margin-bottom:16px;font-size:0.9rem;color:var(--text-muted);">Your actual reading speed significantly affects the result. Use the right WPM for accurate estimates.</p>
+    <div class="profiles-grid">
+      <div class="profile-card"><span class="pc-tag tag-amber">Child Reader</span><div class="pc-wpm">75&#8211;150 WPM</div><div class="pc-desc">Elementary school students. Simple texts at 75 WPM, improving to 150 by grade 6.</div></div>
+      <div class="profile-card"><span class="pc-tag tag-blue">Reading Aloud</span><div class="pc-wpm">110&#8211;150 WPM</div><div class="pc-desc">Average speaking rate per ASHA. Use 130 WPM for speeches, audiobooks, and read-alouds.</div></div>
+      <div class="profile-card"><span class="pc-tag tag-teal">Average Adult</span><div class="pc-wpm">238 WPM</div><div class="pc-desc">Default silent reading speed per National Reading Panel. Most adults read at 200&#8211;280 WPM silently.</div></div>
+      <div class="profile-card"><span class="pc-tag tag-green">Proficient</span><div class="pc-wpm">280&#8211;350 WPM</div><div class="pc-desc">College graduates, avid readers. Good comprehension maintained at this speed.</div></div>
+      <div class="profile-card"><span class="pc-tag tag-purple">Speed Reader</span><div class="pc-wpm">700+ WPM</div><div class="pc-desc">Trained speed readers. Comprehension may drop below 500 WPM for complex content.</div></div>
+    </div>
+    <div class="info-box" style="margin-top:16px;">
+      <strong>Tip:</strong> Not sure of your reading speed? Take our free <a href="/reading-speed-test/">reading speed test</a> and get your personal WPM in 60 seconds. Then use that number in the custom WPM field above for perfectly accurate estimates.
+    </div>
+    <div class="info-box info-box-green">
+      <strong>For blog/newsletter writers:</strong> Use 238 WPM (silent) to estimate how long readers spend on your page. Medium and Dev.to display reading time based on this standard. A 2,000-word article shows as "8 min read."
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="card">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">How long does it take to read 1,000 words?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">1,000 words takes <strong>4 minutes 12 seconds</strong> to read silently at the average reading speed of 238 WPM. If you&#8217;re reading aloud at 130 WPM, it takes 7 minutes 41 seconds. A slow reader at 150 WPM will take about 6 minutes 40 seconds. Use the calculator above for your specific reading speed. See our <a href="/1000-words-to-minutes/">1,000 words to minutes page</a> for a detailed guide.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">How long does it take to read 2,000 words?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">2,000 words takes <strong>8 minutes 24 seconds</strong> to read silently at 238 WPM. Reading aloud takes 15 minutes 23 seconds at 130 WPM. A fast reader at 350 WPM takes about 5 minutes 43 seconds. This is a typical length for a long blog post or detailed how-to guide. See our <a href="/2000-words-to-minutes/">2,000 words to minutes guide</a>.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">How long does it take to read 500 words?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">500 words takes <strong>2 minutes 6 seconds</strong> to read silently at 238 WPM. Reading aloud takes 3 minutes 51 seconds at 130 WPM. This is the typical length of a short blog post, news article, or product description. See our <a href="/500-words-to-minutes/">500 words to minutes page</a>.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">How long does it take to read 3,000 words?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">3,000 words takes <strong>12 minutes 36 seconds</strong> silently at 238 WPM. Reading aloud takes 23 minutes 4 seconds at 130 WPM. This is common for long-form articles, case studies, and detailed guides. A fast reader (350 WPM) finishes in about 8 minutes 34 seconds.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">How long does it take to read 1,500 words?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">1,500 words takes <strong>6 minutes 18 seconds</strong> silently at 238 WPM. Reading aloud takes 11 minutes 32 seconds at 130 WPM. This is a typical medium-length blog post. See our <a href="/1500-words-to-minutes/">1,500 words to minutes guide</a>.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">How long does it take to read 2,500 words?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">2,500 words takes <strong>10 minutes 30 seconds</strong> silently at 238 WPM. Reading aloud takes 19 minutes 14 seconds at 130 WPM. Common for comprehensive articles and research summaries. See our <a href="/2500-words-to-minutes/">2,500 words to minutes guide</a>.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">What is the average reading speed?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">The average adult reads silently at <strong>238 WPM</strong>, based on research by the <a href="https://www.nichd.nih.gov/research/supported/nrp" target="_blank" rel="noopener">National Reading Panel</a>. Reading aloud averages 130 WPM per <a href="https://www.asha.org/public/speech/development/rate/" target="_blank" rel="noopener">ASHA</a>. Speed readers reach 700+ WPM. Children read 75&#8211;150 WPM. College graduates typically read 280&#8211;350 WPM silently.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">How do I calculate reading time from word count?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">Use the formula: <strong>Reading Time (seconds) = Word Count &#247; WPM &#215; 60</strong>. For silent reading use 238 WPM; for reading aloud use 130 WPM. Example: 1,000 words &#247; 238 &#215; 60 = 252 seconds = 4 minutes 12 seconds. Or just use the free calculator above for instant results.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">How long does it take to read 1,000 words out loud?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">Reading 1,000 words out loud takes <strong>7 minutes 41 seconds</strong> at the average speaking pace of 130 WPM. At a slow pace of 110 WPM it takes 9 minutes 5 seconds. This is relevant for audiobooks, speeches, and classroom read-alouds. Use our <a href="/word-to-speaking-time/">speaking time calculator</a> for speech-specific estimates.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">How long does it take to read 2,000 words out loud?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">Reading 2,000 words out loud takes <strong>15 minutes 23 seconds</strong> at 130 WPM average speaking pace. At slow pace (110 WPM): 18 minutes 11 seconds. For presentations, always add 10% buffer time for pauses and transitions.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">How long does it take to read 4,000 words?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">4,000 words takes <strong>16 minutes 48 seconds</strong> silently at 238 WPM. Reading aloud at 130 WPM takes 30 minutes 46 seconds. This is typical for academic papers, comprehensive guides, and long-form sales pages.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">How long does it take to read 5,000 words?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">5,000 words takes <strong>21 minutes exactly</strong> silently at 238 WPM. Reading aloud takes 38 minutes 28 seconds at 130 WPM. This is the typical length of a detailed white paper, comprehensive tutorial, or short eBook chapter.</div>
+    </div>
+  </div>
+
+  <!-- RELATED TOOLS -->
+  <div class="card">
+    <h2 class="section-title">Related Tools</h2>
+    <div class="tools-grid">
+      <a href="/words-to-minutes/" class="tool-card"><div class="tc-icon">&#9201;</div><div class="tc-name">Words to Minutes</div><div class="tc-desc">Convert word count to speaking time</div></a>
+      <a href="/word-to-speaking-time/" class="tool-card"><div class="tc-icon">&#127908;</div><div class="tc-name">Speaking Time</div><div class="tc-desc">Calculate speech duration precisely</div></a>
+      <a href="/word-to-speech-length/" class="tool-card"><div class="tc-icon">&#128203;</div><div class="tc-name">Speech Length</div><div class="tc-desc">Check if your speech hits the mark</div></a>
+      <a href="/reading-speed-test/" class="tool-card"><div class="tc-icon">&#128337;</div><div class="tc-name">Speed Test</div><div class="tc-desc">Find your personal reading WPM</div></a>
+      <a href="/practice-mode/" class="tool-card"><div class="tc-icon">&#9654;</div><div class="tc-name">Practice Mode</div><div class="tc-desc">Live timer while reading aloud</div></a>
+      <a href="/word-to-public-speaking-time/" class="tool-card"><div class="tc-icon">&#127919;</div><div class="tc-name">Public Speaking</div><div class="tc-desc">Optimized for formal delivery</div></a>
+      <a href="/5-minute-speech-word-count/" class="tool-card"><div class="tc-icon">&#53;</div><div class="tc-name">5-Min Speech</div><div class="tc-desc">Exact word count for 5 minutes</div></a>
+      <a href="/speaking-words-per-minute/" class="tool-card"><div class="tc-icon">&#128202;</div><div class="tc-name">WPM Guide</div><div class="tc-desc">Speaking pace reference guide</div></a>
+    </div>
+  </div>
+
+</main>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="sidebar-card sidebar-quick-ref">
+    <h3>&#9889; Quick Reference</h3>
+    <table>
+      <thead><tr><th style="font-size:.7rem;color:var(--text-muted);">Words</th><th style="font-size:.7rem;color:var(--primary-dark);text-align:right;">&#128064; Silent</th><th style="font-size:.7rem;color:var(--teal);text-align:right;">&#128484; Aloud</th></tr></thead>
+      <tbody>
+        <tr><td>200</td><td class="silent">50s</td><td class="aloud">1m 32s</td></tr>
+        <tr><td>500</td><td class="silent">2m 06s</td><td class="aloud">3m 51s</td></tr>
+        <tr><td>750</td><td class="silent">3m 09s</td><td class="aloud">5m 46s</td></tr>
+        <tr><td>1,000</td><td class="silent">4m 12s</td><td class="aloud">7m 41s</td></tr>
+        <tr><td>1,500</td><td class="silent">6m 18s</td><td class="aloud">11m 32s</td></tr>
+        <tr><td>2,000</td><td class="silent">8m 24s</td><td class="aloud">15m 23s</td></tr>
+        <tr><td>2,500</td><td class="silent">10m 30s</td><td class="aloud">19m 14s</td></tr>
+        <tr><td>3,000</td><td class="silent">12m 36s</td><td class="aloud">23m 04s</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:.7rem;color:var(--text-light);margin-top:10px;">Silent: 238 WPM | Aloud: 130 WPM</p>
+  </div>
+
+  <div class="ad-unit" style="min-height:250px;">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9275267797924945" data-ad-slot="auto" data-ad-format="rectangle" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <div class="sidebar-card">
+    <h3>&#128203; Word Count Guides</h3>
+    <ul class="sidebar-links">
+      <li><a href="/500-words-to-minutes/"><span class="sl-icon">500</span>500 Words Guide</a></li>
+      <li><a href="/800-words-to-minutes/"><span class="sl-icon">800</span>800 Words Guide</a></li>
+      <li><a href="/1000-words-to-minutes/"><span class="sl-icon">1k</span>1,000 Words Guide</a></li>
+      <li><a href="/1500-words-to-minutes/"><span class="sl-icon">1.5k</span>1,500 Words Guide</a></li>
+      <li><a href="/2000-words-to-minutes/"><span class="sl-icon">2k</span>2,000 Words Guide</a></li>
+      <li><a href="/2500-words-to-minutes/"><span class="sl-icon">2.5k</span>2,500 Words Guide</a></li>
+    </ul>
+  </div>
+
+  <div class="ad-unit" style="min-height:250px;">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9275267797924945" data-ad-slot="auto" data-ad-format="rectangle" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <div class="sidebar-card">
+    <h3>&#127760; Other Languages</h3>
+    <ul class="sidebar-links">
+      <li><a href="/palabras-a-minutos/"><span class="sl-icon">ES</span>Palabras a Minutos</a></li>
+      <li><a href="/lesezeit-rechner/"><span class="sl-icon">DE</span>Lesezeit Rechner</a></li>
+    </ul>
+  </div>
+</aside>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="/" class="site-logo"><span class="logo-icon">&#9201;</span>WordsToTime</a>
+      <p>Free tools to convert word count to speaking time, reading time, and speech duration. Used by speakers, bloggers, students, and presenters worldwide.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Calculators</h4>
+      <ul>
+        <li><a href="/words-to-minutes/">Words to Minutes</a></li>
+        <li><a href="/word-to-reading-time/">Reading Time</a></li>
+        <li><a href="/word-to-speaking-time/">Speaking Time</a></li>
+        <li><a href="/word-to-speech-length/">Speech Length</a></li>
+        <li><a href="/word-to-typing-time/">Typing Time</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Speech Guides</h4>
+      <ul>
+        <li><a href="/3-minute-speech-word-count/">3-Min Speech</a></li>
+        <li><a href="/5-minute-speech-word-count/">5-Min Speech</a></li>
+        <li><a href="/10-minute-speech-word-count/">10-Min Speech</a></li>
+        <li><a href="/speaking-words-per-minute/">WPM Guide</a></li>
+        <li><a href="/practice-mode/">Practice Mode</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/privacy/">Privacy Policy</a></li>
+        <li><a href="/terms/">Terms of Use</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&#169; 2026 WordsToTime.netlify.app &#8212; Free Speech &amp; Reading Time Tools</span>
+    <span><a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a></span>
+  </div>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+  var speed = { '1': 238, '2': 238, '3': 238 };
+
+  document.getElementById('navToggle').addEventListener('click', function(){
+    document.getElementById('mainNav').classList.toggle('open');
+  });
+
+  function switchTab(tab, btn) {
+    document.querySelectorAll('.calc-tab').forEach(function(t){ t.classList.remove('active'); });
+    document.querySelectorAll('.calc-panel').forEach(function(p){ p.classList.remove('active'); });
+    btn.classList.add('active');
+    document.getElementById('panel-' + tab).classList.add('active');
+  }
+
+  function selectSpeed(value, panel, el) {
+    speed[panel] = value;
+    var sel = el.closest('.speed-selector');
+    sel.querySelectorAll('.speed-btn').forEach(function(b){ b.classList.remove('active'); });
+    el.classList.add('active');
+    var cw = document.getElementById('customWpm' + panel);
+    if (cw) cw.value = '';
+  }
+
+  function customSpeedChanged(panel) {
+    var val = parseInt(document.getElementById('customWpm' + panel).value);
+    if (val >= 50 && val <= 1000) {
+      speed[panel] = val;
+      document.querySelectorAll('#speedSel' + panel + ' .speed-btn').forEach(function(b){ b.classList.remove('active'); });
+    }
+  }
+
+  function fmtTime(sec) {
+    if (sec < 60) return sec + 's';
+    var m = Math.floor(sec / 60), s = sec % 60;
+    return m + 'm ' + (s < 10 ? '0' + s : s) + 's';
+  }
+
+  function calculateWords() {
+    var words = parseInt(document.getElementById('wordCount').value);
+    if (!words || words < 1) { alert('Please enter a valid word count.'); return; }
+    var sp = speed['1'];
+    var totalSec = Math.round((words / sp) * 60);
+    var box = document.getElementById('result1');
+    box.classList.add('visible');
+    document.getElementById('result1-main').textContent = fmtTime(totalSec) + ' (' + words.toLocaleString() + ' words @ ' + sp + ' WPM)';
+    var rates = [{l:'Slow Read (150 WPM)',v:150},{l:'\u{1F440} Silent Avg (238 WPM)',v:238},{l:'\u{1F4AC} Aloud (130 WPM)',v:130},{l:'Fast Read (350 WPM)',v:350}];
+    var b = '';
+    rates.forEach(function(r){
+      var t = Math.round((words/r.v)*60);
+      b += '<div class="result-breakdown-item"><div class="rb-val">' + fmtTime(t) + '</div><div class="rb-label">' + r.l + '</div></div>';
+    });
+    document.getElementById('result1-breakdown').innerHTML = b;
+  }
+
+  function calculatePaste() {
+    var text = document.getElementById('pasteText').value.trim();
+    if (!text) { alert('Please paste some text first.'); return; }
+    var words = text.split(/\s+/).filter(function(w){ return w.length > 0; }).length;
+    var sp = speed['2'];
+    var totalSec = Math.round((words / sp) * 60);
+    var box = document.getElementById('result2');
+    box.classList.add('visible');
+    document.getElementById('result2-main').textContent = fmtTime(totalSec) + ' (' + words.toLocaleString() + ' words)';
+    var rates = [{l:'Slow Read (150 WPM)',v:150},{l:'Silent Avg (238 WPM)',v:238},{l:'Aloud (130 WPM)',v:130},{l:'Fast Read (350 WPM)',v:350}];
+    var b = '';
+    rates.forEach(function(r){
+      var t = Math.round((words/r.v)*60);
+      b += '<div class="result-breakdown-item"><div class="rb-val">' + fmtTime(t) + '</div><div class="rb-label">' + r.l + '</div></div>';
+    });
+    document.getElementById('result2-breakdown').innerHTML = b;
+  }
+
+  function calculateReverse() {
+    var mins = parseFloat(document.getElementById('revMinutes').value) || 0;
+    var secs = parseFloat(document.getElementById('revSeconds').value) || 0;
+    if (mins === 0 && secs === 0) { alert('Please enter a time.'); return; }
+    var totalMins = mins + (secs / 60);
+    var sp = speed['3'];
+    var words = Math.round(totalMins * sp);
+    var box = document.getElementById('result3');
+    box.classList.add('visible');
+    document.getElementById('result3-main').textContent = words.toLocaleString() + ' words @ ' + sp + ' WPM';
+    var rates = [{l:'Slow Read (150)',v:150},{l:'Silent Avg (238)',v:238},{l:'Aloud (130)',v:130},{l:'Fast Read (350)',v:350}];
+    var b = '';
+    rates.forEach(function(r){
+      var w = Math.round(totalMins * r.v);
+      b += '<div class="result-breakdown-item"><div class="rb-val">' + w.toLocaleString() + '</div><div class="rb-label">' + r.l + '</div></div>';
+    });
+    document.getElementById('result3-breakdown').innerHTML = b;
+  }
+
+  function toggleFaq(el) {
+    var ans = el.nextElementSibling;
+    var isOpen = el.classList.contains('open');
+    document.querySelectorAll('.faq-question').forEach(function(q){ q.classList.remove('open'); });
+    document.querySelectorAll('.faq-answer').forEach(function(a){ a.classList.remove('open'); });
+    if (!isOpen) { el.classList.add('open'); ans.classList.add('open'); }
+  }
+
+  document.getElementById('wordCount') && document.getElementById('wordCount').addEventListener('keydown', function(e){ if(e.key==='Enter') calculateWords(); });
+</script>
+</body>
+</html>
