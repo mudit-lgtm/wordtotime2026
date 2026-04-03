@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WPM Calculator — Words Per Minute & Typing Time [Free]</title>
+  <meta name="description" content="Free WPM calculator. Enter word count → get typing time instantly, OR enter words typed ÷ minutes → find your WPM. Includes typing speed reference table and how-long-to-type guide for any word count.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://wordstotime.netlify.app/word-to-typing-time/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wordstotime.netlify.app/word-to-typing-time/">
+  <meta property="og:title" content="WPM Calculator — Words Per Minute & Typing Time Estimator [Free]">
+  <meta property="og:description" content="Calculate typing time from word count, OR find your WPM from words ÷ minutes. Free, instant, no signup.">
+  <meta property="og:image" content="https://wordstotime.netlify.app/og-image.png">
+  <meta property="og:site_name" content="Words to Time">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="WPM Calculator — Words Per Minute & Typing Time Estimator">
+  <meta name="twitter:description" content="Calculate typing time from word count OR find your WPM. Free online tool, instant results.">
+  <meta name="twitter:image" content="https://wordstotime.netlify.app/og-image.png">
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9275267797924945" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"WPM Calculator — Words Per Minute & Typing Time Estimator","description":"Free dual-mode WPM calculator. Enter word count to get typing time at any WPM, or enter words typed and minutes to calculate your personal WPM. Includes GWAM calculator and handwriting speed estimator.","url":"https://wordstotime.netlify.app/word-to-typing-time/","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"Words to Time","url":"https://wordstotime.netlify.app/"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://wordstotime.netlify.app/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://wordstotime.netlify.app/words-to-minutes/"},{"@type":"ListItem","position":3,"name":"WPM Calculator","item":"https://wordstotime.netlify.app/word-to-typing-time/"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"How do you calculate WPM (words per minute) typing?","acceptedAnswer":{"@type":"Answer","text":"To calculate WPM (words per minute): divide the total number of words typed by the number of minutes taken. Formula: WPM = Words Typed ÷ Minutes. Example: if you typed 250 words in 5 minutes, your WPM = 250 ÷ 5 = 50 WPM. For GWAM (Gross Words A Minute), most typing tests count every 5 characters as one 'word' — so GWAM = (Total Characters ÷ 5) ÷ Minutes. Use the WPM Calculator above to find your speed instantly."}},
+    {"@type":"Question","name":"How long does it take to type 1000 words?","acceptedAnswer":{"@type":"Answer","text":"At the average typing speed of 40 WPM it takes 25 minutes to type 1,000 words. At 60 WPM (intermediate): 16 minutes 40 seconds. At 80 WPM (fast typist): 12 minutes 30 seconds. At 100 WPM (expert): 10 minutes exactly. These times are for pure typing speed — writing/composing from scratch takes significantly longer (see the writing time section below)."}},
+    {"@type":"Question","name":"What is a good WPM for typing?","acceptedAnswer":{"@type":"Answer","text":"A good WPM for typing depends on your context. The average person types 40 WPM. A good office typist targets 60–75 WPM. Professional typists and data-entry workers aim for 80–100 WPM. Touch-typists with proper technique average 70–80 WPM. Anything above 100 WPM is considered expert level. The world record is 212 WPM (Barbara Blackburn, 2005). For most professional purposes, 60 WPM is the standard benchmark."}},
+    {"@type":"Question","name":"How long does it take to type 500 words?","acceptedAnswer":{"@type":"Answer","text":"At 40 WPM (average): 12 minutes 30 seconds to type 500 words. At 60 WPM: 8 minutes 20 seconds. At 80 WPM: 6 minutes 15 seconds. At 100 WPM: 5 minutes exactly. Note: these are pure typing times. If you are composing (thinking + typing), expect the actual writing time to be 3–5× longer depending on subject complexity."}},
+    {"@type":"Question","name":"How long does it take to type 200 words?","acceptedAnswer":{"@type":"Answer","text":"At 40 WPM (average): 5 minutes to type 200 words. At 60 WPM: 3 minutes 20 seconds. At 80 WPM: 2 minutes 30 seconds. At 100 WPM: 2 minutes exactly. Use the calculator above for any word count and custom WPM rate."}},
+    {"@type":"Question","name":"What is GWAM in typing?","acceptedAnswer":{"@type":"Answer","text":"GWAM stands for Gross Words A Minute — the raw typing speed without subtracting errors. It is calculated as: GWAM = (Total Keystrokes ÷ 5) ÷ Minutes. Most standardised typing tests (including school tests) count every 5 characters (including spaces) as one 'word'. Net WPM (NWAM) subtracts error penalties. For most real-world purposes, WPM and GWAM are used interchangeably when error rates are low."}}
+  ]}
+  </script>
+
+  <style>
+    :root{--primary:#d97706;--primary-dark:#b45309;--primary-light:#fef3c7;--dark:#0f172a;--dark-card:#1e293b;--dark-border:#334155;--bg:#fffbeb;--white:#ffffff;--border:#e2e8f0;--text:#1e293b;--text-muted:#64748b;--text-light:#94a3b8;--success:#16a34a;--success-light:#dcfce7;--warning:#f59e0b;--warning-light:#fef9c7;--danger:#dc2626;--danger-light:#fee2e2;--cyan:#0891b2;--cyan-light:#cffafe;--green:#059669;--green-light:#d1fae5;--indigo:#4f46e5;--indigo-light:#ede9fe;--orange:#ea580c;--orange-light:#ffedd5;--radius:12px;--radius-sm:8px;--shadow:0 1px 3px rgba(0,0,0,.1),0 1px 2px rgba(0,0,0,.06);--font:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;--max-w:1100px}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6;font-size:16px}
+    a{color:var(--primary-dark);text-decoration:none}a:hover{text-decoration:underline}
+
+    .site-header{background:var(--dark);position:sticky;top:0;z-index:100;border-bottom:1px solid var(--dark-border)}
+    .header-inner{max-width:var(--max-w);margin:0 auto;padding:0 20px;height:62px;display:flex;align-items:center;justify-content:space-between}
+    .site-logo{font-size:1.2rem;font-weight:800;color:#fff;text-decoration:none;display:flex;align-items:center;gap:8px}
+    .logo-icon{background:var(--primary);color:#fff;width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.9rem}
+    .site-nav{display:flex;align-items:center;gap:4px}
+    .site-nav a{color:#cbd5e1;font-size:.875rem;font-weight:500;padding:6px 12px;border-radius:6px;text-decoration:none;transition:.15s;white-space:nowrap}
+    .site-nav a:hover,.site-nav a.active{background:rgba(255,255,255,.1);color:#fff}
+    .nav-cta{background:var(--primary)!important;color:#fff!important;margin-left:8px}
+    .nav-cta:hover{background:var(--primary-dark)!important}
+    .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:6px;flex-direction:column;gap:5px}
+    .nav-toggle span{display:block;width:22px;height:2px;background:#fff;border-radius:2px}
+    @media(max-width:768px){.site-nav{display:none;position:absolute;top:62px;left:0;right:0;background:var(--dark);flex-direction:column;padding:12px 20px 20px;gap:4px;border-bottom:1px solid var(--dark-border)}.site-nav.open{display:flex}.site-nav a{padding:10px 12px;width:100%}.nav-cta{margin-left:0;margin-top:8px}.nav-toggle{display:flex}}
+
+    .breadcrumb{background:var(--white);border-bottom:1px solid var(--border);padding:10px 20px;font-size:.8rem;color:var(--text-muted)}
+    .breadcrumb-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+    .breadcrumb a{color:var(--text-muted)}.breadcrumb a:hover{color:var(--primary)}
+    .breadcrumb-sep{color:var(--text-light)}.breadcrumb-current{color:var(--text);font-weight:500}
+
+    .page-container{max-width:var(--max-w);margin:0 auto;padding:32px 20px 60px;display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start}
+    .main-content{min-width:0}.sidebar{display:flex;flex-direction:column;gap:20px}
+    @media(max-width:900px){.page-container{grid-template-columns:1fr}.sidebar{order:3}}
+
+    /* HERO */
+    .page-hero{background:linear-gradient(135deg,#451a03 0%,#78350f 50%,#d97706 100%);color:#fff;padding:36px 24px;border-radius:var(--radius);margin-bottom:20px;position:relative;overflow:hidden}
+    .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 30%,rgba(251,191,36,.25) 0%,transparent 65%);pointer-events:none}
+    .page-hero h1{font-size:clamp(1.4rem,3.5vw,1.9rem);font-weight:800;line-height:1.25;margin-bottom:8px;position:relative}
+    .page-hero .hero-sub{color:#fde68a;font-size:.95rem;margin-bottom:0;position:relative}
+
+    /* CARDS */
+    .card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);margin-bottom:20px}
+    .section-title{font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+    .section-title::after{content:'';flex:1;height:2px;background:var(--border);border-radius:2px}
+
+    /* TAB SWITCHER */
+    .tab-bar{display:flex;background:#f1f5f9;border-radius:var(--radius-sm);padding:4px;gap:4px;margin-bottom:20px}
+    .tab-btn{flex:1;padding:10px;border:none;border-radius:6px;font-family:var(--font);font-size:.875rem;font-weight:600;cursor:pointer;background:transparent;color:var(--text-muted);transition:.15s;text-align:center}
+    .tab-btn.active{background:var(--white);color:var(--text);box-shadow:0 1px 3px rgba(0,0,0,.12)}
+
+    /* CALC FIELDS */
+    .calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    @media(max-width:580px){.calc-grid{grid-template-columns:1fr}}
+    .field-label{font-size:.8rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+    .calc-input{width:100%;padding:11px 14px;border:2px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font);font-size:1rem;transition:.15s;background:var(--white)}
+    .calc-input:focus{outline:none;border-color:var(--primary)}
+    .calc-select{width:100%;padding:11px 14px;border:2px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font);font-size:.95rem;background:var(--white);cursor:pointer;transition:.15s}
+    .calc-select:focus{outline:none;border-color:var(--primary)}
+    .calc-btn{width:100%;padding:14px;background:var(--primary);color:#fff;border:none;border-radius:var(--radius-sm);font-family:var(--font);font-size:1rem;font-weight:700;cursor:pointer;transition:.15s;margin-top:4px}
+    .calc-btn:hover{background:var(--primary-dark)}
+
+    /* RESULTS */
+    .result-box{display:none;border-radius:var(--radius);padding:24px;text-align:center;margin-top:16px}
+    .result-box.show{display:block}
+    .result-box.time-result{background:linear-gradient(135deg,#451a03,#92400e)}
+    .result-box.wpm-result{background:linear-gradient(135deg,#064e3b,#059669)}
+    .result-time{font-size:3.5rem;font-weight:800;line-height:1;color:#fff}
+    .result-sub{font-size:.9rem;color:rgba(255,255,255,.75);margin-top:6px}
+    .result-pills{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+    .result-pill{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:99px;padding:6px 14px;font-size:.8rem;font-weight:600;color:rgba(255,255,255,.9)}
+
+    /* WPM SPEED METER */
+    .speed-meter{margin:16px 0;background:#f1f5f9;border-radius:var(--radius-sm);padding:14px}
+    .speed-bar-wrap{background:#e2e8f0;border-radius:99px;height:14px;margin:8px 0;overflow:hidden;position:relative}
+    .speed-bar{height:100%;border-radius:99px;transition:width .6s ease;background:linear-gradient(90deg,#ef4444,#f59e0b,#22c55e)}
+    .speed-labels{display:flex;justify-content:space-between;font-size:.7rem;color:var(--text-muted);font-weight:600}
+    .speed-badge{display:inline-block;background:var(--primary);color:#fff;border-radius:99px;padding:3px 12px;font-size:.8rem;font-weight:700;margin-top:6px}
+
+    /* INFO BOXES */
+    .info-box{border-left:4px solid var(--primary);background:var(--primary-light);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:12px 16px;font-size:.88rem;margin:12px 0;color:var(--dark)}
+    .info-box strong{color:var(--primary-dark)}
+    .info-box.green{background:var(--green-light);border-color:var(--green)}.info-box.green strong{color:#065f46}
+    .info-box.cyan{background:var(--cyan-light);border-color:var(--cyan)}.info-box.cyan strong{color:#155e75}
+    .info-box.indigo{background:var(--indigo-light);border-color:var(--indigo)}.info-box.indigo strong{color:var(--indigo)}
+    .info-box.danger{background:var(--danger-light);border-color:var(--danger)}.info-box.danger strong{color:var(--danger)}
+
+    /* TABLES */
+    .table-wrap{overflow-x:auto;border-radius:var(--radius-sm);border:1px solid var(--border)}
+    .data-table{width:100%;border-collapse:collapse;font-size:.875rem}
+    .data-table thead tr{background:var(--dark)}
+    .data-table thead th{padding:10px 12px;color:#e2e8f0;font-weight:600;text-align:left;font-size:.78rem;text-transform:uppercase;letter-spacing:.05em}
+    .data-table tbody tr{border-bottom:1px solid var(--border);transition:background .1s}
+    .data-table tbody tr:hover{background:#fffbeb}
+    .data-table tbody tr:last-child{border-bottom:none}
+    .data-table td{padding:9px 12px}
+    .data-table td:first-child{font-weight:600}
+    .highlight-row td{background:var(--primary-light);font-weight:700;color:var(--primary-dark)}
+
+    /* WPM CARDS */
+    .wpm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:16px}
+    .wpm-card{border-radius:var(--radius-sm);padding:14px;border:1.5px solid var(--border);text-align:center;background:var(--white)}
+    .wpm-card.avg{background:var(--primary-light);border-color:var(--primary)}
+    .wpm-num{font-size:1.8rem;font-weight:800;color:var(--primary-dark);line-height:1}
+    .wpm-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);margin-top:4px}
+    .wpm-note{font-size:.72rem;color:var(--text-light);margin-top:2px}
+
+    /* FAQ */
+    .faq-item{border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:10px;overflow:hidden}
+    .faq-question{padding:14px 18px;font-weight:600;font-size:.95rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:var(--white);transition:.15s;gap:12px}
+    .faq-question:hover{background:var(--bg)}
+    .faq-question.open{background:var(--primary-light);color:var(--primary-dark);border-bottom:1px solid #fde68a}
+    .faq-icon{font-size:1.2rem;color:var(--text-muted);transition:transform .2s;flex-shrink:0}
+    .faq-question.open .faq-icon{transform:rotate(45deg);color:var(--primary)}
+    .faq-answer{display:none;padding:14px 18px;font-size:.9rem;line-height:1.75;color:var(--text-muted);background:var(--white)}
+    .faq-answer.open{display:block}
+    .faq-answer a{color:var(--primary-dark)}
+
+    /* PROSE */
+    .prose{font-size:.92rem;color:var(--text-muted);line-height:1.8}
+    .prose p{margin-bottom:12px}.prose strong{color:var(--text)}.prose a{color:var(--primary-dark)}
+    .prose h3{font-size:1rem;font-weight:700;color:var(--text);margin:16px 0 8px}
+    .prose ul{padding-left:20px;margin-bottom:12px}.prose ul li{margin-bottom:4px}
+    .prose ol{padding-left:20px;margin-bottom:12px}.prose ol li{margin-bottom:4px}
+    .formula-box{background:#0f172a;color:#fde68a;border-radius:var(--radius-sm);padding:14px 18px;font-family:monospace;font-size:1rem;font-weight:700;text-align:center;margin:12px 0;letter-spacing:.04em}
+
+    /* AD */
+    .ad-unit{background:var(--white);border:1px dashed var(--border);border-radius:var(--radius-sm);min-height:90px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+
+    /* SIDEBAR */
+    .sidebar-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+    .sidebar-card h3{font-size:.95rem;font-weight:700;color:var(--text);margin-bottom:14px}
+    .ref-table{width:100%;font-size:.82rem;border-collapse:collapse}
+    .ref-table tr{border-bottom:1px solid var(--border)}.ref-table tr:last-child{border-bottom:none}
+    .ref-table td{padding:7px 4px}.ref-table td:last-child{font-weight:700;text-align:right;color:var(--primary-dark)}
+    .ref-highlight td{background:var(--primary-light);font-weight:800}
+    .sidebar-links{list-style:none;display:flex;flex-direction:column;gap:7px}
+    .sidebar-links li a{display:flex;align-items:center;gap:8px;font-size:.84rem;color:var(--text-muted);text-decoration:none;padding:6px 8px;border-radius:6px;transition:.15s}
+    .sidebar-links li a:hover{background:var(--bg);color:var(--primary-dark);text-decoration:none}
+    .sl-icon{width:22px;height:22px;background:var(--primary-light);color:var(--primary-dark);border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;flex-shrink:0}
+    .sl-icon.green{background:var(--green-light);color:#065f46}
+    .sl-icon.cyan{background:var(--cyan-light);color:#155e75}
+    .sl-icon.indigo{background:var(--indigo-light);color:var(--indigo)}
+
+    /* FOOTER */
+    .site-footer{background:var(--dark);color:#94a3b8;margin-top:60px}
+    .footer-top{max-width:var(--max-w);margin:0 auto;padding:44px 20px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+    .footer-brand .site-logo{margin-bottom:12px}
+    .footer-brand p{font-size:.85rem;line-height:1.75;max-width:300px}
+    .footer-col h4{color:#e2e8f0;font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+    .footer-col ul li a{color:#94a3b8;font-size:.83rem;text-decoration:none;transition:color .15s}
+    .footer-col ul li a:hover{color:#fff}
+    .footer-bottom{border-top:1px solid var(--dark-border);max-width:var(--max-w);margin:0 auto;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;font-size:.8rem;flex-wrap:wrap;gap:8px}
+    .footer-bottom a{color:#94a3b8}.footer-bottom a:hover{color:#fff}
+    @media(max-width:768px){.footer-top{grid-template-columns:1fr 1fr}.footer-brand{grid-column:1/-1}}
+    @media(max-width:480px){.footer-top{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><span class="logo-icon">&#9201;</span>WordsToTime</a>
+    <nav class="site-nav" id="mainNav">
+      <a href="/">Home</a>
+      <a href="/words-to-minutes/">Words to Min</a>
+      <a href="/word-to-reading-time/">Reading Time</a>
+      <a href="/word-to-speaking-time/">Speaking Time</a>
+      <a href="/word-to-typing-time/" class="active">Typing / WPM</a>
+      <a href="/practice-mode/" class="nav-cta">Practice Mode</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="/">Home</a><span class="breadcrumb-sep">&#8250;</span>
+    <a href="/words-to-minutes/">Calculators</a><span class="breadcrumb-sep">&#8250;</span>
+    <span class="breadcrumb-current">WPM Calculator &amp; Typing Time</span>
+  </div>
+</nav>
+
+<div class="page-container">
+<main class="main-content">
+
+  <!-- HERO -->
+  <div class="page-hero">
+    <h1>WPM Calculator — Words Per Minute &amp; Typing Time Estimator</h1>
+    <p class="hero-sub">Two tools in one: calculate how long it takes to type any word count, <em>or</em> enter your test results to find your WPM typing speed. Free, instant, no signup.</p>
+  </div>
+
+  <!-- TOP AD -->
+  <div class="ad-unit" style="margin-bottom:20px">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9275267797924945" data-ad-slot="auto" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <!-- DUAL CALCULATOR -->
+  <div class="card">
+    <h2 class="section-title">&#9000; WPM &amp; Typing Time Calculator</h2>
+
+    <!-- TAB BAR -->
+    <div class="tab-bar">
+      <button class="tab-btn active" id="tab1" onclick="switchTab(1)">&#128336; Word Count → Typing Time</button>
+      <button class="tab-btn" id="tab2" onclick="switchTab(2)">&#9889; Words + Minutes → My WPM</button>
+    </div>
+
+    <!-- PANEL 1: Word count to time -->
+    <div id="panel1">
+      <div class="calc-grid">
+        <div>
+          <div class="field-label">Word count</div>
+          <input type="number" class="calc-input" id="wc1" placeholder="e.g. 500" min="1" max="1000000">
+        </div>
+        <div>
+          <div class="field-label">Your typing speed (WPM)</div>
+          <select class="calc-select" id="wpm1">
+            <option value="20">20 WPM — Beginner (hunt &amp; peck)</option>
+            <option value="30">30 WPM — Slow typist</option>
+            <option value="40" selected>40 WPM — Average typist &#11088;</option>
+            <option value="50">50 WPM — Above average</option>
+            <option value="60">60 WPM — Good / office standard</option>
+            <option value="70">70 WPM — Fast typist</option>
+            <option value="80">80 WPM — Professional typist</option>
+            <option value="100">100 WPM — Expert touch-typist</option>
+            <option value="120">120 WPM — Speed typist</option>
+            <option value="150">150 WPM — Elite typist</option>
+          </select>
+        </div>
+      </div>
+      <button class="calc-btn" onclick="calcTypingTime()" style="margin-top:14px">&#9654; Calculate Typing Time</button>
+
+      <div class="result-box time-result" id="timeResult">
+        <div class="result-time" id="timeVal">—</div>
+        <div class="result-sub" id="timeSub"></div>
+        <div class="result-pills" id="timePills"></div>
+      </div>
+    </div>
+
+    <!-- PANEL 2: WPM calculator -->
+    <div id="panel2" style="display:none">
+      <div class="info-box cyan" style="margin-bottom:16px">
+        <strong>How it works:</strong> Enter how many words you typed and how many minutes it took — the calculator finds your WPM instantly using the formula: <strong>WPM = Words ÷ Minutes</strong>.
+      </div>
+      <div class="calc-grid">
+        <div>
+          <div class="field-label">Words typed</div>
+          <input type="number" class="calc-input" id="wordsTyped" placeholder="e.g. 200" min="1">
+        </div>
+        <div>
+          <div class="field-label">Time taken (minutes)</div>
+          <input type="number" class="calc-input" id="minsTaken" placeholder="e.g. 5" min="0.1" step="0.1">
+        </div>
+      </div>
+      <button class="calc-btn" onclick="calcWPM()" style="margin-top:14px">&#9654; Calculate My WPM</button>
+
+      <div class="result-box wpm-result" id="wpmResult">
+        <div class="result-time" id="wpmVal">—</div>
+        <div class="result-sub" id="wpmSub"></div>
+        <div class="speed-meter" id="speedMeter" style="background:rgba(255,255,255,.15);border-radius:8px">
+          <div class="speed-labels" style="color:rgba(255,255,255,.7)"><span>0</span><span>40 (avg)</span><span>80</span><span>120+</span></div>
+          <div class="speed-bar-wrap"><div class="speed-bar" id="speedBar" style="width:0%"></div></div>
+          <div id="speedLabel" class="speed-badge"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOW TO CALCULATE WPM -->
+  <div class="card">
+    <h2 class="section-title">&#128218; How to Calculate WPM Typing</h2>
+    <div class="prose">
+      <p>Calculating your words-per-minute (WPM) typing speed requires just two numbers: how many words you typed and how long it took.</p>
+      <div class="formula-box">WPM = Total Words Typed ÷ Minutes Taken</div>
+      <h3>Step-by-step WPM calculation</h3>
+      <ol>
+        <li><strong>Count your words</strong> — Most typing tests count every 5 keystrokes (including spaces) as one "word." Your word processor's word count tool works for simple text.</li>
+        <li><strong>Convert your time to minutes</strong> — If you typed for 90 seconds, that is 1.5 minutes. If you typed for 3 minutes 20 seconds, that is 3.33 minutes.</li>
+        <li><strong>Divide words by minutes</strong> — E.g. 200 words ÷ 5 minutes = <strong>40 WPM</strong>.</li>
+      </ol>
+
+      <h3>Gross WPM vs. Net WPM vs. GWAM</h3>
+      <ul>
+        <li><strong>Gross WPM (GWAM)</strong> — Raw speed, no error penalty. Formula: (Total keystrokes ÷ 5) ÷ Minutes.</li>
+        <li><strong>Net WPM</strong> — Accuracy-adjusted. Formula: Gross WPM − (Errors × 1 WPM penalty per error).</li>
+        <li><strong>CWPM</strong> — Correct Words Per Minute. Only counts error-free words. Used in reading fluency tests (CBM).</li>
+      </ul>
+
+      <div class="info-box">
+        <strong>Example:</strong> Harper typed 57 words in 3 minutes. WPM = 57 ÷ 3 = <strong>19 WPM</strong>. If she made 2 errors, her Net WPM = 19 − 2 = 17 WPM. Use the WPM Calculator tab above to solve any version of this instantly.
+      </div>
+
+      <h3>How to calculate WPM in Microsoft Word</h3>
+      <p>Microsoft Word does not have a built-in WPM timer, but you can: (1) use the Word Count tool (Review → Word Count) to get your final count, (2) time yourself with a stopwatch while typing a known passage, then (3) divide words by minutes. Alternatively, use our <strong>WPM Calculator above</strong> — enter the word count and your elapsed minutes.</p>
+    </div>
+  </div>
+
+  <!-- TYPING SPEED REFERENCE -->
+  <div class="card">
+    <h2 class="section-title">&#128202; Typing Speed Reference — What Is a Good WPM?</h2>
+    <div class="wpm-grid">
+      <div class="wpm-card"><div class="wpm-num">20–30</div><div class="wpm-label">Beginner</div><div class="wpm-note">Hunt &amp; peck</div></div>
+      <div class="wpm-card avg"><div class="wpm-num">40</div><div class="wpm-label">&#11088; Average</div><div class="wpm-note">Most adults</div></div>
+      <div class="wpm-card"><div class="wpm-num">60–75</div><div class="wpm-label">Good / Office</div><div class="wpm-note">Standard target</div></div>
+      <div class="wpm-card"><div class="wpm-num">80–100</div><div class="wpm-label">Professional</div><div class="wpm-note">Touch-typist</div></div>
+      <div class="wpm-card"><div class="wpm-num">120+</div><div class="wpm-label">Expert</div><div class="wpm-note">Speed typist</div></div>
+      <div class="wpm-card"><div class="wpm-num">212</div><div class="wpm-label">World Record</div><div class="wpm-note">B. Blackburn 2005</div></div>
+    </div>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Typing Level</th><th>WPM Range</th><th>Typical User</th><th>Use Case</th></tr></thead>
+        <tbody>
+          <tr><td>Beginner</td><td>10–25 WPM</td><td>New typists, non-touch-typists</td><td>Casual personal use</td></tr>
+          <tr><td>Below Average</td><td>25–35 WPM</td><td>Occasional computer users</td><td>Email, social media</td></tr>
+          <tr class="highlight-row"><td>&#11088; Average</td><td>36–45 WPM</td><td>Most adults globally</td><td>General office work</td></tr>
+          <tr><td>Above Average</td><td>46–60 WPM</td><td>Regular office workers</td><td>Word processing, admin</td></tr>
+          <tr><td>Good / Professional</td><td>61–80 WPM</td><td>Trained touch-typists</td><td>Data entry, secretarial</td></tr>
+          <tr><td>Fast</td><td>81–100 WPM</td><td>Journalists, programmers</td><td>High-output writing</td></tr>
+          <tr><td>Expert</td><td>101–130 WPM</td><td>Speed typists, court reporters</td><td>Transcription, live captioning</td></tr>
+          <tr><td>Elite</td><td>130+ WPM</td><td>Competition typists</td><td>Typing competitions (TypeRacer, Monkeytype)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="info-box" style="margin-top:14px"><strong>Industry benchmarks:</strong> Most office jobs require 40–60 WPM. Medical transcriptionists: 70+ WPM. Court reporters: 200+ WPM (stenotype machine). Customer service reps: 45–55 WPM.</div>
+  </div>
+
+  <!-- HOW LONG TO TYPE REFERENCE TABLE -->
+  <div class="card">
+    <h2 class="section-title">&#128336; How Long Does It Take to Type X Words?</h2>
+    <p style="font-size:.88rem;color:var(--text-muted);margin-bottom:14px">Pure typing time (no composing/thinking). Times shown in minutes:seconds at 3 key WPM rates.</p>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Word Count</th><th>@ 30 WPM (slow)</th><th>@ 40 WPM &#11088; avg</th><th>@ 60 WPM (good)</th><th>@ 80 WPM (fast)</th><th>@ 100 WPM (expert)</th></tr></thead>
+        <tbody>
+          <tr><td>100 words</td><td>3m 20s</td><td>2m 30s</td><td>1m 40s</td><td>1m 15s</td><td>1m 0s</td></tr>
+          <tr><td>150 words</td><td>5m 0s</td><td>3m 45s</td><td>2m 30s</td><td>1m 52s</td><td>1m 30s</td></tr>
+          <tr><td>200 words</td><td>6m 40s</td><td>5m 0s</td><td>3m 20s</td><td>2m 30s</td><td>2m 0s</td></tr>
+          <tr><td>300 words</td><td>10m 0s</td><td>7m 30s</td><td>5m 0s</td><td>3m 45s</td><td>3m 0s</td></tr>
+          <tr><td>400 words</td><td>13m 20s</td><td>10m 0s</td><td>6m 40s</td><td>5m 0s</td><td>4m 0s</td></tr>
+          <tr><td>500 words</td><td>16m 40s</td><td>12m 30s</td><td>8m 20s</td><td>6m 15s</td><td>5m 0s</td></tr>
+          <tr class="highlight-row"><td>600 words</td><td>20m 0s</td><td>15m 0s</td><td>10m 0s</td><td>7m 30s</td><td>6m 0s</td></tr>
+          <tr><td>750 words</td><td>25m 0s</td><td>18m 45s</td><td>12m 30s</td><td>9m 22s</td><td>7m 30s</td></tr>
+          <tr><td>800 words</td><td>26m 40s</td><td>20m 0s</td><td>13m 20s</td><td>10m 0s</td><td>8m 0s</td></tr>
+          <tr><td>900 words</td><td>30m 0s</td><td>22m 30s</td><td>15m 0s</td><td>11m 15s</td><td>9m 0s</td></tr>
+          <tr><td>1,000 words</td><td>33m 20s</td><td>25m 0s</td><td>16m 40s</td><td>12m 30s</td><td>10m 0s</td></tr>
+          <tr><td>1,500 words</td><td>50m 0s</td><td>37m 30s</td><td>25m 0s</td><td>18m 45s</td><td>15m 0s</td></tr>
+          <tr><td>2,000 words</td><td>1h 6m</td><td>50m 0s</td><td>33m 20s</td><td>25m 0s</td><td>20m 0s</td></tr>
+          <tr><td>5,000 words</td><td>2h 46m</td><td>2h 5m</td><td>1h 23m</td><td>1h 2m</td><td>50m 0s</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="info-box cyan" style="margin-top:12px">
+      <strong>Typing vs. Writing time:</strong> The table above shows pure <em>re-typing</em> speed. If you are <em>composing from scratch</em> (thinking + typing), multiply the time by <strong>3–10×</strong> depending on complexity. A 1,000-word essay that takes 10 minutes to type from a draft may take 60–90 minutes to write from scratch.
+    </div>
+  </div>
+
+  <!-- MID AD -->
+  <div class="ad-unit" style="margin-bottom:20px">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9275267797924945" data-ad-slot="auto" data-ad-format="rectangle" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <!-- GWAM & HANDWRITING -->
+  <div class="card">
+    <h2 class="section-title">&#128295; GWAM Calculator &amp; Handwriting Speed</h2>
+    <div class="prose">
+      <h3>What is GWAM?</h3>
+      <p><strong>GWAM (Gross Words A Minute)</strong> is the raw typing speed before error deductions. It is the standard metric used in most school and office typing tests. The formula counts every 5 characters (including spaces and punctuation) as one "word":</p>
+      <div class="formula-box">GWAM = (Total Keystrokes ÷ 5) ÷ Minutes</div>
+      <p>Example: You type 1,200 keystrokes in 5 minutes → GWAM = (1,200 ÷ 5) ÷ 5 = <strong>48 GWAM</strong>. Most typing software reports GWAM directly. Use the WPM Calculator tab above — if your word count was counted using the 5-keystrokes rule, the result is your GWAM.</p>
+
+      <h3>Average handwriting speed</h3>
+      <p>The average <strong>handwriting speed is 20–30 words per minute</strong> for adults writing in print. Cursive writing is slightly faster at 25–35 WPM. By comparison, average keyboard typing is 40 WPM — making typing roughly 50–100% faster than handwriting for most people. Note-taking handwriting (shortened, messy) can reach 15–25 WPM under time pressure.</p>
+      <div class="info-box green">
+        <strong>Handwriting time estimates:</strong> 200 words handwritten @ 25 WPM = 8 minutes. 500 words = 20 minutes. 1,000 words = 40 minutes. Compare this to typing 1,000 words at 40 WPM (keyboard) = 25 minutes — a 37% speed advantage.
+      </div>
+
+      <h3>Writing time (composing from scratch)</h3>
+      <p>When you are not re-typing a draft but <em>writing</em> original content — researching, thinking, and typing simultaneously — the effective speed drops dramatically. Typical composing speeds by content type:</p>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead><tr><th>Content Type</th><th>Effective Speed</th><th>Time for 1,000 words</th></tr></thead>
+          <tbody>
+            <tr><td>Casual email / message</td><td>~20–40 WPM</td><td>25–50 minutes</td></tr>
+            <tr><td>Blog post / article (familiar topic)</td><td>~10–20 WPM</td><td>50–100 minutes</td></tr>
+            <tr class="highlight-row"><td>Academic essay</td><td>~5–10 WPM</td><td>100–200 minutes</td></tr>
+            <tr><td>Technical / research writing</td><td>~3–7 WPM</td><td>140–330 minutes</td></tr>
+            <tr><td>Creative writing / fiction</td><td>~5–15 WPM</td><td>65–200 minutes</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- RELATED TOOLS -->
+  <div class="card">
+    <h2 class="section-title">&#128279; Related Calculators</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px">
+      <a href="/words-to-minutes/" style="display:block;background:var(--bg);border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:14px;text-decoration:none;transition:.15s" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-weight:700;color:var(--text);font-size:.9rem">&#9202; Words to Minutes</div>
+        <div style="font-size:.8rem;color:var(--text-muted);margin-top:4px">Classic word-to-minute converter</div>
+      </a>
+      <a href="/word-to-reading-time/" style="display:block;background:var(--bg);border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:14px;text-decoration:none;transition:.15s" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-weight:700;color:var(--text);font-size:.9rem">&#128214; Reading Time</div>
+        <div style="font-size:.8rem;color:var(--text-muted);margin-top:4px">Word count to silent reading time</div>
+      </a>
+      <a href="/word-to-speaking-time/" style="display:block;background:var(--bg);border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:14px;text-decoration:none;transition:.15s" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-weight:700;color:var(--text);font-size:.9rem">&#128162; Speaking Time</div>
+        <div style="font-size:.8rem;color:var(--text-muted);margin-top:4px">How long to say any word count</div>
+      </a>
+      <a href="/word-to-presentation-time/" style="display:block;background:var(--bg);border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:14px;text-decoration:none;transition:.15s" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-weight:700;color:var(--text);font-size:.9rem">&#128200; Presentation Time</div>
+        <div style="font-size:.8rem;color:var(--text-muted);margin-top:4px">Slide timing calculator + WPM guide</div>
+      </a>
+      <a href="/speaking-words-per-minute/" style="display:block;background:var(--bg);border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:14px;text-decoration:none;transition:.15s" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-weight:700;color:var(--text);font-size:.9rem">&#128203; Speaking WPM Guide</div>
+        <div style="font-size:.8rem;color:var(--text-muted);margin-top:4px">Speech rate by context</div>
+      </a>
+      <a href="/practice-mode/" style="display:block;background:var(--bg);border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:14px;text-decoration:none;transition:.15s" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-weight:700;color:var(--text);font-size:.9rem">&#9654; Practice Mode</div>
+        <div style="font-size:.8rem;color:var(--text-muted);margin-top:4px">Live countdown speech timer</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="card">
+    <h2 class="section-title">&#10067; Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="faqToggle(this)">How do you calculate WPM typing speed?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">Divide total words typed by the number of minutes taken: <strong>WPM = Words ÷ Minutes</strong>. Example: 300 words typed in 5 minutes = 60 WPM. For GWAM (standardised typing tests), count every 5 keystrokes as one word: GWAM = (Keystrokes ÷ 5) ÷ Minutes. Use the <strong>&#34;Words + Minutes → My WPM&#34; tab</strong> in the calculator above to get your result instantly without doing any manual maths.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="faqToggle(this)">How long does it take to type 200 words?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">At the average typing speed of 40 WPM: <strong>5 minutes</strong> to type 200 words. At 60 WPM: 3 minutes 20 seconds. At 80 WPM: 2 minutes 30 seconds. At 100 WPM: 2 minutes exactly. These are pure re-typing times. If you are writing 200 words from scratch (composing a message or email), expect 8–15 minutes depending on content complexity.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="faqToggle(this)">How long does it take to type 500 words?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">At 40 WPM (average): <strong>12 minutes 30 seconds</strong>. At 60 WPM: 8 minutes 20 seconds. At 80 WPM: 6 minutes 15 seconds. At 100 WPM: 5 minutes exactly. For a 500-word essay written from scratch, budget 30–60 minutes including thinking, drafting and editing time.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="faqToggle(this)">How long does it take to type 800 words?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">At 40 WPM: <strong>20 minutes</strong> to type 800 words. At 60 WPM: 13 minutes 20 seconds. At 80 WPM: 10 minutes. At 100 WPM: 8 minutes. See the full reference table above for all common word counts at 5 different WPM rates.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="faqToggle(this)">What is a good WPM for typing?<span class="faq-icon">+</span></div>
+      <div class="faq-answer"><strong>40 WPM is average</strong> for most adults. <strong>60 WPM is good</strong> for office work — this is the standard requirement for most administrative and data-entry roles. <strong>80+ WPM is fast</strong> (top 15% of typists). <strong>100+ WPM is expert level</strong>. The world typing record (Barbara Blackburn) is 212 WPM on a Dvorak keyboard. For context: most professional transcriptionists type at 80–100 WPM, and court reporters use stenotype machines to reach 200+ WPM.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="faqToggle(this)">What is GWAM in a typing test?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">GWAM stands for <strong>Gross Words A Minute</strong> — your raw typing speed before any error deductions. In standardised typing tests (common in schools and government hiring), every 5 keystrokes is counted as one "word." Formula: GWAM = (Total Keystrokes ÷ 5) ÷ Minutes. Net WPM = GWAM minus error penalties (typically 1 WPM deducted per error). CWPM (Correct Words Per Minute) only counts words typed without any mistakes, used in reading fluency assessments.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="faqToggle(this)">How long does it take to type 1000 words?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">At 40 WPM (average): <strong>25 minutes</strong> to type 1,000 words. At 60 WPM: 16 minutes 40 seconds. At 80 WPM: 12 minutes 30 seconds. At 100 WPM: 10 minutes. If composing from scratch (writing a 1,000-word essay or article), budget 45–120 minutes depending on your familiarity with the topic.</div>
+    </div>
+  </div>
+
+</main>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="sidebar-card">
+    <h3>&#9889; Quick: How Long to Type (40 WPM avg)</h3>
+    <table class="ref-table">
+      <tr><td>100 words</td><td>2m 30s</td></tr>
+      <tr><td>200 words</td><td>5m 0s</td></tr>
+      <tr><td>300 words</td><td>7m 30s</td></tr>
+      <tr><td>400 words</td><td>10m 0s</td></tr>
+      <tr class="ref-highlight"><td>500 words</td><td>12m 30s</td></tr>
+      <tr><td>750 words</td><td>18m 45s</td></tr>
+      <tr><td>1,000 words</td><td>25m 0s</td></tr>
+      <tr><td>1,500 words</td><td>37m 30s</td></tr>
+      <tr><td>2,000 words</td><td>50m 0s</td></tr>
+    </table>
+  </div>
+
+  <div class="ad-unit" style="min-height:250px">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9275267797924945" data-ad-slot="auto" data-ad-format="rectangle" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <div class="sidebar-card">
+    <h3>&#9889; WPM Speed Benchmarks</h3>
+    <table class="ref-table">
+      <tr><td>Beginner</td><td>20–30 WPM</td></tr>
+      <tr class="ref-highlight"><td>Average</td><td>40 WPM</td></tr>
+      <tr><td>Good</td><td>60–75 WPM</td></tr>
+      <tr><td>Professional</td><td>80–100 WPM</td></tr>
+      <tr><td>Expert</td><td>100–130 WPM</td></tr>
+      <tr><td>World Record</td><td>212 WPM</td></tr>
+    </table>
+  </div>
+
+  <div class="sidebar-card">
+    <h3>&#128279; Other Calculators</h3>
+    <ul class="sidebar-links">
+      <li><a href="/words-to-minutes/"><span class="sl-icon">wm</span>Words to Minutes</a></li>
+      <li><a href="/word-to-reading-time/"><span class="sl-icon cyan">&#128214;</span>Reading Time</a></li>
+      <li><a href="/word-to-speaking-time/"><span class="sl-icon">sp</span>Speaking Time</a></li>
+      <li><a href="/word-to-presentation-time/"><span class="sl-icon cyan">pz</span>Presentation</a></li>
+      <li><a href="/word-to-public-speaking-time/"><span class="sl-icon indigo">&#9201;</span>Speech Timer</a></li>
+      <li><a href="/word-to-debate-time/"><span class="sl-icon">db</span>Debate Timer</a></li>
+      <li><a href="/speaking-words-per-minute/"><span class="sl-icon green">wpm</span>WPM Guide</a></li>
+    </ul>
+  </div>
+
+  <div class="ad-unit" style="min-height:250px">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9275267797924945" data-ad-slot="auto" data-ad-format="rectangle" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+</aside>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="/" class="site-logo"><span class="logo-icon">&#9201;</span>WordsToTime</a>
+      <p>Free tools to convert word count to speaking time, reading time, typing time and presentation duration. Backed by ASHA, Toastmasters and typing speed research.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Calculators</h4>
+      <ul>
+        <li><a href="/words-to-minutes/">Words to Minutes</a></li>
+        <li><a href="/word-to-reading-time/">Reading Time</a></li>
+        <li><a href="/word-to-speaking-time/">Speaking Time</a></li>
+        <li><a href="/word-to-speech-length/">Speech Length</a></li>
+        <li><a href="/word-to-presentation-time/">Presentation Time</a></li>
+        <li><a href="/word-to-typing-time/">WPM / Typing Time</a></li>
+        <li><a href="/word-to-debate-time/">Debate Timer</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Speech Guides</h4>
+      <ul>
+        <li><a href="/3-minute-speech-word-count/">3-Min Speech</a></li>
+        <li><a href="/4-minute-speech-word-count/">4-Min Speech</a></li>
+        <li><a href="/5-minute-speech-word-count/">5-Min Speech</a></li>
+        <li><a href="/10-minute-speech-word-count/">10-Min Speech</a></li>
+        <li><a href="/15-minute-speech-word-count/">15-Min Speech</a></li>
+        <li><a href="/20-minute-speech-word-count/">20-Min Speech</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>WPM &amp; Guides</h4>
+      <ul>
+        <li><a href="/speaking-words-per-minute/">WPM Guide</a></li>
+        <li><a href="/1000-words-to-minutes/">1,000 Words</a></li>
+        <li><a href="/word-to-public-speaking-time/">Public Speaking</a></li>
+        <li><a href="/practice-mode/">Practice Mode</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&#169; 2026 WordsToTime.netlify.app &mdash; Free WPM Calculator &amp; Typing Time Tools</span>
+    <span><a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a> &middot; <a href="/about/">About</a></span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('navToggle').addEventListener('click',function(){document.getElementById('mainNav').classList.toggle('open');});
+
+  function switchTab(n){
+    document.getElementById('tab1').classList.toggle('active',n===1);
+    document.getElementById('tab2').classList.toggle('active',n===2);
+    document.getElementById('panel1').style.display=n===1?'block':'none';
+    document.getElementById('panel2').style.display=n===2?'block':'none';
+  }
+
+  function fmtTime(secs){
+    var h=Math.floor(secs/3600),m=Math.floor((secs%3600)/60),s=Math.round(secs%60);
+    if(s===60){m++;s=0;}if(m===60){h++;m=0;}
+    if(h>0)return h+'h '+(m<10?'0'+m:m)+'m '+(s<10?'0'+s:s)+'s';
+    return m+'m '+(s<10?'0'+s:s)+'s';
+  }
+
+  function calcTypingTime(){
+    var wc=parseInt(document.getElementById('wc1').value)||0;
+    var wpm=parseInt(document.getElementById('wpm1').value)||40;
+    if(!wc){alert('Please enter a word count.');return;}
+    var secs=(wc/wpm)*60;
+    var box=document.getElementById('timeResult');
+    document.getElementById('timeVal').textContent=fmtTime(secs);
+    document.getElementById('timeSub').textContent=wc.toLocaleString()+' words at '+wpm+' WPM';
+    var rates=[[20,'20 WPM'],[30,'30 WPM'],[40,'40 WPM (avg)'],[60,'60 WPM'],[80,'80 WPM'],[100,'100 WPM']];
+    var pills=document.getElementById('timePills');
+    pills.innerHTML='';
+    rates.forEach(function(r){
+      var s2=(wc/r[0])*60,p=document.createElement('div');
+      p.className='result-pill';p.textContent=fmtTime(s2)+' @ '+r[1];
+      pills.appendChild(p);
+    });
+    box.className='result-box time-result show';
+  }
+
+  function calcWPM(){
+    var words=parseInt(document.getElementById('wordsTyped').value)||0;
+    var mins=parseFloat(document.getElementById('minsTaken').value)||0;
+    if(!words||!mins){alert('Please enter both words typed and time in minutes.');return;}
+    var wpm=Math.round(words/mins);
+    var box=document.getElementById('wpmResult');
+    document.getElementById('wpmVal').textContent=wpm+' WPM';
+    var label,pct=Math.min(wpm/130*100,100);
+    if(wpm<25)label='Beginner';
+    else if(wpm<40)label='Below Average';
+    else if(wpm<46)label='Average';
+    else if(wpm<61)label='Above Average';
+    else if(wpm<80)label='Good / Professional';
+    else if(wpm<101)label='Fast Typist';
+    else if(wpm<131)label='Expert';
+    else label='Elite Speed Typist';
+    document.getElementById('wpmSub').textContent=words.toLocaleString()+' words in '+mins+' min = '+wpm+' WPM';
+    document.getElementById('speedBar').style.width=pct+'%';
+    document.getElementById('speedLabel').textContent=label;
+    box.className='result-box wpm-result show';
+  }
+
+  function faqToggle(el){
+    var a=el.nextElementSibling,o=el.classList.contains('open');
+    document.querySelectorAll('.faq-question').forEach(function(q){q.classList.remove('open');});
+    document.querySelectorAll('.faq-answer').forEach(function(ans){ans.classList.remove('open');});
+    if(!o){el.classList.add('open');a.classList.add('open');}
+  }
+</script>
+</body>
+</html>
