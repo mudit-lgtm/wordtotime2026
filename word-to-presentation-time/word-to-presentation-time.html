@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentation Time Calculator — How Long to Present Any Word Count?</title>
+  <meta name="description" content="Free presentation time calculator. Paste your script or enter word count to get instant speaking time at any WPM. Includes slide timing calculator and per-word-count reference table.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://wordstotime.netlify.app/word-to-presentation-time/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wordstotime.netlify.app/word-to-presentation-time/">
+  <meta property="og:title" content="Presentation Time Calculator — Word Count to Speaking Time [Free]">
+  <meta property="og:description" content="Paste your script or enter word count → instant presentation time at 100–150 WPM. Slide timing calculator + full reference table.">
+  <meta property="og:image" content="https://wordstotime.netlify.app/og-image.png">
+  <meta property="og:site_name" content="Words to Time">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Presentation Time Calculator — Word Count to Speaking Time">
+  <meta name="twitter:description" content="Calculate how long your presentation will take. Paste text or enter word count → instant time at any WPM.">
+  <meta name="twitter:image" content="https://wordstotime.netlify.app/og-image.png">
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9275267797924945" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Presentation Time Calculator","description":"Free online calculator that converts word count or pasted text to presentation speaking time. Supports custom WPM rates from 100 to 180 WPM and includes a slide timing calculator.","url":"https://wordstotime.netlify.app/word-to-presentation-time/","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"Words to Time","url":"https://wordstotime.netlify.app/"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://wordstotime.netlify.app/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://wordstotime.netlify.app/words-to-minutes/"},{"@type":"ListItem","position":3,"name":"Presentation Time Calculator","item":"https://wordstotime.netlify.app/word-to-presentation-time/"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"How long does it take to present 500 words?","acceptedAnswer":{"@type":"Answer","text":"500 words takes approximately 4 minutes to present at the standard presentation speaking rate of 125 WPM. At 130 WPM (ASHA standard speech rate) it is 3 minutes 50 seconds. At a slower 100 WPM (deliberate, slide-heavy presentation) it is 5 minutes."}},
+    {"@type":"Question","name":"What is the average speaking rate for a presentation?","acceptedAnswer":{"@type":"Answer","text":"The average speaking rate for a presentation is 100–125 words per minute (WPM). This is slightly slower than general public speaking (130 WPM) because presentations include time for slide transitions, audience questions, and deliberate pauses for visual emphasis. For academic or conference presentations, 110–120 WPM is most common. For pitch decks and business presentations, 125–135 WPM is typical."}},
+    {"@type":"Question","name":"How many words is a 10 minute presentation?","acceptedAnswer":{"@type":"Answer","text":"A 10-minute presentation is 1,000–1,250 words at the standard presentation rate of 100–125 WPM. At 130 WPM (conversational): 1,300 words. For a comfortable 10-minute presentation with slide transitions, aim for 1,000–1,100 words — this leaves time for pauses and natural audience interaction."}},
+    {"@type":"Question","name":"How long does it take to present 1000 words?","acceptedAnswer":{"@type":"Answer","text":"1,000 words takes approximately 8 minutes to present at 125 WPM (standard presentation rate). At 130 WPM it is 7 minutes 41 seconds. At 100 WPM (slow, deliberate presentation): 10 minutes exactly. Add 15–20% extra time for slide transitions if your presentation has 10 or more slides."}},
+    {"@type":"Question","name":"How long does it take to present 2000 words?","acceptedAnswer":{"@type":"Answer","text":"2,000 words takes approximately 16 minutes to present at 125 WPM. At 130 WPM: 15 minutes 23 seconds. At 100 WPM: 20 minutes. For a 2,000-word presentation with 15–20 slides, add 2–3 minutes for slide transitions, bringing the total estimated time to 17–19 minutes."}},
+    {"@type":"Question","name":"How many words per minute in a presentation?","acceptedAnswer":{"@type":"Answer","text":"The typical speaking rate in a presentation is 100–125 words per minute (WPM). Academic and conference presentations average 110–120 WPM. Business and pitch presentations run 120–135 WPM. TED Talks average 163 WPM — significantly faster because they are rehearsed monologues without slides. Use 125 WPM as your standard planning rate for most presentations."}}
+  ]}
+  </script>
+
+  <style>
+    :root{--primary:#0891b2;--primary-dark:#0e7490;--primary-light:#cffafe;--dark:#0f172a;--dark-card:#1e293b;--dark-border:#334155;--bg:#f0f9ff;--white:#ffffff;--border:#e2e8f0;--text:#1e293b;--text-muted:#64748b;--text-light:#94a3b8;--success:#16a34a;--success-light:#dcfce7;--warning:#f59e0b;--warning-light:#fef9c7;--danger:#dc2626;--danger-light:#fee2e2;--green:#059669;--green-light:#d1fae5;--indigo:#4f46e5;--indigo-light:#ede9fe;--orange:#ea580c;--orange-light:#ffedd5;--radius:12px;--radius-sm:8px;--shadow:0 1px 3px rgba(0,0,0,.1),0 1px 2px rgba(0,0,0,.06);--font:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;--max-w:1100px}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6;font-size:16px}
+    a{color:var(--primary);text-decoration:none}a:hover{text-decoration:underline}
+
+    .site-header{background:var(--dark);position:sticky;top:0;z-index:100;border-bottom:1px solid var(--dark-border)}
+    .header-inner{max-width:var(--max-w);margin:0 auto;padding:0 20px;height:62px;display:flex;align-items:center;justify-content:space-between}
+    .site-logo{font-size:1.2rem;font-weight:800;color:#fff;text-decoration:none;display:flex;align-items:center;gap:8px}
+    .logo-icon{background:var(--primary);color:#fff;width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.9rem}
+    .site-nav{display:flex;align-items:center;gap:4px}
+    .site-nav a{color:#cbd5e1;font-size:.875rem;font-weight:500;padding:6px 12px;border-radius:6px;text-decoration:none;transition:.15s;white-space:nowrap}
+    .site-nav a:hover,.site-nav a.active{background:rgba(255,255,255,.1);color:#fff}
+    .nav-cta{background:var(--primary)!important;color:#fff!important;margin-left:8px}
+    .nav-cta:hover{background:var(--primary-dark)!important}
+    .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:6px;flex-direction:column;gap:5px}
+    .nav-toggle span{display:block;width:22px;height:2px;background:#fff;border-radius:2px}
+    @media(max-width:768px){.site-nav{display:none;position:absolute;top:62px;left:0;right:0;background:var(--dark);flex-direction:column;padding:12px 20px 20px;gap:4px;border-bottom:1px solid var(--dark-border)}.site-nav.open{display:flex}.site-nav a{padding:10px 12px;width:100%}.nav-cta{margin-left:0;margin-top:8px}.nav-toggle{display:flex}}
+
+    .breadcrumb{background:var(--white);border-bottom:1px solid var(--border);padding:10px 20px;font-size:.8rem;color:var(--text-muted)}
+    .breadcrumb-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+    .breadcrumb a{color:var(--text-muted)}.breadcrumb a:hover{color:var(--primary)}
+    .breadcrumb-sep{color:var(--text-light)}.breadcrumb-current{color:var(--text);font-weight:500}
+
+    .page-container{max-width:var(--max-w);margin:0 auto;padding:32px 20px 60px;display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start}
+    .main-content{min-width:0}.sidebar{display:flex;flex-direction:column;gap:20px}
+    @media(max-width:900px){.page-container{grid-template-columns:1fr}.sidebar{order:3}}
+
+    /* HERO */
+    .page-hero{background:linear-gradient(135deg,#083344 0%,#155e75 50%,#0891b2 100%);color:#fff;padding:36px 24px;border-radius:var(--radius);margin-bottom:20px;position:relative;overflow:hidden}
+    .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 30%,rgba(34,211,238,.25) 0%,transparent 65%);pointer-events:none}
+    .page-hero h1{font-size:clamp(1.4rem,3.5vw,1.9rem);font-weight:800;line-height:1.25;margin-bottom:8px;position:relative}
+    .page-hero .hero-sub{color:#a5f3fc;font-size:.95rem;margin-bottom:0;position:relative}
+
+    /* MAIN CALC */
+    .card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);margin-bottom:20px}
+    .section-title{font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+    .section-title::after{content:'';flex:1;height:2px;background:var(--border);border-radius:2px}
+
+    /* CALCULATOR UI */
+    .calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    @media(max-width:640px){.calc-grid{grid-template-columns:1fr}}
+    .field-label{font-size:.8rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+    .calc-textarea{width:100%;min-height:120px;padding:12px 14px;border:2px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font);font-size:.9rem;resize:vertical;transition:.15s;line-height:1.6}
+    .calc-textarea:focus{outline:none;border-color:var(--primary)}
+    .calc-input{width:100%;padding:11px 14px;border:2px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font);font-size:1rem;transition:.15s}
+    .calc-input:focus{outline:none;border-color:var(--primary)}
+    .calc-select{width:100%;padding:11px 14px;border:2px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font);font-size:.95rem;background:var(--white);cursor:pointer;transition:.15s}
+    .calc-select:focus{outline:none;border-color:var(--primary)}
+    .calc-btn{width:100%;padding:14px;background:var(--primary);color:#fff;border:none;border-radius:var(--radius-sm);font-family:var(--font);font-size:1rem;font-weight:700;cursor:pointer;transition:.15s;margin-top:4px}
+    .calc-btn:hover{background:var(--primary-dark)}
+    .calc-or{display:flex;align-items:center;gap:10px;font-size:.8rem;color:var(--text-muted);font-weight:600;margin:8px 0}
+    .calc-or::before,.calc-or::after{content:'';flex:1;height:1px;background:var(--border)}
+
+    /* RESULT */
+    .result-box{display:none;border-radius:var(--radius);background:linear-gradient(135deg,#083344,#0e7490);color:#fff;padding:24px;text-align:center;margin-top:16px}
+    .result-box.show{display:block}
+    .result-time{font-size:3.5rem;font-weight:800;line-height:1;color:#fff}
+    .result-sub{font-size:.9rem;color:#a5f3fc;margin-top:6px}
+    .result-pills{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+    .result-pill{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:99px;padding:6px 14px;font-size:.8rem;font-weight:600;color:#e0f2fe}
+
+    /* SLIDE CALCULATOR */
+    .slide-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;align-items:end}
+    @media(max-width:580px){.slide-grid{grid-template-columns:1fr 1fr}}
+    .slide-result{background:var(--primary-light);border-radius:var(--radius-sm);padding:16px;margin-top:14px;display:none}
+    .slide-result.show{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+    .slide-big{font-size:2.4rem;font-weight:800;color:var(--primary-dark);line-height:1}
+    .slide-detail{font-size:.85rem;color:var(--text-muted);line-height:1.6}
+
+    /* TABLE */
+    .table-wrap{overflow-x:auto;border-radius:var(--radius-sm);border:1px solid var(--border)}
+    .data-table{width:100%;border-collapse:collapse;font-size:.875rem}
+    .data-table thead tr{background:var(--dark)}
+    .data-table thead th{padding:10px 12px;color:#e2e8f0;font-weight:600;text-align:left;font-size:.78rem;text-transform:uppercase;letter-spacing:.05em}
+    .data-table tbody tr{border-bottom:1px solid var(--border);transition:background .1s}
+    .data-table tbody tr:hover{background:#f0f9ff}
+    .data-table tbody tr:last-child{border-bottom:none}
+    .data-table td{padding:9px 12px}
+    .data-table td:first-child{font-weight:600}
+    .highlight-row td{background:#cffafe;font-weight:700;color:var(--primary-dark)}
+
+    /* INFO BOX */
+    .info-box{border-left:4px solid var(--primary);background:var(--primary-light);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:12px 16px;font-size:.88rem;margin:12px 0;color:var(--dark)}
+    .info-box strong{color:var(--primary-dark)}
+    .info-box.green{background:var(--green-light);border-color:var(--green)}.info-box.green strong{color:#065f46}
+    .info-box.orange{background:var(--orange-light);border-color:var(--orange)}.info-box.orange strong{color:var(--orange)}
+    .info-box.indigo{background:var(--indigo-light);border-color:var(--indigo)}.info-box.indigo strong{color:var(--indigo)}
+
+    /* WPM REFERENCE PILLS */
+    .wpm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:10px;margin-bottom:16px}
+    .wpm-card{border-radius:var(--radius-sm);padding:14px;border:1.5px solid var(--border);text-align:center}
+    .wpm-card.active{background:var(--primary-light);border-color:var(--primary)}
+    .wpm-num{font-size:1.8rem;font-weight:800;color:var(--primary-dark);line-height:1}
+    .wpm-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);margin-top:4px}
+    .wpm-note{font-size:.72rem;color:var(--text-light);margin-top:2px}
+
+    /* FAQ */
+    .faq-item{border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:10px;overflow:hidden}
+    .faq-question{padding:14px 18px;font-weight:600;font-size:.95rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:var(--white);transition:.15s;gap:12px}
+    .faq-question:hover{background:var(--bg)}
+    .faq-question.open{background:var(--primary-light);color:var(--primary-dark);border-bottom:1px solid #a5f3fc}
+    .faq-icon{font-size:1.2rem;color:var(--text-muted);transition:transform .2s;flex-shrink:0}
+    .faq-question.open .faq-icon{transform:rotate(45deg);color:var(--primary)}
+    .faq-answer{display:none;padding:14px 18px;font-size:.9rem;line-height:1.75;color:var(--text-muted);background:var(--white)}
+    .faq-answer.open{display:block}
+    .faq-answer a{color:var(--primary)}
+
+    /* PROSE */
+    .prose{font-size:.92rem;color:var(--text-muted);line-height:1.8}
+    .prose p{margin-bottom:12px}.prose strong{color:var(--text)}.prose a{color:var(--primary)}
+    .prose h3{font-size:1rem;font-weight:700;color:var(--text);margin:16px 0 8px}
+    .prose ul{padding-left:20px;margin-bottom:12px}.prose ul li{margin-bottom:4px}
+
+    /* AD */
+    .ad-unit{background:var(--white);border:1px dashed var(--border);border-radius:var(--radius-sm);min-height:90px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+
+    /* SIDEBAR */
+    .sidebar-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+    .sidebar-card h3{font-size:.95rem;font-weight:700;color:var(--text);margin-bottom:14px}
+    .ref-table{width:100%;font-size:.82rem;border-collapse:collapse}
+    .ref-table tr{border-bottom:1px solid var(--border)}.ref-table tr:last-child{border-bottom:none}
+    .ref-table td{padding:7px 4px}.ref-table td:last-child{font-weight:700;text-align:right;color:var(--primary-dark)}
+    .ref-highlight td{background:var(--primary-light);font-weight:800}
+    .sidebar-links{list-style:none;display:flex;flex-direction:column;gap:7px}
+    .sidebar-links li a{display:flex;align-items:center;gap:8px;font-size:.84rem;color:var(--text-muted);text-decoration:none;padding:6px 8px;border-radius:6px;transition:.15s}
+    .sidebar-links li a:hover{background:var(--bg);color:var(--primary);text-decoration:none}
+    .sl-icon{width:22px;height:22px;background:var(--primary-light);color:var(--primary-dark);border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;flex-shrink:0}
+    .sl-icon.green{background:var(--green-light);color:#065f46}
+    .sl-icon.orange{background:var(--orange-light);color:var(--orange)}
+    .sl-icon.indigo{background:var(--indigo-light);color:var(--indigo)}
+
+    /* FOOTER */
+    .site-footer{background:var(--dark);color:#94a3b8;margin-top:60px}
+    .footer-top{max-width:var(--max-w);margin:0 auto;padding:44px 20px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+    .footer-brand .site-logo{margin-bottom:12px}
+    .footer-brand p{font-size:.85rem;line-height:1.75;max-width:300px}
+    .footer-col h4{color:#e2e8f0;font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+    .footer-col ul li a{color:#94a3b8;font-size:.83rem;text-decoration:none;transition:color .15s}
+    .footer-col ul li a:hover{color:#fff}
+    .footer-bottom{border-top:1px solid var(--dark-border);max-width:var(--max-w);margin:0 auto;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;font-size:.8rem;flex-wrap:wrap;gap:8px}
+    .footer-bottom a{color:#94a3b8}.footer-bottom a:hover{color:#fff}
+    @media(max-width:768px){.footer-top{grid-template-columns:1fr 1fr}.footer-brand{grid-column:1/-1}}
+    @media(max-width:480px){.footer-top{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><span class="logo-icon">&#9201;</span>WordsToTime</a>
+    <nav class="site-nav" id="mainNav">
+      <a href="/">Home</a>
+      <a href="/words-to-minutes/">Words to Min</a>
+      <a href="/word-to-reading-time/">Reading Time</a>
+      <a href="/word-to-speaking-time/">Speaking Time</a>
+      <a href="/word-to-presentation-time/" class="active">Presentation</a>
+      <a href="/practice-mode/" class="nav-cta">Practice Mode</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="/">Home</a><span class="breadcrumb-sep">&#8250;</span>
+    <a href="/words-to-minutes/">Calculators</a><span class="breadcrumb-sep">&#8250;</span>
+    <span class="breadcrumb-current">Presentation Time Calculator</span>
+  </div>
+</nav>
+
+<div class="page-container">
+<main class="main-content">
+
+  <!-- HERO -->
+  <div class="page-hero">
+    <h1>Presentation Time Calculator — Word Count to Speaking Time</h1>
+    <p class="hero-sub">Paste your script or enter a word count to instantly calculate how long your presentation will take. Supports custom WPM rates, slide timing, and all common presentation lengths.</p>
+  </div>
+
+  <!-- TOP AD -->
+  <div class="ad-unit" style="margin-bottom:20px">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9275267797924945" data-ad-slot="auto" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <!-- MAIN CALCULATOR -->
+  <div class="card">
+    <h2 class="section-title">&#128200; Presentation Time Calculator</h2>
+
+    <!-- Paste text -->
+    <div class="field-label">Option A — Paste your presentation script</div>
+    <textarea class="calc-textarea" id="textInput" placeholder="Paste your presentation script here… The word count will be detected automatically." oninput="autoCount()"></textarea>
+    <div style="font-size:.8rem;color:var(--text-muted);margin-top:5px;margin-bottom:12px">Word count: <strong id="liveCount">0</strong></div>
+
+    <div class="calc-or">OR</div>
+
+    <!-- Manual word count -->
+    <div class="field-label" style="margin-bottom:6px">Option B — Enter word count manually</div>
+    <div class="calc-grid" style="margin-bottom:16px">
+      <div>
+        <input type="number" class="calc-input" id="wordInput" placeholder="Enter word count (e.g. 1000)" min="1" max="100000">
+      </div>
+      <div>
+        <div class="field-label">Speaking rate (WPM)</div>
+        <select class="calc-select" id="wpmSelect">
+          <option value="100">100 WPM — Very slow / academic</option>
+          <option value="110">110 WPM — Slow / lecture pace</option>
+          <option value="120">120 WPM — Conference / formal</option>
+          <option value="125" selected>125 WPM — Standard presentation &#11088;</option>
+          <option value="130">130 WPM — ASHA public speaking</option>
+          <option value="140">140 WPM — Toastmasters</option>
+          <option value="150">150 WPM — Conversational</option>
+          <option value="163">163 WPM — TED Talk pace</option>
+          <option value="180">180 WPM — Fast / news broadcast</option>
+        </select>
+      </div>
+    </div>
+
+    <button class="calc-btn" onclick="calculateTime()">&#9654; Calculate Presentation Time</button>
+
+    <!-- RESULT -->
+    <div class="result-box" id="resultBox">
+      <div id="resultTime" class="result-time">0:00</div>
+      <div id="resultSub" class="result-sub"></div>
+      <div class="result-pills" id="resultPills"></div>
+    </div>
+  </div>
+
+  <!-- SLIDE TIMING CALCULATOR -->
+  <div class="card">
+    <h2 class="section-title">&#128199; Slide Timing Calculator</h2>
+    <p style="font-size:.88rem;color:var(--text-muted);margin-bottom:16px">Enter your total presentation time and number of slides to calculate how long you should spend on each slide.</p>
+    <div class="slide-grid">
+      <div>
+        <div class="field-label">Total time (minutes)</div>
+        <input type="number" class="calc-input" id="totalMins" placeholder="e.g. 10" min="1" max="300">
+      </div>
+      <div>
+        <div class="field-label">Number of slides</div>
+        <input type="number" class="calc-input" id="numSlides" placeholder="e.g. 15" min="1" max="500">
+      </div>
+      <div>
+        <button class="calc-btn" style="margin-top:0" onclick="calcSlides()">Calculate Per Slide</button>
+      </div>
+    </div>
+    <div class="slide-result" id="slideResult">
+      <div>
+        <div class="slide-big" id="slideTime">—</div>
+        <div style="font-size:.72rem;color:var(--text-muted);font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-top:4px">per slide</div>
+      </div>
+      <div class="slide-detail" id="slideDetail"></div>
+    </div>
+    <div class="info-box" style="margin-top:14px">
+      <strong>Rule of thumb:</strong> Aim for <strong>1–2 minutes per slide</strong> for most presentations. Title and transition slides can use 20–30 seconds. Data-heavy slides need 2–3 minutes. If you have 15 slides in a 20-minute presentation, that is 80 seconds per slide — a comfortable pace.
+    </div>
+  </div>
+
+  <!-- WPM REFERENCE -->
+  <div class="card">
+    <h2 class="section-title">&#127919; Average Speaking Rate for Presentations (WPM Guide)</h2>
+    <div class="wpm-grid">
+      <div class="wpm-card"><div class="wpm-num">100</div><div class="wpm-label">Academic / Lecture</div><div class="wpm-note">Very deliberate</div></div>
+      <div class="wpm-card"><div class="wpm-num">110</div><div class="wpm-label">Conference Formal</div><div class="wpm-note">Heavy data slides</div></div>
+      <div class="wpm-card active"><div class="wpm-num">125</div><div class="wpm-label">&#11088; Standard Pres.</div><div class="wpm-note">Recommended rate</div></div>
+      <div class="wpm-card"><div class="wpm-num">130</div><div class="wpm-label">ASHA / Business</div><div class="wpm-note">Pitch decks</div></div>
+      <div class="wpm-card"><div class="wpm-num">163</div><div class="wpm-label">TED Talk</div><div class="wpm-note">Rehearsed script</div></div>
+    </div>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Presentation Type</th><th>Avg WPM</th><th>Reason</th><th>Best For</th></tr></thead>
+        <tbody>
+          <tr><td>Academic / Thesis</td><td>100–110 WPM</td><td>Complex content, frequent pauses</td><td>University defences, lectures</td></tr>
+          <tr><td>Conference / Research</td><td>110–120 WPM</td><td>Data-heavy slides, Q&amp;A built-in</td><td>Industry conferences, symposia</td></tr>
+          <tr class="highlight-row"><td>&#11088; Standard Business Pres.</td><td>125 WPM</td><td>Balanced pace with slide time</td><td>Work meetings, pitches, school</td></tr>
+          <tr><td>Sales Pitch / Investor</td><td>125–140 WPM</td><td>Energy-driven, fewer slides</td><td>Startup pitches, demos</td></tr>
+          <tr><td>TED / Keynote</td><td>160–165 WPM</td><td>Rehearsed monologue, no slides needed</td><td>Keynotes, TEDx talks</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:.75rem;color:var(--text-muted);margin-top:8px">Sources: <a href="https://www.asha.org/public/speech/development/rate/" target="_blank" rel="noopener">ASHA Speaking Rate Research</a> &bull; <a href="https://www.toastmasters.org/" target="_blank" rel="noopener">Toastmasters International</a> &bull; TED Talk corpus analysis.</p>
+  </div>
+
+  <!-- WORD COUNT REFERENCE TABLE -->
+  <div class="card">
+    <h2 class="section-title">&#128336; How Long to Present — Full Reference Table</h2>
+    <p style="font-size:.88rem;color:var(--text-muted);margin-bottom:14px">Presentation time at 125 WPM (standard) and 130 WPM (ASHA speech rate) for every common word count. Add 10–15% for slide transitions.</p>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Word Count</th><th>@ 100 WPM</th><th>@ 125 WPM &#11088;</th><th>@ 130 WPM</th><th>@ 150 WPM</th></tr></thead>
+        <tbody>
+          <tr><td>250 words</td><td>2m 30s</td><td>2m 0s</td><td>1m 55s</td><td>1m 40s</td></tr>
+          <tr><td>300 words</td><td>3m 0s</td><td>2m 24s</td><td>2m 18s</td><td>2m 0s</td></tr>
+          <tr><td>400 words</td><td>4m 0s</td><td>3m 12s</td><td>3m 5s</td><td>2m 40s</td></tr>
+          <tr><td>500 words</td><td>5m 0s</td><td>4m 0s</td><td>3m 51s</td><td>3m 20s</td></tr>
+          <tr class="highlight-row"><td>600 words</td><td>6m 0s</td><td>4m 48s</td><td>4m 37s</td><td>4m 0s</td></tr>
+          <tr><td>750 words</td><td>7m 30s</td><td>6m 0s</td><td>5m 46s</td><td>5m 0s</td></tr>
+          <tr><td>1,000 words</td><td>10m 0s</td><td>8m 0s</td><td>7m 41s</td><td>6m 40s</td></tr>
+          <tr><td>1,250 words</td><td>12m 30s</td><td>10m 0s</td><td>9m 37s</td><td>8m 20s</td></tr>
+          <tr><td>1,500 words</td><td>15m 0s</td><td>12m 0s</td><td>11m 32s</td><td>10m 0s</td></tr>
+          <tr><td>2,000 words</td><td>20m 0s</td><td>16m 0s</td><td>15m 23s</td><td>13m 20s</td></tr>
+          <tr><td>2,500 words</td><td>25m 0s</td><td>20m 0s</td><td>19m 13s</td><td>16m 40s</td></tr>
+          <tr><td>3,000 words</td><td>30m 0s</td><td>24m 0s</td><td>23m 4s</td><td>20m 0s</td></tr>
+          <tr><td>3,750 words</td><td>37m 30s</td><td>30m 0s</td><td>28m 51s</td><td>25m 0s</td></tr>
+          <tr><td>5,000 words</td><td>50m 0s</td><td>40m 0s</td><td>38m 28s</td><td>33m 20s</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- MID AD -->
+  <div class="ad-unit" style="margin-bottom:20px">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9275267797924945" data-ad-slot="auto" data-ad-format="rectangle" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <!-- GUIDE -->
+  <div class="card">
+    <h2 class="section-title">&#128218; Presentation Timing Guide</h2>
+    <div class="prose">
+      <h3>What is the average speaking rate for a presentation?</h3>
+      <p>The average speaking rate for a presentation is <strong>100–125 words per minute (WPM)</strong>. This is slower than general public speaking (130 WPM) because presentations include time for slide transitions, pauses for audience comprehension, and deliberate emphasis on key data points. For most business presentations and school projects, use <strong>125 WPM as your planning baseline</strong>. The calculator above defaults to 125 WPM for this reason.</p>
+
+      <div class="info-box">
+        <strong>Key difference vs. pure speech:</strong> A 10-minute <em>speech</em> at 130 WPM = 1,300 words. A 10-minute <em>presentation</em> at 125 WPM = 1,250 words. The difference is small — but add 15 slide transitions at 5 seconds each and you lose another 1 minute 15 seconds, bringing you closer to 1,100–1,150 words for a true 10-minute presentation slot.
+      </div>
+
+      <h3>How long does it take to present 500 words?</h3>
+      <p>500 words takes approximately <strong>4 minutes to present at 125 WPM</strong> (standard presentation rate). At 130 WPM (ASHA): 3 minutes 51 seconds. At 100 WPM (slow, deliberate): 5 minutes exactly. For a 5-minute presentation slot, aim for <strong>550–600 words</strong> at 125 WPM — this leaves 20–30 seconds of buffer for a strong opening and closing pause.</p>
+
+      <h3>How many words is a 10-minute presentation?</h3>
+      <p>A 10-minute presentation is <strong>1,000–1,250 words</strong> at the standard 100–125 WPM presentation rate. At 130 WPM: 1,300 words. Use 1,000–1,100 words for a presentation with 10–15 slides (accounting for transition time), or 1,200–1,250 words for a script-heavy 10-minute talk with minimal slide interaction. For reference, a standard 10-minute TED Talk runs ~1,600 words at 163 WPM.</p>
+
+      <h3>Presentation word count by duration (quick reference)</h3>
+      <ul>
+        <li><strong>5-minute presentation</strong>: 500–625 words at 100–125 WPM</li>
+        <li><strong>10-minute presentation</strong>: 1,000–1,250 words at 100–125 WPM</li>
+        <li><strong>15-minute presentation</strong>: 1,500–1,875 words at 100–125 WPM</li>
+        <li><strong>20-minute presentation</strong>: 2,000–2,500 words at 100–125 WPM</li>
+        <li><strong>30-minute presentation</strong>: 3,000–3,750 words at 100–125 WPM</li>
+        <li><strong>45-minute lecture</strong>: 4,500–5,625 words at 100–125 WPM</li>
+        <li><strong>60-minute seminar</strong>: 6,000–7,500 words at 100–125 WPM</li>
+      </ul>
+
+      <div class="info-box green">
+        <strong>Presentation rehearsal tip:</strong> Run your presentation <em>at least twice</em> with the <a href="/word-to-public-speaking-time/">live speech timer</a>. Most presenters discover they speak 15–20% faster under adrenaline. If your rehearsal clocks 9:00 for a 10-minute slot, you are actually well-paced. If it clocks 7:30, cut words or slow down deliberately.
+      </div>
+
+      <h3>演講時間計算器 (Traditional Chinese)</h3>
+      <p>本計算器可以將字數轉換為演講時間。對於標準簡報，請使用 <strong>125 WPM</strong>（每分鐘125個英文單字）。輸入字數後，即可立即得知您的演講需要多長時間。也可以直接貼上您的演講稿，系統會自動計算字數和時間。</p>
+
+      <h3>Redezeit Rechner (German)</h3>
+      <p>Der Präsentationszeit-Rechner berechnet die Redezeit für Ihren Vortrag. Für eine Standardpräsentation empfehlen wir <strong>125 WPM</strong> (Wörter pro Minute). Fügen Sie Ihren Text ein oder geben Sie die Wörteranzahl manuell ein, um die benötigte Redezeit sofort zu erhalten.</p>
+    </div>
+  </div>
+
+  <!-- RELATED TOOLS -->
+  <div class="card">
+    <h2 class="section-title">&#128295; Related Calculators</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px">
+      <a href="/word-to-reading-time/" style="display:block;background:var(--bg);border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:14px;text-decoration:none;transition:.15s" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-weight:700;color:var(--text);font-size:.9rem">&#128214; Reading Time Calculator</div>
+        <div style="font-size:.8rem;color:var(--text-muted);margin-top:4px">Convert word count to silent reading time</div>
+      </a>
+      <a href="/word-to-speaking-time/" style="display:block;background:var(--bg);border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:14px;text-decoration:none;transition:.15s" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-weight:700;color:var(--text);font-size:.9rem">&#128162; Speaking Time Calculator</div>
+        <div style="font-size:.8rem;color:var(--text-muted);margin-top:4px">Word count to speech time at any WPM</div>
+      </a>
+      <a href="/word-to-public-speaking-time/" style="display:block;background:var(--bg);border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:14px;text-decoration:none;transition:.15s" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-weight:700;color:var(--text);font-size:.9rem">&#9201; Live Speech Timer</div>
+        <div style="font-size:.8rem;color:var(--text-muted);margin-top:4px">Countdown timer with traffic-light system</div>
+      </a>
+      <a href="/words-to-minutes/" style="display:block;background:var(--bg);border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:14px;text-decoration:none;transition:.15s" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-weight:700;color:var(--text);font-size:.9rem">&#9202; Words to Minutes</div>
+        <div style="font-size:.8rem;color:var(--text-muted);margin-top:4px">Classic word-to-minute converter</div>
+      </a>
+      <a href="/practice-mode/" style="display:block;background:var(--bg);border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:14px;text-decoration:none;transition:.15s" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-weight:700;color:var(--text);font-size:.9rem">&#9654; Practice Mode</div>
+        <div style="font-size:.8rem;color:var(--text-muted);margin-top:4px">Practice your presentation with live feedback</div>
+      </a>
+      <a href="/speaking-words-per-minute/" style="display:block;background:var(--bg);border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:14px;text-decoration:none;transition:.15s" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-weight:700;color:var(--text);font-size:.9rem">&#128202; WPM Reference Guide</div>
+        <div style="font-size:.8rem;color:var(--text-muted);margin-top:4px">Speaking rates explained by context</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="card">
+    <h2 class="section-title">&#10067; Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="faqToggle(this)">How long does it take to present 500 words?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">500 words takes approximately <strong>4 minutes at 125 WPM</strong> (standard presentation rate). At 130 WPM (ASHA): 3 minutes 51 seconds. At 100 WPM (very slow/academic): 5 minutes. For a 5-minute presentation slot, aim for <strong>550–600 words</strong> at 125 WPM to leave buffer for pauses and a strong close. Use the calculator above for your exact word count.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="faqToggle(this)">What is the average speaking rate for a presentation?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">The average speaking rate for a presentation is <strong>100–125 words per minute (WPM)</strong>, depending on context. Academic lectures run 100–110 WPM. Standard business presentations run 120–130 WPM. TED Talks average 163 WPM — much faster because they are fully rehearsed monologues. <strong>Use 125 WPM as your default planning rate</strong> for most presentations. This gives you natural pause time between slides without rushing.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="faqToggle(this)">How many words is a 10-minute presentation?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">A 10-minute presentation is <strong>1,000–1,250 words at 100–125 WPM</strong>. At 130 WPM (conversational): 1,300 words. For a presentation with 10–15 slides, use 1,000–1,100 words as your target — the remainder of the 10 minutes is consumed by slide transitions and pauses. See the reference table above for all word counts. Use the <a href="/">home calculator</a> for any custom word count and WPM combination.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="faqToggle(this)">How long does it take to present 1000 words?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">1,000 words takes approximately <strong>8 minutes at 125 WPM</strong> (standard presentation rate). At 130 WPM: 7 minutes 41 seconds. At 100 WPM: 10 minutes exactly. If your 1,000-word presentation has 10+ slides, add 1–2 minutes for transitions, bringing total time to 9–10 minutes. This makes 1,000 words a safe target for a 10-minute presentation slot.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="faqToggle(this)">How long does it take to present 2000 words?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">2,000 words takes approximately <strong>16 minutes at 125 WPM</strong>. At 130 WPM: 15 minutes 23 seconds. At 100 WPM: 20 minutes exactly. For a 15-minute slot, aim for 1,750–1,875 words. For a 20-minute slot, 2,000–2,300 words is appropriate. Add 2–3 minutes for slide transitions if your presentation has 15–20 slides.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="faqToggle(this)">How long should it take to read a presentation slide?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">A standard presentation slide should take <strong>1–2 minutes</strong> to present (60–120 seconds). Title and agenda slides: 20–30 seconds. Text-heavy or data slides: 2–3 minutes. Rule: if a slide has more than 50 words on it, it is probably better split into two slides. Use the <strong>Slide Timing Calculator above</strong> to get the exact seconds per slide for your presentation length and slide count.</div>
+    </div>
+  </div>
+
+</main>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="sidebar-card">
+    <h3>&#9889; Quick Reference (125 WPM)</h3>
+    <table class="ref-table">
+      <tr><td>300 words</td><td>2m 24s</td></tr>
+      <tr><td>500 words</td><td>4m 0s</td></tr>
+      <tr class="ref-highlight"><td>600 words</td><td>4m 48s</td></tr>
+      <tr><td>750 words</td><td>6m 0s</td></tr>
+      <tr><td>1,000 words</td><td>8m 0s</td></tr>
+      <tr><td>1,250 words</td><td>10m 0s</td></tr>
+      <tr><td>1,500 words</td><td>12m 0s</td></tr>
+      <tr><td>2,000 words</td><td>16m 0s</td></tr>
+      <tr><td>2,500 words</td><td>20m 0s</td></tr>
+      <tr><td>3,750 words</td><td>30m 0s</td></tr>
+    </table>
+  </div>
+
+  <div class="ad-unit" style="min-height:250px">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9275267797924945" data-ad-slot="auto" data-ad-format="rectangle" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <div class="sidebar-card">
+    <h3>&#128295; Other Calculators</h3>
+    <ul class="sidebar-links">
+      <li><a href="/words-to-minutes/"><span class="sl-icon">wm</span>Words to Minutes</a></li>
+      <li><a href="/word-to-reading-time/"><span class="sl-icon">&#128214;</span>Reading Time</a></li>
+      <li><a href="/word-to-speaking-time/"><span class="sl-icon">sp</span>Speaking Time</a></li>
+      <li><a href="/word-to-public-speaking-time/"><span class="sl-icon orange">&#9201;</span>Speech Timer</a></li>
+      <li><a href="/word-to-speech-length/"><span class="sl-icon">&#128203;</span>Speech Length</a></li>
+      <li><a href="/word-to-debate-time/"><span class="sl-icon indigo">db</span>Debate Timer</a></li>
+    </ul>
+  </div>
+
+  <div class="ad-unit" style="min-height:250px">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9275267797924945" data-ad-slot="auto" data-ad-format="rectangle" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <div class="sidebar-card">
+    <h3>&#128336; Speech Guides</h3>
+    <ul class="sidebar-links">
+      <li><a href="/3-minute-speech-word-count/"><span class="sl-icon green">3m</span>3-Min: ~390 words</a></li>
+      <li><a href="/4-minute-speech-word-count/"><span class="sl-icon indigo">4m</span>4-Min: ~520 words</a></li>
+      <li><a href="/5-minute-speech-word-count/"><span class="sl-icon">5m</span>5-Min: ~650 words</a></li>
+      <li><a href="/10-minute-speech-word-count/"><span class="sl-icon">10m</span>10-Min: ~1,300 words</a></li>
+      <li><a href="/15-minute-speech-word-count/"><span class="sl-icon">15m</span>15-Min: ~1,950 words</a></li>
+    </ul>
+  </div>
+</aside>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="/" class="site-logo"><span class="logo-icon">&#9201;</span>WordsToTime</a>
+      <p>Free tools to convert word count to speaking time, reading time and presentation duration. Backed by ASHA, Toastmasters and TED research.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Calculators</h4>
+      <ul>
+        <li><a href="/words-to-minutes/">Words to Minutes</a></li>
+        <li><a href="/word-to-reading-time/">Reading Time</a></li>
+        <li><a href="/word-to-speaking-time/">Speaking Time</a></li>
+        <li><a href="/word-to-speech-length/">Speech Length</a></li>
+        <li><a href="/word-to-presentation-time/">Presentation Time</a></li>
+        <li><a href="/word-to-debate-time/">Debate Timer</a></li>
+        <li><a href="/practice-mode/">Practice Mode</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Speech Guides</h4>
+      <ul>
+        <li><a href="/3-minute-speech-word-count/">3-Min Speech</a></li>
+        <li><a href="/4-minute-speech-word-count/">4-Min Speech</a></li>
+        <li><a href="/5-minute-speech-word-count/">5-Min Speech</a></li>
+        <li><a href="/7-minute-speech-word-count/">7-Min Speech</a></li>
+        <li><a href="/10-minute-speech-word-count/">10-Min Speech</a></li>
+        <li><a href="/15-minute-speech-word-count/">15-Min Speech</a></li>
+        <li><a href="/20-minute-speech-word-count/">20-Min Speech</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>WPM &amp; Guides</h4>
+      <ul>
+        <li><a href="/speaking-words-per-minute/">WPM Guide</a></li>
+        <li><a href="/1000-words-to-minutes/">1,000 Words</a></li>
+        <li><a href="/word-to-public-speaking-time/">Public Speaking</a></li>
+        <li><a href="/how-long-900-word-speech/">900-Word Speech</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&#169; 2026 WordsToTime.netlify.app &mdash; Free Presentation &amp; Speech Time Tools</span>
+    <span><a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a> &middot; <a href="/about/">About</a></span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('navToggle').addEventListener('click',function(){document.getElementById('mainNav').classList.toggle('open');});
+
+  function faqToggle(el){
+    var a=el.nextElementSibling,o=el.classList.contains('open');
+    document.querySelectorAll('.faq-question').forEach(function(q){q.classList.remove('open');});
+    document.querySelectorAll('.faq-answer').forEach(function(ans){ans.classList.remove('open');});
+    if(!o){el.classList.add('open');a.classList.add('open');}
+  }
+
+  function fmtTime(secs){
+    var h=Math.floor(secs/3600),m=Math.floor((secs%3600)/60),s=Math.round(secs%60);
+    if(s===60){m++;s=0;} if(m===60){h++;m=0;}
+    if(h>0)return h+'h '+(m<10?'0'+m:m)+'m '+(s<10?'0'+s:s)+'s';
+    return m+'m '+(s<10?'0'+s:s)+'s';
+  }
+
+  function autoCount(){
+    var txt=document.getElementById('textInput').value.trim();
+    var count=txt.length===0?0:txt.split(/\s+/).length;
+    document.getElementById('liveCount').textContent=count.toLocaleString();
+    if(count>0)document.getElementById('wordInput').value=count;
+  }
+
+  function calculateTime(){
+    var textVal=document.getElementById('textInput').value.trim();
+    var words=0;
+    if(textVal.length>0){words=textVal.split(/\s+/).length;}
+    else{words=parseInt(document.getElementById('wordInput').value)||0;}
+    if(!words||words<1){alert('Please paste your script or enter a word count.');return;}
+
+    var wpm=parseInt(document.getElementById('wpmSelect').value)||125;
+    var secs=(words/wpm)*60;
+    var box=document.getElementById('resultBox');
+    var rtime=document.getElementById('resultTime');
+    var rsub=document.getElementById('resultSub');
+    var rpills=document.getElementById('resultPills');
+
+    rtime.textContent=fmtTime(secs);
+    rsub.textContent=words.toLocaleString()+' words at '+wpm+' WPM';
+
+    var rates=[100,125,130,150,163];
+    var labels=['100 WPM (slow)','125 WPM (standard)','130 WPM (ASHA)','150 WPM (conv.)','163 WPM (TED)'];
+    rpills.innerHTML='';
+    rates.forEach(function(r,i){
+      var s2=(words/r)*60;
+      var pill=document.createElement('div');
+      pill.className='result-pill';
+      pill.textContent=fmtTime(s2)+' @ '+labels[i];
+      rpills.appendChild(pill);
+    });
+
+    box.className='result-box show';
+  }
+
+  function calcSlides(){
+    var mins=parseFloat(document.getElementById('totalMins').value)||0;
+    var slides=parseInt(document.getElementById('numSlides').value)||0;
+    if(!mins||!slides){alert('Please enter total minutes and slide count.');return;}
+    var secsPerSlide=(mins*60)/slides;
+    var r=document.getElementById('slideResult');
+    var st=document.getElementById('slideTime');
+    var sd=document.getElementById('slideDetail');
+    r.className='slide-result show';
+    st.textContent=fmtTime(secsPerSlide);
+    var wPerSlide=Math.round((secsPerSlide/60)*125);
+    var advice=secsPerSlide<30?'&#128308; Very fast — consider fewer slides':(secsPerSlide<60?'&#128993; Tight — limit text per slide':(secsPerSlide<120?'&#128994; Good pace':(secsPerSlide<180?'&#128994; Comfortable — room for audience interaction':'&#128310; Slow — add detail or split time')));
+    sd.innerHTML='<strong>'+mins+' min &divide; '+slides+' slides</strong><br>~'+wPerSlide+' words per slide<br>'+advice;
+  }
+</script>
+</body>
+</html>
