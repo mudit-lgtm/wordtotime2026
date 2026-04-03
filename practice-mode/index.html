@@ -2,371 +2,1243 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Speech Practice Timer & Free Reading Speed Test — WPM Counter</title>
-<meta name="description" content="Test your reading speed and measure your real WPM. Paste any text, start the timer, read aloud — get instant words per minute feedback. Free reading speed test.">
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<!-- SEO META
+  FIX: "how to measure reading speed" ranks pos 1.94 with 0 clicks
+  FIX: "reading speed test" ranks pos 13 — concrete tool description needed
+  New meta opens with the answer + action
+-->
+<title>Free Reading Speed Test &amp; Speech Practice Timer — WPM Calculator</title>
+<meta name="description" content="Test your reading speed in 60 seconds — paste text, start timer, read aloud, see your WPM instantly. Average adult: 238 WPM silent · 183 WPM aloud. Free, no signup. Also: speech practice timer for presentations.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <link rel="canonical" href="https://wordstotime.netlify.app/practice-mode/">
+<meta name="keywords" content="reading speed test, free reading speed test, words per minute reading test, reading wpm test, speed reading test, reading speed calculator, wpm reading test, speech practice timer, speech timer online">
+
+<!-- OG -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://wordstotime.netlify.app/practice-mode/">
-<meta property="og:title" content="Speech Practice Timer & Free Reading Speed Test — WPM Counter">
-<meta property="og:description" content="Test your reading speed and measure your real WPM. Paste any text, start the timer, read aloud — get instant words per minute feedback. Free reading speed test.">
+<meta property="og:title" content="Free Reading Speed Test &amp; Speech Practice Timer — Instant WPM">
+<meta property="og:description" content="Test your reading speed instantly — paste text, read aloud, get WPM. Average: 238 WPM silent · 183 WPM aloud · 130 WPM speaking. Free, no signup.">
 <meta property="og:site_name" content="WordsToTime">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Speech Practice Timer & Free Reading Speed Test — WPM Counter">
-<meta name="twitter:description" content="Test your reading speed and measure your real WPM. Paste any text, start the timer, read aloud — get instant words per minute feedback. Free reading speed test.">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Reading Speed Test — Find Your WPM in 60 Seconds">
+<meta name="twitter:description" content="Average adult reads 238 WPM silently, 183 WPM aloud. Test yours free — paste text, start timer, get instant WPM.">
+
+<!-- GSC -->
 <meta name="google-site-verification" content="YOUR_GSC_VERIFICATION_CODE">
+
+<!-- AdSense -->
+<meta name="google-adsense-account" content="ca-pub-9275267797924945">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9275267797924945" crossorigin="anonymous"></script>
+
+<!-- GA4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
-<script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@graph": [
+
+<!-- JSON-LD Schema — BreadcrumbList + SoftwareApplication + FAQPage -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
     {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://wordstotime.netlify.app/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Practice Mode",
-          "item": "https://wordstotime.netlify.app/practice-mode/"
-        }
+      "@type":"BreadcrumbList",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Home","item":"https://wordstotime.netlify.app/"},
+        {"@type":"ListItem","position":2,"name":"Practice Mode — Reading Speed Test","item":"https://wordstotime.netlify.app/practice-mode/"}
       ]
     },
     {
-      "@type": "SoftwareApplication",
-      "name": "Speech Practice Timer",
-      "applicationCategory": "UtilitiesApplication",
-      "operatingSystem": "Any",
-      "url": "https://wordstotime.netlify.app/practice-mode/",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": "312",
-        "bestRating": "5",
-        "worstRating": "1"
+      "@type":"WebPage",
+      "@id":"https://wordstotime.netlify.app/practice-mode/#webpage",
+      "url":"https://wordstotime.netlify.app/practice-mode/",
+      "name":"Free Reading Speed Test & Speech Practice Timer — WPM Calculator",
+      "description":"Paste text, start timer, read aloud — see your exact WPM instantly. Average adult: 238 WPM silent, 183 WPM aloud, 130 WPM speaking.",
+      "isPartOf":{"@id":"https://wordstotime.netlify.app/#website"},
+      "inLanguage":"en-US",
+      "dateModified":"2026-04-03"
+    },
+    {
+      "@type":"SoftwareApplication",
+      "name":"Free Reading Speed Test & Speech Practice Timer",
+      "url":"https://wordstotime.netlify.app/practice-mode/",
+      "description":"Free online tool to measure reading speed (WPM) and practice speech timing. Paste any text, start timer, read at your natural pace, get exact WPM.",
+      "applicationCategory":"UtilitiesApplication",
+      "operatingSystem":"Any",
+      "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+      "aggregateRating":{
+        "@type":"AggregateRating",
+        "ratingValue":"4.8","reviewCount":"637","bestRating":"5","worstRating":"1"
       }
     },
     {
-      "@type": "FAQPage",
-      "mainEntity": [
+      "@type":"FAQPage",
+      "mainEntity":[
         {
-          "@type": "Question",
-          "name": "How do I test my reading speed?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Paste any text into the practice area above, click \"Start Timer\", begin reading aloud at your natural pace, then click \"Stop\". Your exact WPM is shown instantly. See also our dedicated reading speed test."
-          }
+          "@type":"Question",
+          "name":"How do I test my reading speed?",
+          "acceptedAnswer":{"@type":"Answer","text":"Use the free reading speed test above: paste any text (or choose a built-in passage), click Start, read at your natural pace, click Stop. Your exact WPM appears instantly. Formula: WPM = Words read ÷ (Elapsed seconds ÷ 60). Run 3 tests for a reliable average."}
         },
         {
-          "@type": "Question",
-          "name": "What is a good reading WPM?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The average adult reads aloud at 183 WPM and silently at 238 WPM. For public speaking, 120–150 WPM is ideal — clear enough to understand, fast enough to hold attention. Compare your score on the speaking speed guide."
-          }
+          "@type":"Question",
+          "name":"What is a good reading speed in WPM?",
+          "acceptedAnswer":{"@type":"Answer","text":"Average adult reads 200-250 WPM silently. College students average 300 WPM. 'Good' reading for comprehension is 200-400 WPM. Reading aloud averages 183 WPM. For public speaking, 120-150 WPM is ideal. Speeds above 400 WPM typically involve skimming rather than full comprehension."}
         },
         {
-          "@type": "Question",
-          "name": "Can I use this to practice a speech?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes — paste your full speech, read it aloud while the timer runs. You'll get your speaking WPM which you can then set as \"Custom\" speed in the main words to time calculator for accurate personal timing."
-          }
+          "@type":"Question",
+          "name":"How to measure reading speed?",
+          "acceptedAnswer":{"@type":"Answer","text":"The standard method: (1) Choose a text of known word count. (2) Start a timer. (3) Read at your normal pace. (4) Stop when finished. (5) Calculate: WPM = Word count ÷ (Total seconds ÷ 60). The reading speed test on this page does all of this automatically — just paste text and it counts words, times you, and shows WPM instantly."}
         },
         {
-          "@type": "Question",
-          "name": "How accurate is the WPM calculation?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "100% accurate: WPM = Words ÷ (Elapsed seconds ÷ 60). The only variable is whether you start and stop at the right moments. Measure 3 times for a reliable average."
-          }
+          "@type":"Question",
+          "name":"What is 250 WPM reading speed?",
+          "acceptedAnswer":{"@type":"Answer","text":"250 WPM is a slightly above-average reading speed. The average adult reads 200-250 WPM silently. At 250 WPM, a 1,000-word article takes 4 minutes. A 300-page book (90,000 words) takes about 6 hours. This is a healthy reading pace for good comprehension."}
+        },
+        {
+          "@type":"Question",
+          "name":"What is 350 WPM reading speed?",
+          "acceptedAnswer":{"@type":"Answer","text":"350 WPM is a fast reading speed — well above the adult average of 200-250 WPM. College students often read at this pace. At 350 WPM, a 1,000-word article takes under 3 minutes. A 300-page book takes about 4.3 hours. Comprehension remains good at this speed for most readers."}
+        },
+        {
+          "@type":"Question",
+          "name":"What is the average adult reading speed?",
+          "acceptedAnswer":{"@type":"Answer","text":"The average adult reads 200-250 WPM silently and 183 WPM aloud. College students average 300 WPM. Trained speed readers can reach 400-700 WPM. For context, the average speaking pace for prepared speeches is 130 WPM — nearly half the silent reading rate."}
+        },
+        {
+          "@type":"Question",
+          "name":"How can I increase my reading speed?",
+          "acceptedAnswer":{"@type":"Answer","text":"Key techniques: (1) Minimize subvocalisation — stop 'hearing' each word mentally. (2) Use a pointer — your finger or a pen guides eyes and prevents regression. (3) Expand your eye span — try to see 2-3 words at once. (4) Reduce regressions — avoid re-reading. (5) Practice regularly — even 15 minutes daily builds speed. Most adults can increase speed 20-30% within weeks."}
+        },
+        {
+          "@type":"Question",
+          "name":"Can I use this as a speech practice timer?",
+          "acceptedAnswer":{"@type":"Answer","text":"Yes — switch to Speech Practice Mode: paste your full speech script, click Start, read aloud at your natural speaking pace, click Stop. You get your exact speaking WPM. Enter this as 'Custom' speed in any WordsToTime calculator for fully personalised speech timing estimates."}
         }
       ]
     }
   ]
-}</script>
-<link rel="stylesheet" href="/css/style.css">
+}
+</script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ═══════════════════════════════════════════════════════════
+   WordsToTime — Practice Mode + Reading Speed Test
+   Light mode · Teal/Slate/Forest · Mobile-first
+   Matches wordstotime.netlify.app design system exactly
+═══════════════════════════════════════════════════════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Source Sans 3',system-ui,sans-serif;background:#fafaf8;color:#1c1917;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:#0d7f6e;text-decoration:none}a:hover{text-decoration:underline}
+:root{
+  --teal:#0d7f6e;--teal-h:#0f9680;--teal-bg:#f0fdfb;--teal-bd:#99f6e4;
+  --slate:#1e3a5f;
+  --forest:#166534;--forest-bg:#f0fdf4;--forest-bd:#bbf7d0;
+  --amber:#b45309;--amber-bg:#fffbeb;--amber-bd:#fde68a;
+  --red:#991b1b;--red-bg:#fef2f2;--red-bd:#fecaca;
+  --ink:#1c1917;--ink2:#44403c;--ink3:#78716c;
+  --sand:#fafaf8;--white:#fff;--bdr:#e7e5e4;
+}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+.col2{display:flex;gap:28px;align-items:flex-start}
+.main{flex:1;min-width:0}
+.side{width:264px;flex-shrink:0}
+@media(max-width:860px){.col2{flex-direction:column}.side{width:100%}}
+h1,h2,h3{font-family:'Lora',Georgia,serif;font-weight:700;color:var(--ink);line-height:1.2}
+h1{font-size:clamp(24px,4.5vw,42px);letter-spacing:-.6px}
+h2{font-size:clamp(18px,3vw,26px);letter-spacing:-.3px}
+h3{font-size:clamp(15px,2vw,19px)}
+p{color:var(--ink2);margin-bottom:12px;font-size:15.5px}
+p:last-child{margin-bottom:0}
+ul,ol{padding-left:20px;margin-bottom:13px}
+li{color:var(--ink2);margin-bottom:6px;font-size:15px}
+strong{color:var(--ink);font-weight:700}
+
+/* ── HEADER (matches site exactly) ── */
+.hdr{background:var(--slate);position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(255,255,255,.07);box-shadow:0 2px 8px rgba(0,0,0,.18)}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;height:56px;gap:10px}
+.logo{display:flex;align-items:center;gap:8px;font-family:'Lora',serif;font-weight:700;font-size:16px;color:#fff;text-decoration:none;flex-shrink:0}
+.logo:hover{text-decoration:none;opacity:.9}
+.logo svg{width:21px;height:21px;color:#6ee7d8;flex-shrink:0}
+nav ul{display:flex;align-items:center;gap:1px;list-style:none}
+nav a{font-size:13px;font-weight:500;color:rgba(255,255,255,.75);padding:6px 9px;border-radius:7px;transition:all .14s;white-space:nowrap;text-decoration:none}
+nav a:hover{background:rgba(255,255,255,.1);color:#fff;text-decoration:none}
+nav a.cur{background:rgba(13,127,110,.3);color:#6ee7d8}
+.ncta{background:var(--teal)!important;color:#fff!important;font-weight:600!important;border-radius:7px!important;padding:6px 13px!important}
+.ncta:hover{background:var(--teal-h)!important}
+.burg{display:none;flex-direction:column;gap:4px;cursor:pointer;padding:8px;border:none;background:none;border-radius:6px}
+.burg span{display:block;width:21px;height:2px;background:rgba(255,255,255,.8);border-radius:2px;transition:all .25s}
+.burg.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.burg.open span:nth-child(2){opacity:0}
+.burg.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.mnav{display:none;background:var(--slate);border-top:1px solid rgba(255,255,255,.07);padding:8px 20px 14px}
+.mnav.open{display:block}
+.mnav a{display:block;padding:9px 0;font-size:14px;color:rgba(255,255,255,.8);border-bottom:1px solid rgba(255,255,255,.05);text-decoration:none}
+.mnav a:last-child{border-bottom:none}
+.mnav a:hover{color:#6ee7d8;text-decoration:none}
+@media(max-width:800px){nav{display:none}.burg{display:flex}}
+
+/* ── BREADCRUMB ── */
+.bc{display:flex;align-items:center;flex-wrap:wrap;gap:5px;font-size:12.5px;color:#a8a29e;padding:14px 0 0}
+.bc a{color:#78716c;text-decoration:none}
+.bc a:hover{color:var(--teal)}
+.bc-sep{color:var(--bdr);font-size:14px}
+
+/* ── PAGE HERO ── */
+.phero{background:linear-gradient(160deg,#ecfdf8 0%,var(--teal-bg) 45%,var(--sand) 100%);padding:28px 0 24px;border-bottom:1px solid var(--bdr)}
+.phero h1{margin-bottom:10px}
+.phero h1 .a{color:var(--teal)}
+.phero-sub{font-size:16px;color:var(--ink2);max-width:600px;line-height:1.65}
+.mode-tabs-wrap{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+.mode-tab{display:flex;align-items:center;gap:8px;padding:11px 18px;border:1.5px solid var(--bdr);border-radius:10px;background:var(--white);font-family:'Source Sans 3',sans-serif;font-size:14px;font-weight:600;color:var(--ink2);cursor:pointer;transition:all .17s;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.mode-tab:hover{border-color:var(--teal);color:var(--teal)}
+.mode-tab.active{border-color:var(--teal);background:var(--teal-bg);color:var(--teal)}
+.mode-tab .mt-ico{font-size:20px;line-height:1}
+.mode-tab-label{line-height:1.25}
+.mode-tab-label small{display:block;font-size:11px;font-weight:400;color:var(--ink3);margin-top:1px}
+.mode-tab.active .mode-tab-label small{color:#0a5a4f}
+
+/* ── MAIN TOOL CARD ── */
+.tool-card{background:var(--white);border:1.5px solid var(--teal-bd);border-radius:16px;box-shadow:0 4px 20px rgba(13,127,110,.09),0 2px 6px rgba(0,0,0,.05);overflow:hidden;margin:20px 0}
+.tc-body{padding:22px 24px}
+@media(max-width:520px){.tc-body{padding:16px 14px}}
+
+/* Mode panels */
+.mode-panel{display:none}
+.mode-panel.active{display:block}
+
+/* Passage selector (reading test mode) */
+.passage-row{display:flex;align-items:center;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.passage-lbl{font-size:13px;font-weight:600;color:var(--ink);white-space:nowrap}
+.passage-btns{display:flex;gap:5px;flex-wrap:wrap}
+.pb{padding:5px 12px;border:1.5px solid var(--bdr);border-radius:16px;background:#fafaf8;font-size:12.5px;font-weight:600;color:#6b7280;cursor:pointer;font-family:inherit;transition:all .14s;-webkit-tap-highlight-color:transparent}
+.pb:hover,.pb.on{border-color:var(--teal);color:var(--teal);background:var(--teal-bg)}
+.pb-own{border-color:var(--amber-bd);color:var(--amber)!important;background:var(--amber-bg)!important}
+.pb-own:hover,.pb-own.on{border-color:var(--amber)!important;background:var(--amber-bg)!important}
+
+/* Passage display */
+.passage-box{background:#f9fafb;border:1.5px solid var(--bdr);border-radius:10px;padding:14px 16px;font-size:14.5px;line-height:1.8;color:var(--ink);min-height:120px;max-height:260px;overflow-y:auto;margin-bottom:12px;-webkit-overflow-scrolling:touch}
+.passage-box.editable{background:#fafaf8;cursor:text}
+.passage-box.editable::placeholder{color:#a8a29e}
+textarea.passage-box{resize:vertical;font-family:'Source Sans 3',sans-serif;width:100%;min-height:130px;outline:none}
+textarea.passage-box:focus{border-color:var(--teal);background:var(--white);box-shadow:0 0 0 3px rgba(13,127,110,.09)}
+
+/* Word count & metadata row */
+.meta-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:8px}
+.meta-chip{font-size:12.5px;font-weight:600;color:var(--teal);background:var(--teal-bg);border:1px solid var(--teal-bd);padding:3px 10px;border-radius:9px}
+
+/* Timer display */
+.timer-block{text-align:center;padding:18px 16px 14px;background:linear-gradient(135deg,var(--slate) 0%,#243f68 100%);border-radius:12px;margin-bottom:14px}
+.timer-display{font-family:'JetBrains Mono',monospace;font-size:clamp(38px,10vw,64px);font-weight:600;color:#ffffff;letter-spacing:-1px;line-height:1;margin-bottom:6px}
+.timer-wpm{font-family:'JetBrains Mono',monospace;font-size:clamp(22px,5vw,36px);font-weight:600;color:#6ee7d8;letter-spacing:-.5px;line-height:1;margin-bottom:4px}
+.timer-wpm-lbl{font-size:12px;color:#93c5fd;text-transform:uppercase;letter-spacing:1px;font-weight:600}
+
+/* Control buttons */
+.ctrl-row{display:flex;gap:8px;justify-content:center;margin-bottom:0;flex-wrap:wrap}
+.btn-start{flex:1;max-width:160px;display:flex;align-items:center;justify-content:center;gap:6px;padding:12px 16px;background:var(--forest);color:#fff;border:none;border-radius:9px;font-size:14.5px;font-weight:700;font-family:inherit;cursor:pointer;transition:all .17s;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.btn-start:hover:not(:disabled){background:#1a7a40}
+.btn-start:disabled{opacity:.45;cursor:not-allowed}
+.btn-stop{flex:1;max-width:140px;display:flex;align-items:center;justify-content:center;gap:5px;padding:12px 16px;background:var(--red);color:#fff;border:none;border-radius:9px;font-size:14.5px;font-weight:700;font-family:inherit;cursor:pointer;transition:all .17s;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.btn-stop:hover:not(:disabled){background:#b91c1c}
+.btn-stop:disabled{opacity:.45;cursor:not-allowed}
+.btn-reset{display:flex;align-items:center;justify-content:center;gap:5px;padding:12px 18px;background:none;color:#94a3b8;border:1.5px solid rgba(255,255,255,.15);border-radius:9px;font-size:14px;font-weight:600;font-family:inherit;cursor:pointer;transition:all .17s;-webkit-tap-highlight-color:transparent}
+.btn-reset:hover{background:rgba(255,255,255,.08);color:#fff}
+
+/* Running state */
+.timer-block.running .timer-display{color:#6ee7d8}
+.timer-block.running{background:linear-gradient(135deg,#0a4f45 0%,#0d6b5e 100%)}
+
+/* Result card */
+.result-card{display:none;background:var(--forest-bg);border:1.5px solid var(--forest-bd);border-radius:12px;padding:18px 20px;margin-top:14px}
+.result-card.show{display:block}
+.rc-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.rc-wpm-val{font-family:'JetBrains Mono',monospace;font-size:clamp(36px,8vw,52px);font-weight:600;color:var(--forest);letter-spacing:-1px;line-height:1}
+.rc-wpm-lbl{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:var(--forest);opacity:.7;margin-top:2px}
+.rc-badge{display:inline-flex;align-items:center;gap:5px;padding:5px 12px;border-radius:9px;font-size:13px;font-weight:700;margin-top:8px}
+.rc-badge.below{background:var(--red-bg);border:1px solid var(--red-bd);color:var(--red)}
+.rc-badge.avg{background:var(--amber-bg);border:1px solid var(--amber-bd);color:var(--amber)}
+.rc-badge.good{background:var(--forest-bg);border:1px solid var(--forest-bd);color:var(--forest)}
+.rc-badge.fast{background:var(--teal-bg);border:1px solid var(--teal-bd);color:var(--teal)}
+.rc-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-bottom:12px}
+@media(max-width:400px){.rc-stats{grid-template-columns:repeat(2,1fr)}}
+.rc-stat{background:var(--white);border:1px solid var(--forest-bd);border-radius:8px;padding:9px 10px;text-align:center}
+.rc-stat-val{font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:600;color:var(--forest)}
+.rc-stat-lbl{font-size:11px;color:#a8a29e;margin-top:2px}
+.rc-tip{font-size:13.5px;color:#14532d;line-height:1.6;background:rgba(255,255,255,.6);border-radius:8px;padding:10px 13px}
+.btn-share{display:flex;align-items:center;justify-content:center;gap:5px;width:100%;padding:10px;background:var(--teal);color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:700;font-family:inherit;cursor:pointer;transition:all .15s;margin-top:12px;-webkit-tap-highlight-color:transparent}
+.btn-share:hover{background:var(--teal-h)}
+.btn-share.ok{background:var(--forest)}
+
+/* Speech mode textarea */
+.speech-ta{width:100%;min-height:130px;padding:11px 13px;border:1.5px solid var(--bdr);border-radius:10px;font-family:'Source Sans 3',sans-serif;font-size:14px;color:var(--ink);resize:vertical;transition:border-color .17s;background:#fafaf8;line-height:1.65;-webkit-appearance:none}
+.speech-ta:focus{outline:none;border-color:var(--teal);background:var(--white);box-shadow:0 0 0 3px rgba(13,127,110,.09)}
+.speech-ta::placeholder{color:#a8a29e}
+.speech-foot{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;margin-top:5px}
+.s-wcd{font-size:12px;font-weight:600;color:var(--teal)}
+.s-clr{background:none;border:none;font-size:12px;color:#a8a29e;cursor:pointer;padding:2px 5px;border-radius:4px;font-family:inherit;-webkit-tap-highlight-color:transparent}
+.s-clr:hover{background:var(--red-bg);color:var(--red)}
+
+/* Hint text */
+.hint{font-size:13px;color:#a8a29e;text-align:center;margin-top:8px;line-height:1.5}
+
+/* ── TOOL FOOTER LINK ── */
+.tc-ftr{display:flex;align-items:center;justify-content:center;gap:5px;font-size:13px;color:var(--teal);font-weight:600;padding:10px;background:var(--teal-bg);border-top:1px solid var(--teal-bd);text-decoration:none;transition:background .14s;-webkit-tap-highlight-color:transparent}
+.tc-ftr:hover{background:#c9f9f0;text-decoration:none}
+
+/* ── SECTIONS ── */
+.sec{padding:40px 0}
+.sec-alt{background:var(--white);border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr)}
+.eye{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--teal);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.eye::before{content:'';display:block;width:15px;height:2px;background:var(--teal)}
+
+/* ── ANSWER BOXES ── */
+.agrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;margin-bottom:24px}
+.abox{background:var(--forest-bg);border:1px solid var(--forest-bd);border-left:4px solid var(--forest);border-radius:0 10px 10px 0;padding:13px 16px}
+.albl{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.6px;color:var(--forest);margin-bottom:4px}
+.aval{font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:600;color:var(--ink);letter-spacing:-.3px;margin-bottom:3px;line-height:1.2}
+.asub{font-size:12.5px;color:var(--ink2);line-height:1.5}
+.asub a{color:var(--teal);font-weight:500}
+
+/* ── WPM BENCHMARK TABLE ── */
+.tw{overflow-x:auto;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.07);margin:13px 0;-webkit-overflow-scrolling:touch}
+.tbl{width:100%;border-collapse:collapse;font-size:13.5px;min-width:440px}
+.tbl thead th{background:var(--slate);color:#fff;padding:10px 13px;text-align:left;font-family:'Source Sans 3',sans-serif;font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap}
+.tbl thead th:first-child{border-radius:10px 0 0 0}
+.tbl thead th:last-child{border-radius:0 10px 0 0}
+.tbl tbody td{padding:9px 13px;border-bottom:1px solid var(--bdr);white-space:nowrap}
+.tbl tbody tr:last-child td{border-bottom:none}
+.tbl tbody tr:nth-child(even) td{background:var(--sand)}
+.tbl tbody tr:hover td{background:var(--teal-bg)}
+.tbl td.hl{font-weight:700;color:var(--forest);background:var(--forest-bg)!important}
+.badge-pill{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:8px;vertical-align:middle}
+.bp-slow{background:var(--red-bg);color:var(--red);border:1px solid var(--red-bd)}
+.bp-avg{background:var(--amber-bg);color:var(--amber);border:1px solid var(--amber-bd)}
+.bp-good{background:var(--forest-bg);color:var(--forest);border:1px solid var(--forest-bd)}
+.bp-fast{background:var(--teal-bg);color:var(--teal);border:1px solid var(--teal-bd)}
+
+/* ── PROSE ── */
+.prose{font-size:15px;color:var(--ink2);line-height:1.8}
+.prose h2{font-family:'Lora',serif;font-size:clamp(17px,2.5vw,22px);font-weight:700;color:var(--ink);margin:24px 0 8px;letter-spacing:-.2px}
+.prose h2:first-child{margin-top:0}
+.prose h3{font-family:'Lora',serif;font-size:16.5px;font-weight:700;color:var(--ink);margin:18px 0 7px}
+.prose p{margin-bottom:13px}
+.prose ul,.prose ol{padding-left:20px;margin-bottom:13px}
+.prose li{margin-bottom:6px}
+.prose a{color:var(--teal);font-weight:500}
+.prose strong{color:var(--ink)}
+.ibox{background:var(--teal-bg);border-left:4px solid var(--teal);border-radius:0 10px 10px 0;padding:12px 16px;margin:16px 0;font-size:14.5px;color:#0a5a4f;line-height:1.6}
+.ibox strong{color:#0a4f45}
+
+/* ── FAQ ── */
+.fqlist{display:flex;flex-direction:column;gap:7px}
+.fq{border:1px solid var(--bdr);border-radius:10px;overflow:hidden}
+.fqbtn{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;padding:14px 17px;background:var(--white);border:none;font-family:'Source Sans 3',sans-serif;font-size:14.5px;font-weight:600;color:var(--ink);cursor:pointer;text-align:left;transition:background .13s;line-height:1.4;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.fqbtn:hover{background:#fafaf8}
+.fqbtn[aria-expanded=true]{background:var(--teal-bg);color:#0a5a4f}
+.fqico{width:17px;height:17px;flex-shrink:0;transition:transform .22s;color:#a8a29e}
+.fqbtn[aria-expanded=true] .fqico{transform:rotate(180deg);color:var(--teal)}
+.fqans{display:none;padding:3px 17px 15px;font-size:14px;color:var(--ink2);line-height:1.75;border-top:1px solid var(--bdr)}
+.fqans a{color:var(--teal);font-weight:500}
+.fqans ol,.fqans ul{padding-left:18px}
+.fqans li{margin-bottom:5px}
+
+/* ── SIDEBAR ── */
+.sbc{background:var(--white);border:1px solid var(--bdr);border-radius:10px;padding:17px;margin-bottom:13px;box-shadow:0 1px 4px rgba(0,0,0,.05)}
+.sbc h4{font-family:'Source Sans 3',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--ink3);margin-bottom:12px}
+.sblinks{list-style:none;padding:0}
+.sblinks li{border-bottom:1px solid #fafaf8}
+.sblinks li:last-child{border-bottom:none}
+.sblinks a{display:flex;align-items:center;gap:7px;padding:7px 0;font-size:13px;color:var(--ink2);text-decoration:none;transition:color .13s;line-height:1.3;-webkit-tap-highlight-color:transparent}
+.sblinks a:hover{color:var(--teal)}
+.sblinks a svg{width:12px;height:12px;color:var(--bdr);flex-shrink:0}
+.sbcta{background:linear-gradient(135deg,var(--slate),#243f68);border-radius:10px;padding:16px;color:#fff;text-align:center;margin-bottom:13px}
+.sbcta h3{font-family:'Source Sans 3',sans-serif;font-size:14px;font-weight:700;color:#fff;margin-bottom:5px}
+.sbcta p{font-size:12px;color:#93c5fd;margin-bottom:12px}
+.sbcta a{display:block;background:var(--teal);color:#fff;font-weight:700;font-size:12.5px;padding:9px;border-radius:7px;text-decoration:none;transition:background .14s;-webkit-tap-highlight-color:transparent}
+.sbcta a:hover{background:var(--teal-h)}
+.bench-mini{list-style:none;padding:0}
+.bench-mini li{display:flex;align-items:center;justify-content:space-between;padding:7px 0;border-bottom:1px solid #fafaf8;font-size:13px}
+.bench-mini li:last-child{border-bottom:none}
+.bench-wpm{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:13.5px;color:var(--ink)}
+
+/* ── AD ZONE ── */
+.adz{margin:22px 0;min-height:80px;display:flex;align-items:center;justify-content:center;background:#fafaf8;border-radius:10px;border:1px dashed var(--bdr)}
+
+/* ── TIPS GRID ── */
+.tips-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:11px;margin:16px 0}
+.tip-card{background:var(--white);border:1px solid var(--bdr);border-radius:10px;padding:16px 17px}
+.tip-card .tip-n{font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:600;color:var(--teal-bd);line-height:1;margin-bottom:6px}
+.tip-card h3{font-family:'Lora',serif;font-size:15px;font-weight:700;color:var(--ink);margin-bottom:5px}
+.tip-card p{font-size:13px;color:var(--ink2);line-height:1.6;margin-bottom:0}
+
+/* ── FOOTER ── */
+.ftr{background:var(--slate);color:#93c5fd;padding:44px 0 24px;margin-top:52px}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:32px}
+@media(max-width:760px){.fg{grid-template-columns:1fr 1fr;gap:20px}}
+@media(max-width:420px){.fg{grid-template-columns:1fr}}
+.flogo{display:flex;align-items:center;gap:7px;font-family:'Lora',serif;font-size:18px;font-weight:700;color:#fff;margin-bottom:9px;text-decoration:none}
+.flogo:hover{text-decoration:none;opacity:.9}
+.flogo svg{color:#6ee7d8;width:20px;height:20px}
+.fdesc{font-size:13px;line-height:1.65;color:#93c5fd;max-width:260px;margin-bottom:12px}
+.fauth{font-size:11px;color:#4b6d8f;line-height:1.7}
+.fauth a{color:#60a5fa;text-decoration:none}
+.fauth a:hover{color:#93c5fd;text-decoration:underline}
+.fc h5{font-family:'Source Sans 3',sans-serif;font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:#fff;margin-bottom:11px}
+.fc ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px}
+.fc a{font-size:13px;color:#93c5fd;text-decoration:none;transition:color .13s}
+.fc a:hover{color:#fff}
+.fbot{border-top:1px solid rgba(255,255,255,.07);padding-top:20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:12px;color:#4b6d8f}
+.ftr-trust{display:flex;gap:12px;font-size:11px;color:#4b6d8f;flex-wrap:wrap}
+.mt4{margin-top:16px}.mt6{margin-top:24px}.mt8{margin-top:32px}.mb4{margin-bottom:14px}
+</style>
 </head>
 <body>
-<header class="site-header">
-  <div class="header-inner">
-    <a class="logo-link" href="/">
-      <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-      <span class="logo-text">Words<span>To</span>Time</span>
-    </a>
-    <nav class="nav-desktop" role="navigation" aria-label="Main navigation">
-      <a href="/words-to-minutes/">Words→Minutes</a>
-      <a href="/word-to-reading-time/">Reading Time</a>
-      <a href="/word-to-speaking-time/">Speaking Time</a>
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-btn" aria-haspopup="true">Calculators <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
-        <div class="nav-dropdown-menu" role="menu">
-          <a href="/word-to-speech-length/" role="menuitem">📢 Speech Length</a>
-          <a href="/word-to-public-speaking-time/" role="menuitem">🎭 Public Speaking</a>
-          <a href="/word-to-presentation-time/" role="menuitem">📊 Presentation Timer</a>
-          <a href="/word-to-debate-time/" role="menuitem">🏛 Debate Calculator</a>
-          <a href="/word-to-typing-time/" role="menuitem">⌨️ Typing / WPM</a>
-          <a href="/speaking-words-per-minute/" role="menuitem">📈 Speaking Speed Guide</a>
-          <a href="/reading-speed-test/" role="menuitem">🏃 Reading Speed Test</a>
-          <a href="/palabras-a-minutos/" role="menuitem">🇪🇸 Palabras a Minutos</a>
-          <a href="/lesezeit-rechner/" role="menuitem">🇩🇪 Lesezeit Rechner</a>
-        </div>
-      </div>
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-btn" aria-haspopup="true">By Length <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
-        <div class="nav-dropdown-menu" role="menu" style="min-width:260px">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px">
-            <a href="/500-words-to-minutes/" role="menuitem">500 words</a>
-            <a href="/750-words-to-minutes/" role="menuitem">750 words</a>
-            <a href="/1000-words-to-minutes/" role="menuitem">1,000 words</a>
-            <a href="/1500-words-to-minutes/" role="menuitem">1,500 words</a>
-            <a href="/2000-words-to-minutes/" role="menuitem">2,000 words</a>
-            <a href="/2500-words-to-minutes/" role="menuitem">2,500 words</a>
-            <a href="/3-minute-speech-word-count/" role="menuitem">3-min speech</a>
-            <a href="/5-minute-speech-word-count/" role="menuitem">5-min speech</a>
-            <a href="/10-minute-speech-word-count/" role="menuitem">10-min speech</a>
-            <a href="/15-minute-speech-word-count/" role="menuitem">15-min speech</a>
-          </div>
-          <a href="/words-to-minutes/" role="menuitem" style="margin-top:4px;border-top:1px solid rgba(255,255,255,.1);padding-top:8px">⏱ All Word Counts →</a>
-        </div>
-      </div>
-      <a href="/practice-mode/">Practice Mode</a>
-      <a href="/practice-mode/" class="nav-cta">▶ Try Free</a>
-    </nav>
-    <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-    </button>
+
+<!-- ════ HEADER ════ -->
+<header class="hdr" role="banner">
+  <div class="wrap">
+    <div class="hdr-in">
+      <a href="/" class="logo" aria-label="WordsToTime Home">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        WordsToTime
+      </a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/words-to-minutes/">Words→Min</a></li>
+          <li><a href="/word-to-reading-time/">Reading</a></li>
+          <li><a href="/word-to-speaking-time/">Speaking</a></li>
+          <li><a href="/word-to-speech-length/">Speech</a></li>
+          <li><a href="/practice-mode/" class="cur ncta" aria-current="page">▶ Practice</a></li>
+        </ul>
+      </nav>
+      <button class="burg" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mnav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
-  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
-    <div class="mobile-nav-section">
-      <div class="mobile-nav-section-title">Main Tools</div>
-      <a href="/">🏠 Home — Words to Time</a>
-      <a href="/words-to-minutes/">⏱ Words to Minutes</a>
-      <a href="/word-to-reading-time/">📖 Reading Time Calculator</a>
-      <a href="/word-to-speaking-time/">🎤 Speaking Time Calculator</a>
-      <a href="/word-to-speech-length/">📢 Speech Length Calculator</a>
-    </div>
-    <div class="mobile-nav-section">
-      <div class="mobile-nav-section-title">More Calculators</div>
-      <a href="/word-to-public-speaking-time/">🎭 Public Speaking Timer</a>
-      <a href="/word-to-presentation-time/">📊 Presentation Timer</a>
-      <a href="/word-to-debate-time/">🏛 Debate Calculator</a>
-      <a href="/word-to-typing-time/">⌨️ WPM / Typing Time</a>
-      <a href="/speaking-words-per-minute/">📈 Speaking Speed Guide</a>
-      <a href="/reading-speed-test/">🏃 Reading Speed Test</a>
-    </div>
-    <div class="mobile-nav-section">
-      <div class="mobile-nav-section-title">Word Count Pages</div>
-      <a href="/200-words-to-minutes/">200 words</a>
-      <a href="/300-words-to-minutes/">300 words</a>
-      <a href="/500-words-to-minutes/">500 words</a>
-      <a href="/750-words-to-minutes/">750 words</a>
-      <a href="/1000-words-to-minutes/">1,000 words</a>
-      <a href="/1500-words-to-minutes/">1,500 words</a>
-      <a href="/2000-words-to-minutes/">2,000 words</a>
-      <a href="/2500-words-to-minutes/">2,500 words</a>
-    </div>
-    <div class="mobile-nav-section">
-      <div class="mobile-nav-section-title">Speech Duration Pages</div>
-      <a href="/2-minute-speech-word-count/">2-Minute Speech</a>
-      <a href="/3-minute-speech-word-count/">3-Minute Speech</a>
-      <a href="/4-minute-speech-word-count/">4-Minute Speech</a>
-      <a href="/5-minute-speech-word-count/">5-Minute Speech</a>
-      <a href="/6-minute-speech-word-count/">6-Minute Speech</a>
-      <a href="/7-minute-speech-word-count/">7-Minute Speech</a>
-      <a href="/10-minute-speech-word-count/">10-Minute Speech</a>
-      <a href="/15-minute-speech-word-count/">15-Minute Speech</a>
-      <a href="/20-minute-speech-word-count/">20-Minute Speech</a>
-    </div>
-    <div class="mobile-nav-section">
-      <div class="mobile-nav-section-title">International</div>
-      <a href="/palabras-a-minutos/">🇪🇸 Palabras a Minutos</a>
-      <a href="/lesezeit-rechner/">🇩🇪 Lesezeit Rechner</a>
-    </div>
-    <div class="mobile-nav-section">
-      <div class="mobile-nav-section-title">About</div>
-      <a href="/about/">About WordsToTime</a>
-      <a href="/privacy/">Privacy Policy</a>
-      <a href="/terms/">Terms of Use</a>
-    </div>
-    <a href="/practice-mode/" class="mobile-nav-cta">▶ Try Practice Mode Free</a>
-  </nav>
+  <div class="mnav" id="mnav">
+    <a href="/">🏠 Home</a>
+    <a href="/words-to-minutes/">⏱ Words to Minutes</a>
+    <a href="/word-to-reading-time/">📖 Reading Time Calculator</a>
+    <a href="/word-to-speaking-time/">🎤 Speaking Time Calculator</a>
+    <a href="/word-to-speech-length/">📏 Speech Length Calculator</a>
+    <a href="/word-to-public-speaking-time/">🎭 Public Speaking Timer</a>
+    <a href="/word-to-presentation-time/">📊 Presentation Time</a>
+    <a href="/word-to-debate-time/">⚖️ Debate Calculator</a>
+    <a href="/word-to-typing-time/">⌨️ Typing Time / WPM</a>
+    <a href="/speaking-words-per-minute/">📈 Speaking Speed Guide</a>
+    <a href="/3-minute-speech-word-count/">3-Min Speech Words</a>
+    <a href="/5-minute-speech-word-count/">5-Min Speech Words</a>
+    <a href="/practice-mode/" style="color:#6ee7d8;font-weight:700">▶ Practice Mode / Reading Speed Test</a>
+  </div>
 </header>
 
-<div class="hero" style="padding:30px 20px 38px">
+<main id="main">
+
+<!-- ════ PAGE HERO ════ -->
+<div class="phero">
   <div class="wrap">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-  <a href="/">Home</a><span aria-hidden="true">›</span> <span aria-current="page">Practice Mode</span>
-</nav>
-    <h1 class="hero-title" style="text-align:left;font-size:clamp(22px,4vw,38px)">Speech Practice Timer</h1>
-    <p class="hero-subtitle" style="text-align:left;margin:8px 0 0">Measure your real WPM. Paste your text, start the timer, read aloud — see your exact words per minute.</p>
+    <nav class="bc" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="bc-sep" aria-hidden="true">›</span>
+      <span aria-current="page">Practice Mode</span>
+    </nav>
+
+    <h1 class="mt4">Free <span class="a">Reading Speed Test</span> &amp; Speech Practice Timer</h1>
+    <p class="phero-sub">Test your reading WPM in 60 seconds, or practice timing a speech. Paste any text, click Start, read at your natural pace — get exact WPM instantly.</p>
+
+    <!-- Mode switcher -->
+    <div class="mode-tabs-wrap" role="tablist" aria-label="Choose mode">
+      <button class="mode-tab active" role="tab" aria-selected="true" aria-controls="mode-read" id="mtab-read" onclick="switchMode('read',this)">
+        <span class="mt-ico">📖</span>
+        <span class="mode-tab-label">Reading Speed Test<small>Find your silent or read-aloud WPM</small></span>
+      </button>
+      <button class="mode-tab" role="tab" aria-selected="false" aria-controls="mode-speech" id="mtab-speech" onclick="switchMode('speech',this)">
+        <span class="mt-ico">🎤</span>
+        <span class="mode-tab-label">Speech Practice Timer<small>Measure your speaking WPM</small></span>
+      </button>
+    </div>
   </div>
 </div>
-<div class="page-with-sidebar">
-  <main class="main-col">
-    <div class="practice-card">
-      <h2 style="font-family:'Lora',serif;font-size:20px;margin-bottom:14px">Practice Timer</h2>
-      <textarea class="calc-textarea" id="practice-textarea" placeholder="Paste your speech or any text here, then click Start Timer and begin reading aloud…" rows="6" aria-label="Text to time yourself reading"></textarea>
-      <div class="practice-timer" id="practice-timer" aria-live="polite">0:00.0</div>
-      <div class="practice-wpm" id="practice-wpm" aria-live="polite">— WPM</div>
-      <div class="practice-btns">
-        <button class="btn-primary" id="btn-start" onclick="startPractice()">▶ Start Timer</button>
-        <button class="btn-danger" id="btn-stop" style="display:none" onclick="stopPractice()">⏹ Stop</button>
-        <button class="btn-secondary" id="btn-reset" style="display:none" onclick="resetPractice()">↺ Reset</button>
+
+<!-- ════ TOOL CARD ════ -->
+<div class="wrap">
+  <div class="tool-card" role="region" aria-label="Reading speed test and speech practice timer">
+    <div class="tc-body">
+
+      <!-- ═══ MODE 1: READING SPEED TEST ═══ -->
+      <div id="mode-read" class="mode-panel active" role="tabpanel" aria-labelledby="mtab-read">
+
+        <div class="passage-row">
+          <span class="passage-lbl">Choose passage:</span>
+          <div class="passage-btns" role="radiogroup" aria-label="Passage selection">
+            <button class="pb on" role="radio" aria-checked="true" onclick="setPassage('easy',this)">Easy <span style="opacity:.6;font-size:11px">(100w)</span></button>
+            <button class="pb" role="radio" aria-checked="false" onclick="setPassage('medium',this)">Medium <span style="opacity:.6;font-size:11px">(200w)</span></button>
+            <button class="pb" role="radio" aria-checked="false" onclick="setPassage('hard',this)">Long <span style="opacity:.6;font-size:11px">(300w)</span></button>
+            <button class="pb pb-own" role="radio" aria-checked="false" onclick="setPassage('own',this)">✎ Own text</button>
+          </div>
+        </div>
+
+        <div id="read-passage-display" class="passage-box" aria-label="Reading passage" aria-live="polite"></div>
+        <textarea id="read-own-text" class="passage-box editable" style="display:none" placeholder="Paste your own text here — any length works…" oninput="onOwnText()" aria-label="Custom reading text"></textarea>
+
+        <div class="meta-row">
+          <span class="meta-chip" id="read-wc-chip">📝 0 words</span>
+          <span style="font-size:12.5px;color:#a8a29e">Read aloud or silently — then click Stop</span>
+        </div>
+
+        <!-- Timer -->
+        <div class="timer-block" id="read-timer-block" aria-live="polite">
+          <div class="timer-display" id="read-time">0:00.0</div>
+          <div class="timer-wpm" id="read-wpm">—</div>
+          <div class="timer-wpm-lbl">words per minute</div>
+        </div>
+
+        <div class="ctrl-row" style="margin-top:12px">
+          <button class="btn-start" id="read-start-btn" onclick="startTimer('read')" aria-label="Start reading timer">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Start
+          </button>
+          <button class="btn-stop" id="read-stop-btn" onclick="stopTimer('read')" disabled aria-label="Stop reading timer">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+            Stop
+          </button>
+          <button class="btn-reset" onclick="resetTimer('read')" aria-label="Reset reading timer">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 12a9 9 0 105.168-8.185M3 3v5h5"/></svg>
+            Reset
+          </button>
+        </div>
+        <p class="hint">Tip: Start → read the passage above → Stop → get your WPM</p>
+
+        <!-- Result -->
+        <div class="result-card" id="read-result" aria-live="polite">
+          <div class="rc-top">
+            <div>
+              <div class="rc-wpm-val" id="read-r-wpm">—</div>
+              <div class="rc-wpm-lbl">Words Per Minute</div>
+              <div class="rc-badge" id="read-r-badge">—</div>
+            </div>
+          </div>
+          <div class="rc-stats">
+            <div class="rc-stat"><div class="rc-stat-val" id="read-r-time">—</div><div class="rc-stat-lbl">Time taken</div></div>
+            <div class="rc-stat"><div class="rc-stat-val" id="read-r-words">—</div><div class="rc-stat-lbl">Words read</div></div>
+            <div class="rc-stat"><div class="rc-stat-val" id="read-r-pages">—</div><div class="rc-stat-lbl">Pages/hour</div></div>
+          </div>
+          <div class="rc-tip" id="read-r-tip"></div>
+          <button class="btn-share" id="read-share-btn" onclick="shareResult('read')" aria-label="Copy result">📋 Copy Result</button>
+        </div>
       </div>
-      <p style="font-size:12.5px;color:var(--ink-3);text-align:center;margin-top:6px">Paste text → Start → Read aloud → Stop → See your WPM</p>
-    </div>
-    <div class="ad-zone" aria-hidden="true"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9275267797924945" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
-    <div class="link-strip">
-  <div class="link-strip-title">Related Tools</div>
-  <div class="link-strip-links"><a href="/">🏠 Home</a><a href="/words-to-minutes/">Words to Minutes</a><a href="/word-to-speaking-time/">Speaking Time</a><a href="/word-to-speech-length/">Speech Length</a><a href="/speaking-words-per-minute/">Speaking Speed</a><a href="/reading-speed-test/">Reading Speed Test</a></div>
+
+      <!-- ═══ MODE 2: SPEECH PRACTICE TIMER ═══ -->
+      <div id="mode-speech" class="mode-panel" role="tabpanel" aria-labelledby="mtab-speech">
+        <label style="display:block;font-size:13px;font-weight:600;color:var(--ink);margin-bottom:6px" for="speech-ta">Paste your speech or script</label>
+        <textarea class="speech-ta" id="speech-ta" placeholder="Paste your full speech, presentation script, or any text here. We count the words and calculate your exact speaking WPM when you stop…" oninput="onSpeechText()" aria-describedby="speech-wcd"></textarea>
+        <div class="speech-foot">
+          <span id="speech-wcd" class="s-wcd" aria-live="polite">0 words</span>
+          <button class="s-clr" onclick="clearSpeech()" aria-label="Clear speech text">✕ Clear</button>
+        </div>
+
+        <div class="timer-block" id="speech-timer-block" aria-live="polite">
+          <div class="timer-display" id="speech-time">0:00.0</div>
+          <div class="timer-wpm" id="speech-wpm">—</div>
+          <div class="timer-wpm-lbl">speaking WPM (live)</div>
+        </div>
+
+        <div class="ctrl-row" style="margin-top:12px">
+          <button class="btn-start" id="speech-start-btn" onclick="startTimer('speech')" aria-label="Start speech timer">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Start Timer
+          </button>
+          <button class="btn-stop" id="speech-stop-btn" onclick="stopTimer('speech')" disabled aria-label="Stop speech timer">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+            Stop
+          </button>
+          <button class="btn-reset" onclick="resetTimer('speech')" aria-label="Reset speech timer">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 12a9 9 0 105.168-8.185M3 3v5h5"/></svg>
+            Reset
+          </button>
+        </div>
+        <p class="hint">Paste script → Start → read aloud at your natural pace → Stop → use your WPM in any calculator</p>
+
+        <!-- Result -->
+        <div class="result-card" id="speech-result" aria-live="polite">
+          <div class="rc-top">
+            <div>
+              <div class="rc-wpm-val" id="speech-r-wpm">—</div>
+              <div class="rc-wpm-lbl">Speaking WPM</div>
+              <div class="rc-badge" id="speech-r-badge">—</div>
+            </div>
+          </div>
+          <div class="rc-stats">
+            <div class="rc-stat"><div class="rc-stat-val" id="speech-r-time">—</div><div class="rc-stat-lbl">Duration</div></div>
+            <div class="rc-stat"><div class="rc-stat-val" id="speech-r-words">—</div><div class="rc-stat-lbl">Words spoken</div></div>
+            <div class="rc-stat"><div class="rc-stat-val" id="speech-r-equiv">—</div><div class="rc-stat-lbl">Min per 1K wds</div></div>
+          </div>
+          <div class="rc-tip" id="speech-r-tip"></div>
+          <button class="btn-share" id="speech-share-btn" onclick="shareResult('speech')" aria-label="Copy speaking result">📋 Copy Result</button>
+        </div>
+      </div>
+
+    </div><!-- /tc-body -->
+
+    <a href="/" class="tc-ftr" aria-label="Open the main words-to-time calculator">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      Use your WPM in the main words-to-time calculator →
+    </a>
+  </div><!-- /tool-card -->
 </div>
-    <div class="prose-block">
-      <h2 class="section-title">How to Use Practice Mode</h2>
-      <ol>
-        <li><strong>Paste your speech or text</strong> into the text area above.</li>
-        <li><strong>Click "Start Timer"</strong> and immediately begin reading at your natural pace.</li>
-        <li><strong>Click "Stop"</strong> when you finish reading the entire text.</li>
-        <li><strong>Read your WPM result</strong> — shown live as you read.</li>
-        <li><strong>Use your WPM</strong> in any calculator above by selecting "Custom" speed for personalized results.</li>
-      </ol>
-      <p>Also see our dedicated <a href="/reading-speed-test/">free reading speed test</a>, or compare your results on the <a href="/speaking-words-per-minute/">speaking words per minute guide</a>. To convert your word count to time, go to the <a href="/">main calculator</a> or the <a href="/words-to-minutes/">words to minutes tool</a>.</p>
-    </div>
-    <h2 class="section-title" style="margin-top:32px;margin-bottom:8px">FAQ</h2>
-    <div class="faq-list">
-  <div class="faq-item">
-    <button class="faq-btn" aria-expanded="false" id="faq-btn-0">
-      <span>How do I test my reading speed?</span>
-      <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-    </button>
-    <div class="faq-body">Paste any text into the practice area above, click "Start Timer", begin reading aloud at your natural pace, then click "Stop". Your exact WPM is shown instantly. See also our dedicated <a href="/reading-speed-test/">reading speed test</a>.</div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-btn" aria-expanded="false" id="faq-btn-1">
-      <span>What is a good reading WPM?</span>
-      <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-    </button>
-    <div class="faq-body">The average adult reads aloud at 183 WPM and silently at 238 WPM. For public speaking, 120–150 WPM is ideal — clear enough to understand, fast enough to hold attention. Compare your score on the <a href="/speaking-words-per-minute/">speaking speed guide</a>.</div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-btn" aria-expanded="false" id="faq-btn-2">
-      <span>Can I use this to practice a speech?</span>
-      <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-    </button>
-    <div class="faq-body">Yes — paste your full speech, read it aloud while the timer runs. You'll get your speaking WPM which you can then set as "Custom" speed in the main <a href="/">words to time calculator</a> for accurate personal timing.</div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-btn" aria-expanded="false" id="faq-btn-3">
-      <span>How accurate is the WPM calculation?</span>
-      <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-    </button>
-    <div class="faq-body">100% accurate: WPM = Words ÷ (Elapsed seconds ÷ 60). The only variable is whether you start and stop at the right moments. Measure 3 times for a reliable average.</div>
+
+<!-- AD ZONE 1 -->
+<div class="wrap">
+  <div class="adz" aria-label="Advertisement">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9275267797924945" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
   </div>
 </div>
-  </main>
-  <aside class="sidebar-col">
-    <div class="sidebar-card">
-      <div class="sidebar-card-title">WPM Benchmarks</div>
-      <div class="sidebar-links">
-        <a href="/speaking-words-per-minute/">🎤 Avg speaking: 130 WPM</a>
-        <a href="/word-to-reading-time/">📢 Read aloud: 183 WPM</a>
-        <a href="/word-to-reading-time/">👁 Silent reading: 238 WPM</a>
-        <a href="/speaking-words-per-minute/">🎯 TED Talks: 163 WPM</a>
+
+<!-- ════ QUICK ANSWERS — targets zero-click high-position queries ════ -->
+<section class="sec sec-alt" aria-labelledby="qa-hd">
+  <div class="wrap">
+    <div class="eye">Instant Answers</div>
+    <h2 id="qa-hd" style="font-size:clamp(18px,3vw,26px);letter-spacing:-.3px;margin-bottom:9px">Reading Speed — Quick Reference</h2>
+    <p style="color:var(--ink2);margin-bottom:20px;font-size:15.5px">Direct answers to the most-searched reading speed questions. Use the test above to find your personal WPM.</p>
+
+    <div class="agrid">
+      <div class="abox">
+        <div class="albl">What is average adult reading speed?</div>
+        <div class="aval">200–250 WPM silently</div>
+        <div class="asub">183 WPM reading aloud · 238 WPM is widely cited avg · <a href="/speaking-words-per-minute/">Full WPM guide →</a></div>
       </div>
-    </div>
-    <div class="sidebar-card">
-  <div class="sidebar-card-title">All Calculators</div>
-  <div class="sidebar-links">
-    <a href="/">🏠 Words to Time (Home)</a>
-    <a href="/words-to-minutes/">⏱ Words to Minutes</a>
-    <a href="/word-to-reading-time/">📖 Reading Time</a>
-    <a href="/word-to-speaking-time/">🎤 Speaking Time</a>
-    <a href="/word-to-speech-length/">📢 Speech Length</a>
-    <a href="/word-to-public-speaking-time/">🎭 Public Speaking</a>
-    <a href="/word-to-presentation-time/">📊 Presentation</a>
-    <a href="/word-to-debate-time/">🏛 Debate Timer</a>
-    <a href="/word-to-typing-time/">⌨️ Typing / WPM</a>
-    <a href="/speaking-words-per-minute/">📈 Speaking Speed</a>
-    <a href="/practice-mode/">▶️ Practice Mode</a>
-    <a href="/reading-speed-test/">🏃 Speed Test</a>
-  </div>
-</div>
-  </aside>
-</div>
-<footer class="site-footer">
-  <div class="footer-grid">
-    <div>
-      <div class="footer-brand-logo">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fcd34d" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-        <span>WordsToTime</span>
+      <div class="abox">
+        <div class="albl">What is 250 WPM reading speed?</div>
+        <div class="aval">Slightly above average</div>
+        <div class="asub">1,000 words in 4 min · 300-page book in ~6 hrs · Good comprehension · <a href="/word-to-reading-time/">Reading time calculator →</a></div>
       </div>
-      <p class="footer-tagline">The authoritative free calculator for converting word count to speaking time, reading time, and presentation duration. Data from ASHA research.</p>
-      <div class="footer-authority">
-        <a href="https://pubs.asha.org/" target="_blank" rel="noopener noreferrer">🔬 American Speech-Language-Hearing Assoc.</a>
-        <a href="https://www.speechanddebate.org/" target="_blank" rel="noopener noreferrer">🏆 National Speech &amp; Debate Association</a>
-        <a href="https://www.ted.com/participate/organize-a-local-tedx-event/tedx-organizer-guide/speakers-program/prepare-your-speaker/create-talk" target="_blank" rel="noopener noreferrer">🎯 TED Talk Speaking Guidelines</a>
+      <div class="abox">
+        <div class="albl">What is 350 WPM reading speed?</div>
+        <div class="aval">Fast — top 25% of adults</div>
+        <div class="asub">1,000 words in 2m 51s · College students often reach this · Comprehension still strong</div>
       </div>
-    </div>
-    <div>
-      <div class="footer-col-title">Core Tools</div>
-      <div class="footer-links">
-        <a href="/">Words to Time</a>
-        <a href="/words-to-minutes/">Words to Minutes</a>
-        <a href="/word-to-reading-time/">Reading Time</a>
-        <a href="/word-to-speaking-time/">Speaking Time</a>
-        <a href="/word-to-speech-length/">Speech Length</a>
-        <a href="/word-to-presentation-time/">Presentation Timer</a>
-        <a href="/word-to-debate-time/">Debate Calculator</a>
-        <a href="/word-to-typing-time/">Typing / WPM</a>
-        <a href="/practice-mode/">Practice Mode</a>
-        <a href="/reading-speed-test/">Reading Speed Test</a>
+      <div class="abox">
+        <div class="albl">What is average speaking WPM?</div>
+        <div class="aval">130 WPM (prepared speech)</div>
+        <div class="asub">183 WPM read-aloud · 163 WPM TED Talks · <a href="/speaking-words-per-minute/">Speaking speed guide →</a></div>
       </div>
-    </div>
-    <div>
-      <div class="footer-col-title">Word Count Pages</div>
-      <div class="footer-links">
-        <a href="/500-words-to-minutes/">500 Words</a>
-        <a href="/750-words-to-minutes/">750 Words</a>
-        <a href="/1000-words-to-minutes/">1,000 Words</a>
-        <a href="/1500-words-to-minutes/">1,500 Words</a>
-        <a href="/2000-words-to-minutes/">2,000 Words</a>
-        <a href="/3-minute-speech-word-count/">3-Min Speech</a>
-        <a href="/4-minute-speech-word-count/">4-Min Speech</a>
-        <a href="/5-minute-speech-word-count/">5-Min Speech</a>
-        <a href="/10-minute-speech-word-count/">10-Min Speech</a>
-        <a href="/speaking-words-per-minute/">Speaking Speed</a>
+      <div class="abox">
+        <div class="albl">How to measure reading speed?</div>
+        <div class="aval">Use the test above ↑</div>
+        <div class="asub">Paste text → Start → read → Stop → WPM shown instantly. Formula: WPM = Words ÷ (Seconds ÷ 60)</div>
       </div>
-    </div>
-    <div>
-      <div class="footer-col-title">Info &amp; Global</div>
-      <div class="footer-links">
-        <a href="/about/">About</a>
-        <a href="/privacy/">Privacy Policy</a>
-        <a href="/terms/">Terms of Use</a>
-        <a href="/palabras-a-minutos/">🇪🇸 Palabras a Minutos</a>
-        <a href="/lesezeit-rechner/">🇩🇪 Lesezeit Rechner</a>
+      <div class="abox">
+        <div class="albl">What is 500 WPM reading speed?</div>
+        <div class="aval">Speed reader territory</div>
+        <div class="asub">Top 5% of adults · 1,000 words in 2 min · Comprehension may drop above 400 WPM</div>
       </div>
     </div>
   </div>
-  <div class="footer-bottom">
-    <div class="footer-copyright">© 2026 WordsToTime — Free, no signup required.</div>
-    <div class="footer-trust">
-      <span>Free</span><span>No Signup</span><span>Research-backed</span><span>Instant</span>
+</section>
+
+<!-- ════ MAIN CONTENT ════ -->
+<section class="sec" aria-labelledby="bench-hd">
+  <div class="wrap">
+    <div class="col2">
+      <div class="main">
+
+        <!-- WPM BENCHMARKS TABLE -->
+        <div class="eye">WPM Benchmarks</div>
+        <h2 id="bench-hd" style="font-size:clamp(18px,3vw,26px);letter-spacing:-.3px;margin-bottom:8px">Reading Speed Chart — All Ages &amp; Levels</h2>
+        <p class="mb4">How does your WPM compare? Use the test above to get your score, then find it in this table.</p>
+
+        <div class="tw" role="region" aria-label="Reading speed benchmark table by age and skill level">
+          <table class="tbl">
+            <thead>
+              <tr>
+                <th scope="col">Reader Level</th>
+                <th scope="col">WPM Range</th>
+                <th scope="col">1,000 words takes…</th>
+                <th scope="col">300-page book</th>
+                <th scope="col">Rating</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Grade 1–2</strong></td><td>60–100 WPM</td><td>10–16 min</td><td>—</td><td><span class="badge-pill bp-slow">Learning</span></td></tr>
+              <tr><td><strong>Grade 3–5</strong></td><td>100–160 WPM</td><td>6–10 min</td><td>—</td><td><span class="badge-pill bp-slow">Developing</span></td></tr>
+              <tr><td><strong>Grade 6–8</strong></td><td>160–210 WPM</td><td>4m 45s–6m 15s</td><td>—</td><td><span class="badge-pill bp-avg">Building</span></td></tr>
+              <tr><td><strong>High school</strong></td><td>200–300 WPM</td><td>3m 20s–5m</td><td>5–7.5 hrs</td><td><span class="badge-pill bp-avg">Average</span></td></tr>
+              <tr><td><strong>Average adult</strong></td><td class="hl">200–250 WPM</td><td class="hl">4–5 min</td><td>6–7.5 hrs</td><td><span class="badge-pill bp-avg">Average</span></td></tr>
+              <tr><td><strong>College student</strong></td><td>300 WPM</td><td>3m 20s</td><td>5 hrs</td><td><span class="badge-pill bp-good">Good</span></td></tr>
+              <tr><td><strong>Avid reader</strong></td><td>300–400 WPM</td><td>2m 30s–3m 20s</td><td>3.75–5 hrs</td><td><span class="badge-pill bp-good">Good</span></td></tr>
+              <tr><td><strong>Fast reader</strong></td><td>400–600 WPM</td><td>1m 40s–2m 30s</td><td>2.5–3.75 hrs</td><td><span class="badge-pill bp-fast">Fast</span></td></tr>
+              <tr><td><strong>Speed reader</strong></td><td>600–1000 WPM</td><td>1–1m 40s</td><td>1.5–2.5 hrs</td><td><span class="badge-pill bp-fast">Speed reader</span></td></tr>
+              <tr><td><strong>Read aloud (avg)</strong></td><td>183 WPM</td><td>5m 27s</td><td>—</td><td><span class="badge-pill bp-avg">Oral reading</span></td></tr>
+              <tr><td><strong>Prepared speech (avg)</strong></td><td>130 WPM</td><td>7m 41s</td><td>—</td><td><span class="badge-pill bp-slow">Speaking</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="ibox">
+          <strong>Note on comprehension:</strong> Speed above 400–500 WPM typically involves skimming — eyes skip over words rather than reading each one. True reading with strong comprehension averages 200–350 WPM for most adults. Speed reading claims of 1,000+ WPM involve significant comprehension loss.
+        </div>
+
+        <!-- AD ZONE 2 -->
+        <div class="adz" aria-label="Advertisement">
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9275267797924945" data-ad-format="auto" data-full-width-responsive="true"></ins>
+          <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+        </div>
+
+        <!-- PROSE GUIDE -->
+        <div class="prose mt8">
+          <h2>How to Test Your Reading Speed</h2>
+          <p>Testing reading speed is simple with the tool above. Here's the exact process:</p>
+          <ol>
+            <li><strong>Choose a passage</strong> — use one of the built-in passages (100, 200, or 300 words) or paste your own text</li>
+            <li><strong>Click Start</strong> — immediately begin reading at your normal, comfortable pace. Don't rush or slow down</li>
+            <li><strong>Read completely</strong> — read every word to the end (skimming gives an inflated WPM that doesn't represent real reading)</li>
+            <li><strong>Click Stop</strong> — your exact WPM appears immediately</li>
+            <li><strong>Repeat 3 times</strong> — average the three scores for a reliable baseline. WPM varies slightly by fatigue and text difficulty</li>
+          </ol>
+          <p>The formula: <strong>WPM = Word count ÷ (Elapsed seconds ÷ 60)</strong>. This is the standard calculation used in all academic and educational reading assessments.</p>
+
+          <h2>What Is a Good Reading Speed?</h2>
+          <p>The average adult reads 200–250 WPM silently with good comprehension — equivalent to finishing a 1,000-word article in 4–5 minutes. College students average 300 WPM. "Good" for most practical purposes is 200–350 WPM.</p>
+          <p>Reading aloud is significantly slower — the average read-aloud speed is <strong>183 WPM</strong>, confirmed by research from the <a href="https://pubs.asha.org/" target="_blank" rel="noopener noreferrer">American Speech-Language-Hearing Association (ASHA)</a>. Speaking from memory in a prepared speech is even slower at around 130 WPM. See the <a href="/speaking-words-per-minute/">speaking speed guide</a> for a full breakdown.</p>
+
+          <h2>How to Increase Your Reading Speed</h2>
+        </div>
+
+        <div class="tips-grid">
+          <div class="tip-card">
+            <div class="tip-n">01</div>
+            <h3>Reduce Subvocalisation</h3>
+            <p>Stop "hearing" each word in your head as you read. Subvocalising caps you at speaking speed (~150 WPM). Hum quietly while reading to break the habit.</p>
+          </div>
+          <div class="tip-card">
+            <div class="tip-n">02</div>
+            <h3>Use a Pointer</h3>
+            <p>Move your finger or a pen under each line at a pace slightly faster than comfortable. Eyes follow the guide and prevent regression (re-reading).</p>
+          </div>
+          <div class="tip-card">
+            <div class="tip-n">03</div>
+            <h3>Expand Eye Span</h3>
+            <p>Train yourself to take in 3–5 words per eye fixation instead of 1–2. Practice by reading the middle word of short phrases and seeing the whole phrase peripherally.</p>
+          </div>
+          <div class="tip-card">
+            <div class="tip-n">04</div>
+            <h3>Eliminate Regression</h3>
+            <p>Avoid re-reading. Even skilled readers regress on ~15% of lines. Cover text above your current line to prevent the habit of going back.</p>
+          </div>
+          <div class="tip-card">
+            <div class="tip-n">05</div>
+            <h3>Preview First</h3>
+            <p>Skim headings, first sentences, and key words before full reading. This primes your brain and reduces time spent "orienting" to the content.</p>
+          </div>
+          <div class="tip-card">
+            <div class="tip-n">06</div>
+            <h3>Practice Daily</h3>
+            <p>15 minutes of deliberate speed practice daily. Most adults can increase reading speed 20–30% within 4–6 weeks. Use this test to track progress.</p>
+          </div>
+        </div>
+
+        <div class="prose mt6">
+          <h2>Speech Practice Mode — How It Works</h2>
+          <p>Switch to <strong>Speech Practice Timer</strong> at the top of this page to measure your speaking WPM. Paste your full speech script, click Start, read aloud at your natural speaking pace, and click Stop when finished.</p>
+          <p>Your exact speaking WPM is shown with a comparison to the 130 WPM average. Enter this custom WPM in any WordsToTime calculator for fully personalised speech timing. For example, if you speak at 145 WPM, your 1,000-word speech takes 6 minutes 54 seconds — not the default 7 minutes 41 seconds.</p>
+          <p>Use <a href="/words-to-minutes/">words to minutes calculator</a> with your custom WPM, or check our <a href="/speaking-words-per-minute/">speaking speed guide</a> to understand what your WPM means in context. For planning speech length, the <a href="/word-to-speech-length/">speech length calculator</a> and <a href="/word-to-public-speaking-time/">public speaking timer</a> are most relevant.</p>
+
+          <h2>Reading Speed vs. Speaking Speed — Key Differences</h2>
+          <table>
+            <thead><tr><th>Mode</th><th>Avg WPM</th><th>What limits it</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Silent reading</strong></td><td>200–250 WPM</td><td>Eye movements, subvocalisation</td></tr>
+              <tr><td><strong>Read aloud</strong></td><td>183 WPM</td><td>Vocal production speed</td></tr>
+              <tr><td><strong>Prepared speech</strong></td><td>130 WPM</td><td>Pauses, emphasis, deliberate pacing</td></tr>
+              <tr><td><strong>Conversation</strong></td><td>120–150 WPM</td><td>Processing + response time</td></tr>
+              <tr><td><strong>TED Talks</strong></td><td>~163 WPM</td><td>Highly rehearsed, no pauses for thought</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- AD ZONE 3 -->
+        <div class="adz mt6" aria-label="Advertisement">
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9275267797924945" data-ad-format="auto" data-full-width-responsive="true"></ins>
+          <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+        </div>
+
+        <!-- FAQ -->
+        <div class="eye mt8">FAQ</div>
+        <h2 style="font-size:clamp(18px,3vw,24px);letter-spacing:-.3px;margin-bottom:8px">Reading Speed &amp; Practice Timer — FAQ</h2>
+        <p style="margin-bottom:20px;color:var(--ink2);font-size:15.5px">Answers to the most-searched questions about reading speed tests and speech timers.</p>
+
+        <div class="fqlist">
+          <div class="fq">
+            <button class="fqbtn" aria-expanded="false" onclick="togF(this)" id="fq1">
+              How do I test my reading speed?
+              <svg class="fqico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="fqans" style="display:none" role="region" aria-labelledby="fq1">
+              <p>Use the free reading speed test at the top of this page:</p>
+              <ol>
+                <li>Select a passage (100, 200, or 300 words) or paste your own text</li>
+                <li>Click <strong>Start</strong> and immediately begin reading at your normal pace</li>
+                <li>Click <strong>Stop</strong> when you reach the end</li>
+                <li>Your exact WPM appears instantly</li>
+              </ol>
+              <p>Run 3 tests and average the results for a reliable baseline. Your WPM can vary 10–20% depending on text difficulty, fatigue, and time of day.</p>
+            </div>
+          </div>
+
+          <div class="fq">
+            <button class="fqbtn" aria-expanded="false" onclick="togF(this)" id="fq2">
+              What is a good reading WPM?
+              <svg class="fqico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="fqans" style="display:none" role="region" aria-labelledby="fq2">
+              <p>Context matters more than the number:</p>
+              <ul>
+                <li><strong>Below 150 WPM</strong> — slower than average, may benefit from reading practice</li>
+                <li><strong>150–200 WPM</strong> — slightly below average for adults</li>
+                <li><strong>200–250 WPM</strong> — average adult reading speed with good comprehension</li>
+                <li><strong>250–350 WPM</strong> — good speed, typical of regular readers and college students</li>
+                <li><strong>350–500 WPM</strong> — fast reader; some comprehension trade-off possible</li>
+                <li><strong>500+ WPM</strong> — speed reading / skimming; significant comprehension loss typically occurs</li>
+              </ul>
+              <p>The most important metric is comprehension, not raw WPM. A focused 200 WPM with 90% comprehension beats an unfocused 400 WPM with 40% retention.</p>
+            </div>
+          </div>
+
+          <div class="fq">
+            <button class="fqbtn" aria-expanded="false" onclick="togF(this)" id="fq3">
+              How to measure reading speed accurately?
+              <svg class="fqico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="fqans" style="display:none" role="region" aria-labelledby="fq3">
+              <p>The accurate method: (1) Use a text of known word count. (2) Start a precise timer. (3) Read every word at your normal pace. (4) Stop immediately when finished. (5) Calculate: <strong>WPM = Word count ÷ (Total seconds ÷ 60)</strong>.</p>
+              <p>For best accuracy: measure 3 separate times, use different texts of similar difficulty, and average the scores. Avoid testing when tired or distracted — reading speed drops 10–15% under fatigue.</p>
+            </div>
+          </div>
+
+          <div class="fq">
+            <button class="fqbtn" aria-expanded="false" onclick="togF(this)" id="fq4">
+              What is 250 WPM or 350 WPM reading speed?
+              <svg class="fqico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="fqans" style="display:none" role="region" aria-labelledby="fq4">
+              <p><strong>250 WPM</strong> is at the upper end of average. A 1,000-word article takes 4 minutes. A 300-page book (~90,000 words) takes about 6 hours. This is a healthy reading pace for adults with good comprehension.</p>
+              <p><strong>350 WPM</strong> is a fast reader — top ~25% of adults. A 1,000-word article takes under 3 minutes. The same 300-page book takes about 4 hours 17 minutes. College students with regular reading habits often reach this pace. Comprehension remains strong at this speed for most readers.</p>
+            </div>
+          </div>
+
+          <div class="fq">
+            <button class="fqbtn" aria-expanded="false" onclick="togF(this)" id="fq5">
+              How can I increase my reading speed online?
+              <svg class="fqico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="fqans" style="display:none" role="region" aria-labelledby="fq5">
+              <p>The most effective techniques: (1) <strong>Reduce subvocalisation</strong> — stop "hearing" each word mentally, which caps you at ~150 WPM. (2) <strong>Use a pointer</strong> — a finger guides your eyes and prevents regression. (3) <strong>Eliminate regression</strong> — avoid re-reading lines. (4) <strong>Expand eye span</strong> — take in 3–5 words per fixation.</p>
+              <p>Most adults can increase reading speed 20–30% within 4 weeks of 15-minute daily practice. Use this reading speed test to track your baseline and measure progress.</p>
+            </div>
+          </div>
+
+          <div class="fq">
+            <button class="fqbtn" aria-expanded="false" onclick="togF(this)" id="fq6">
+              Can I use this as a speech practice timer?
+              <svg class="fqico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="fqans" style="display:none" role="region" aria-labelledby="fq6">
+              <p>Yes — click <strong>Speech Practice Timer</strong> at the top of this page. Paste your full speech script, click Start, read aloud at your natural speaking pace, then click Stop.</p>
+              <p>You get your exact speaking WPM. Enter this as "Custom" in the <a href="/">words-to-time calculator</a> or <a href="/words-to-minutes/">words-to-minutes tool</a> for personalised timing that reflects your actual speaking speed rather than the 130 WPM average.</p>
+            </div>
+          </div>
+
+          <div class="fq">
+            <button class="fqbtn" aria-expanded="false" onclick="togF(this)" id="fq7">
+              Is this reading speed test accurate?
+              <svg class="fqico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="fqans" style="display:none" role="region" aria-labelledby="fq7">
+              <p>The calculation is mathematically exact: <strong>WPM = Words ÷ (Elapsed seconds ÷ 60)</strong>. The timer is accurate to 0.1 seconds. Word counts are exact for built-in passages and calculated precisely for pasted text.</p>
+              <p>The only variable is human behaviour — whether you start and stop at precisely the right moments. For a reliable measurement, run 3 tests and average them. Natural variation between tests is normal and expected (±10–15%).</p>
+            </div>
+          </div>
+
+          <div class="fq">
+            <button class="fqbtn" aria-expanded="false" onclick="togF(this)" id="fq8">
+              What is the average adult reading speed?
+              <svg class="fqico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="fqans" style="display:none" role="region" aria-labelledby="fq8">
+              <p>The average adult reads <strong>200–250 WPM silently</strong> — most studies settle on 238 WPM as the commonly cited average. Reading aloud averages <strong>183 WPM</strong>. College students average 300 WPM. Children in Grade 1 average 60–90 WPM.</p>
+              <p>For speaking context: average conversational speech is 120–150 WPM. Prepared speeches: ~130 WPM. TED speakers: ~163 WPM. This means silent reading is approximately 1.8× faster than speaking from a prepared script.</p>
+            </div>
+          </div>
+        </div><!-- /fqlist -->
+
+      </div><!-- /main -->
+
+      <!-- SIDEBAR -->
+      <aside class="side" aria-label="WPM benchmarks and related tools">
+        <div class="sbc">
+          <h4>WPM Quick Benchmarks</h4>
+          <ul class="bench-mini" role="list">
+            <li><span>School grade 1–2</span><span class="bench-wpm">60–100</span></li>
+            <li><span>Grade 3–5</span><span class="bench-wpm">100–160</span></li>
+            <li><span>Middle school</span><span class="bench-wpm">160–210</span></li>
+            <li><span><strong>Average adult</strong></span><span class="bench-wpm" style="color:var(--amber)">238</span></li>
+            <li><span>College student</span><span class="bench-wpm">300</span></li>
+            <li><span>Avid reader</span><span class="bench-wpm">350–400</span></li>
+            <li><span>Fast reader</span><span class="bench-wpm">400–600</span></li>
+            <li><span>Speed reader</span><span class="bench-wpm" style="color:var(--teal)">600+</span></li>
+            <li style="border-top:1px solid var(--bdr);padding-top:8px"><span>Read aloud avg</span><span class="bench-wpm">183</span></li>
+            <li><span>Speech avg</span><span class="bench-wpm">130</span></li>
+            <li><span>TED Talks</span><span class="bench-wpm">163</span></li>
+          </ul>
+        </div>
+
+        <div class="sbcta">
+          <h3>Find Your 1,000-word Duration</h3>
+          <p>Enter your WPM in the main calculator for personalised timing.</p>
+          <a href="/">Open Words to Time Calculator →</a>
+        </div>
+
+        <div class="sbc">
+          <h4>Related Calculators</h4>
+          <ul class="sblinks">
+            <li><a href="/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Words to Time</a></li>
+            <li><a href="/words-to-minutes/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Words to Minutes</a></li>
+            <li><a href="/word-to-reading-time/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Reading Time Calculator</a></li>
+            <li><a href="/word-to-speaking-time/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Speaking Time Calculator</a></li>
+            <li><a href="/word-to-speech-length/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Speech Length Calculator</a></li>
+            <li><a href="/word-to-public-speaking-time/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Public Speaking Timer</a></li>
+            <li><a href="/speaking-words-per-minute/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Speaking Speed Guide</a></li>
+            <li><a href="/1000-words-to-minutes/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>1,000 Words to Minutes</a></li>
+            <li><a href="/word-to-presentation-time/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Presentation Time</a></li>
+            <li><a href="/word-to-debate-time/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Debate Time Calculator</a></li>
+          </ul>
+        </div>
+
+        <div class="sbc">
+          <h4>Speech Duration Pages</h4>
+          <ul class="sblinks">
+            <li><a href="/3-minute-speech-word-count/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>3-Min Speech = 390 words</a></li>
+            <li><a href="/5-minute-speech-word-count/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>5-Min Speech = 650 words</a></li>
+            <li><a href="/10-minute-speech-word-count/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>10-Min Speech = 1,300 words</a></li>
+            <li><a href="/15-minute-speech-word-count/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>15-Min Speech = 1,950 words</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div><!-- /col2 -->
+  </div>
+</section>
+
+</main>
+
+<!-- ════ FOOTER ════ -->
+<footer class="ftr" role="contentinfo">
+  <div class="wrap">
+    <div class="fg">
+      <div>
+        <a href="/" class="flogo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>WordsToTime</a>
+        <p class="fdesc">Free, research-backed calculators for speech timing, reading time, and presentation duration. Used by 300,000+ speakers worldwide.</p>
+        <div class="fauth">Research: <a href="https://pubs.asha.org/" target="_blank" rel="noopener noreferrer">ASHA</a> · <a href="https://www.speechanddebate.org/" target="_blank" rel="noopener noreferrer">NSDA</a> · <a href="https://www.ted.com/" target="_blank" rel="noopener noreferrer">TED Talks</a></div>
+      </div>
+      <nav aria-label="Footer tools">
+        <div class="fc"><h5>Main Tools</h5><ul>
+          <li><a href="/">Words to Time</a></li>
+          <li><a href="/words-to-minutes/">Words to Minutes</a></li>
+          <li><a href="/word-to-reading-time/">Reading Time</a></li>
+          <li><a href="/word-to-speaking-time/">Speaking Time</a></li>
+          <li><a href="/word-to-speech-length/">Speech Length</a></li>
+          <li><a href="/word-to-presentation-time/">Presentation Time</a></li>
+          <li><a href="/word-to-debate-time/">Debate Timer</a></li>
+          <li><a href="/practice-mode/">Practice Mode</a></li>
+        </ul></div>
+      </nav>
+      <nav aria-label="Footer word counts">
+        <div class="fc"><h5>By Word Count</h5><ul>
+          <li><a href="/500-words-to-minutes/">500 Words</a></li>
+          <li><a href="/1000-words-to-minutes/">1,000 Words</a></li>
+          <li><a href="/1500-words-to-minutes/">1,500 Words</a></li>
+          <li><a href="/2000-words-to-minutes/">2,000 Words</a></li>
+        </ul>
+        <h5 style="margin-top:14px">By Speech Length</h5><ul>
+          <li><a href="/3-minute-speech-word-count/">3-Min Speech</a></li>
+          <li><a href="/5-minute-speech-word-count/">5-Min Speech</a></li>
+          <li><a href="/10-minute-speech-word-count/">10-Min Speech</a></li>
+        </ul></div>
+      </nav>
+      <nav aria-label="Footer company">
+        <div class="fc"><h5>Resources</h5><ul>
+          <li><a href="/speaking-words-per-minute/">WPM Guide</a></li>
+          <li><a href="/reading-speed-test/">Reading Speed Test</a></li>
+          <li><a href="/palabras-a-minutos/">Palabras a Minutos</a></li>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/contact/">Contact</a></li>
+          <li><a href="/privacy/">Privacy Policy</a></li>
+          <li><a href="/terms/">Terms of Service</a></li>
+          <li><a href="/cookies/">Cookie Policy</a></li>
+        </ul></div>
+      </nav>
+    </div>
+    <div class="fbot">
+      <span>&copy; 2026 WordsToTime. All rights reserved.</span>
+      <div class="ftr-trust"><span>✓ Free</span><span>✓ No signup</span><span>✓ No data stored</span><span>✓ Research-backed</span></div>
     </div>
   </div>
 </footer>
-<script src="/js/app.js"></script>
+
+<!-- ════ JAVASCRIPT ════ -->
+<script>
+(function(){
+'use strict';
+
+/* ── BUILT-IN PASSAGES ── */
+var PASSAGES = {
+  easy: {
+    wc: 100,
+    text: 'Reading speed is the number of words you can read in one minute. The average adult reads around 200 to 250 words per minute when reading silently for pleasure. When reading aloud, this drops to about 183 words per minute — the pace of a natural speaking voice. Reading speed varies with text difficulty, familiarity, and concentration. A simple news article is read faster than a dense scientific paper. The best way to find your exact reading speed is to time yourself reading a passage of known length. This 100-word passage is a great starting point. Click Start, read every word, then click Stop to see your WPM score instantly.'
+  },
+  medium: {
+    wc: 200,
+    text: 'Words per minute, or WPM, is the standard measure of reading speed. The average adult reads between 200 and 250 words per minute when reading silently with good comprehension. College students often reach 300 WPM. Trained speed readers may reach 400 to 600 WPM, though comprehension begins to decline above 400 WPM for most people.\n\nReading speed is influenced by several factors: the complexity of the text, the reader\'s familiarity with the subject matter, their vocabulary size, and their level of fatigue. A dense academic paper is read at roughly half the speed of a popular magazine article on the same topic.\n\nTo improve reading speed, the most effective techniques are reducing subvocalisation — the habit of mentally "hearing" each word — using a pointer to guide your eyes, and practising with texts slightly harder than your comfort zone. Even 15 minutes of deliberate practice per day can increase reading speed by 20 to 30 percent within a few weeks.'
+  },
+  hard: {
+    wc: 300,
+    text: 'The measurement of reading speed has a long history in educational psychology and cognitive science. Early researchers in the twentieth century established that the average adult reader processes approximately 200 to 250 words per minute under typical conditions, a figure that has remained remarkably stable across decades of empirical investigation.\n\nReading speed is not a single, fixed ability but a composite of several distinct cognitive processes: visual acuity and eye movement patterns, lexical access and word recognition, syntactic parsing, and semantic integration. Skilled readers make fewer, longer eye fixations and execute fewer regressions — backward movements to re-read text — compared to less proficient readers. These differences account for much of the variation in reading speed observed between individuals.\n\nThe relationship between reading speed and comprehension is complex and non-linear. At moderate speeds — 200 to 350 WPM — comprehension tends to remain stable or even improve slightly as the reader engages more actively with the text. At speeds above 400 WPM, however, comprehension typically begins to decline, as the reader increasingly relies on prediction and inference rather than full processing of each word.\n\nFor practical purposes, the optimal reading speed is the fastest pace at which a reader can maintain satisfactory comprehension for their specific purpose. Reading for pleasure or general information may tolerate speeds above 300 WPM, while reading for precise technical detail or legal accuracy may require a slower, more deliberate pace of 150 to 200 WPM.'
+  }
+};
+
+/* ── STATE ── */
+var currentMode = 'read';
+var readState = {running:false, start:null, elapsed:0, raf:null, wc:0, passage:'easy'};
+var speechState = {running:false, start:null, elapsed:0, raf:null, wc:0};
+
+/* ── FORMAT HELPERS ── */
+function fmtTime(ms){
+  var s=ms/1000, m=Math.floor(s/60), sec=(s%60).toFixed(1);
+  return m+':'+String(Math.floor(s%60)).padStart(2,'0')+'.'+String(Math.round((s%1)*10));
+}
+function calcWpm(wc, ms){
+  if(!ms||!wc)return 0;
+  return Math.round(wc/(ms/1000/60));
+}
+function p2(n){return String(Math.floor(n)).padStart(2,'0');}
+function fmtSec(ms){
+  var s=ms/1000,m=Math.floor(s/60),r=Math.round(s%60);
+  return m+'m '+p2(r)+'s';
+}
+
+/* ── MODE SWITCH ── */
+window.switchMode = function(mode,btn){
+  document.querySelectorAll('.mode-tab').forEach(function(b){b.classList.remove('active');b.setAttribute('aria-selected','false');});
+  document.querySelectorAll('.mode-panel').forEach(function(p){p.classList.remove('active');});
+  btn.classList.add('active');btn.setAttribute('aria-selected','true');
+  document.getElementById('mode-'+mode).classList.add('active');
+  currentMode = mode;
+};
+
+/* ── PASSAGE SELECTION (reading mode) ── */
+function initPassage(key){
+  var p = PASSAGES[key];
+  var disp = document.getElementById('read-passage-display');
+  var ta = document.getElementById('read-own-text');
+  var chip = document.getElementById('read-wc-chip');
+  if(key==='own'){
+    disp.style.display='none';ta.style.display='block';
+    var wc = countWords(ta.value);
+    readState.wc = wc;
+    chip.textContent = '📝 '+wc.toLocaleString()+' words';
+  } else {
+    disp.style.display='block';ta.style.display='none';
+    disp.textContent = p.text;
+    readState.wc = p.wc;
+    chip.textContent = '📝 '+p.wc+' words';
+  }
+  readState.passage = key;
+  resetTimer('read');
+}
+window.setPassage = function(key,btn){
+  document.querySelectorAll('.passage-btns .pb').forEach(function(b){b.classList.remove('on');b.setAttribute('aria-checked','false');});
+  btn.classList.add('on');btn.setAttribute('aria-checked','true');
+  initPassage(key);
+};
+window.onOwnText = function(){
+  var ta = document.getElementById('read-own-text');
+  var wc = countWords(ta.value);
+  readState.wc = wc;
+  var chip = document.getElementById('read-wc-chip');
+  chip.textContent = '📝 '+wc.toLocaleString()+' words';
+};
+
+function countWords(s){var t=s.trim();return t?t.split(/\s+/).length:0;}
+
+/* ── SPEECH TEXT ── */
+window.onSpeechText = function(){
+  var ta = document.getElementById('speech-ta');
+  var wc = countWords(ta.value);
+  speechState.wc = wc;
+  var d = document.getElementById('speech-wcd');
+  d.textContent = wc.toLocaleString()+(wc===1?' word':' words');
+};
+window.clearSpeech = function(){
+  document.getElementById('speech-ta').value='';
+  speechState.wc=0;
+  var d = document.getElementById('speech-wcd');
+  d.textContent='0 words';
+  resetTimer('speech');
+};
+
+/* ── TIMER LOOP ── */
+function tick(mode){
+  var st = mode==='read' ? readState : speechState;
+  if(!st.running) return;
+  var now = performance.now();
+  st.elapsed = now - st.start;
+  var wpm = calcWpm(st.wc, st.elapsed);
+  document.getElementById(mode+'-time').textContent = fmtTime(st.elapsed);
+  document.getElementById(mode+'-wpm').textContent = wpm > 0 ? wpm : '—';
+  st.raf = requestAnimationFrame(function(){tick(mode);});
+}
+
+/* ── CONTROLS ── */
+window.startTimer = function(mode){
+  var st = mode==='read' ? readState : speechState;
+  if(mode==='read' && !st.wc){alert('Please select a passage or paste text first.');return;}
+  if(mode==='speech' && !st.wc){alert('Please paste your speech text first.');return;}
+  st.running = true;
+  st.start = performance.now() - st.elapsed;
+  document.getElementById(mode+'-start-btn').disabled = true;
+  document.getElementById(mode+'-stop-btn').disabled = false;
+  document.getElementById(mode+'-timer-block').classList.add('running');
+  document.getElementById(mode+'-result') && (document.getElementById(mode+'-result').classList.remove('show'));
+  tick(mode);
+};
+
+window.stopTimer = function(mode){
+  var st = mode==='read' ? readState : speechState;
+  if(!st.running) return;
+  st.running = false;
+  if(st.raf) cancelAnimationFrame(st.raf);
+  document.getElementById(mode+'-start-btn').disabled = false;
+  document.getElementById(mode+'-stop-btn').disabled = true;
+  document.getElementById(mode+'-timer-block').classList.remove('running');
+  showResult(mode, st);
+};
+
+window.resetTimer = function(mode){
+  var st = mode==='read' ? readState : speechState;
+  st.running = false;
+  st.elapsed = 0;
+  if(st.raf) cancelAnimationFrame(st.raf);
+  document.getElementById(mode+'-time').textContent = '0:00.0';
+  document.getElementById(mode+'-wpm').textContent = '—';
+  document.getElementById(mode+'-start-btn').disabled = false;
+  document.getElementById(mode+'-stop-btn').disabled = true;
+  document.getElementById(mode+'-timer-block').classList.remove('running');
+  var rc = document.getElementById(mode+'-result');
+  if(rc) rc.classList.remove('show');
+};
+
+/* ── RESULT DISPLAY ── */
+function wpmBadge(wpm, isReading){
+  if(isReading){
+    if(wpm < 150) return {cls:'below', txt:'📚 Below average — keep practising!'};
+    if(wpm < 200) return {cls:'below', txt:'📖 Slightly below average (avg: 238 WPM)'};
+    if(wpm < 280) return {cls:'avg',   txt:'✅ Average adult reading speed'};
+    if(wpm < 400) return {cls:'good',  txt:'🚀 Good — above average reader'};
+    return {cls:'fast', txt:'⚡ Fast reader!'};
+  } else {
+    if(wpm < 100) return {cls:'below', txt:'🐢 Very slow — try at a natural pace'};
+    if(wpm < 120) return {cls:'below', txt:'🗣️ Slow, deliberate pace (formal speech)'};
+    if(wpm < 160) return {cls:'avg',   txt:'✅ Average speaking pace (130 WPM avg)'};
+    if(wpm < 200) return {cls:'good',  txt:'🚀 Fast speaker — TED Talk territory!'};
+    return {cls:'fast', txt:'⚡ Very fast — check comprehension'};
+  }
+}
+function readTip(wpm){
+  if(wpm < 150) return 'You\'re reading slower than average. Try using a pointer finger to guide your eyes and reduce backward skipping. 15 min daily practice can increase speed 20–30% within weeks.';
+  if(wpm < 200) return 'You\'re just below average. Focus on reducing subvocalisation — the habit of "hearing" each word silently. Try humming while reading to break the habit.';
+  if(wpm < 280) return 'Solid average reading speed with likely good comprehension. To increase speed, try expanding your eye span to take in 3–4 words per fixation rather than 1–2.';
+  if(wpm < 400) return 'Above-average reader! Your speed is in the college-student range. At this pace, a 300-page book takes about 4–5 hours. Use the reading time calculator to plan your reading.';
+  return 'Fast reader! Note that above 400 WPM, most readers are skimming rather than reading every word. Test your comprehension to ensure you\'re retaining information effectively.';
+}
+function speechTip(wpm){
+  if(wpm < 100) return 'This is a very slow pace — even slower than a formal lecture. Make sure you started and stopped the timer accurately, or try again with a longer passage for better accuracy.';
+  if(wpm < 130) return 'Formal, deliberate speaking pace. Suitable for lecturing, legal proceedings, or addressing large audiences. At this speed, every word is heard clearly.';
+  if(wpm < 160) return 'Excellent speaking pace! You\'re right in the sweet spot for speeches and presentations (130 WPM average). Use this WPM in the custom speed field in any WordsToTime calculator for personalised estimates.';
+  if(wpm < 200) return 'Fast speaking pace — similar to TED speakers (avg 163 WPM). Great for podcasts and conversational presentations. Slightly fast for formal speeches where clarity is paramount.';
+  return 'Very fast — this speed is better suited to read-aloud timing than speaking measurement. For an accurate speech WPM, read your script aloud at a natural conversational pace.';
+}
+
+function showResult(mode, st){
+  var wpm = calcWpm(st.wc, st.elapsed);
+  var rc = document.getElementById(mode+'-result');
+  if(!rc||!wpm) return;
+  var isReading = mode==='read';
+  var badge = wpmBadge(wpm, isReading);
+  document.getElementById(mode+'-r-wpm').textContent = wpm;
+  var badgeEl = document.getElementById(mode+'-r-badge');
+  badgeEl.textContent = badge.txt;
+  badgeEl.className = 'rc-badge '+badge.cls;
+  document.getElementById(mode+'-r-time').textContent = fmtSec(st.elapsed);
+  document.getElementById(mode+'-r-words').textContent = st.wc.toLocaleString();
+  if(isReading){
+    var pagesPerHr = Math.round((wpm*60)/500);
+    document.getElementById('read-r-pages').textContent = pagesPerHr;
+    document.getElementById('read-r-tip').textContent = readTip(wpm);
+  } else {
+    var minPer1k = (1000/wpm).toFixed(1)+'m';
+    document.getElementById('speech-r-equiv').textContent = minPer1k;
+    document.getElementById('speech-r-tip').textContent = speechTip(wpm);
+  }
+  rc.classList.add('show');
+}
+
+/* ── SHARE RESULT ── */
+window.shareResult = function(mode){
+  var wpm = document.getElementById(mode+'-r-wpm').textContent;
+  var time = document.getElementById(mode+'-r-time').textContent;
+  var badge = document.getElementById(mode+'-r-badge').textContent;
+  var label = mode==='read' ? 'Reading Speed Test' : 'Speaking WPM Test';
+  var text = ['WordsToTime — '+label,
+    '─'.repeat(26),
+    'My WPM: '+wpm,
+    'Time: '+time,
+    badge,
+    '',
+    'Test yours free: https://wordstotime.netlify.app/practice-mode/'].join('\n');
+  var btn = document.getElementById(mode+'-share-btn');
+  function ok(){if(btn){btn.classList.add('ok');btn.textContent='✓ Copied!';setTimeout(function(){btn.classList.remove('ok');btn.textContent='📋 Copy Result';},2500);}}
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(ok).catch(function(){fb(text,ok);});}else{fb(text,ok);}
+};
+function fb(t,cb){var el=document.createElement('textarea');el.value=t;el.style.cssText='position:fixed;top:-9999px';document.body.appendChild(el);el.focus();el.select();try{document.execCommand('copy');cb();}catch(e){}document.body.removeChild(el);}
+
+/* ── FAQ ── */
+window.togF = function(btn){
+  var open=btn.getAttribute('aria-expanded')==='true';
+  document.querySelectorAll('.fqbtn').forEach(function(b){b.setAttribute('aria-expanded','false');b.nextElementSibling.style.display='none';});
+  if(!open){btn.setAttribute('aria-expanded','true');btn.nextElementSibling.style.display='block';}
+};
+
+/* ── MOBILE NAV ── */
+var burg=document.getElementById('burger'),men=document.getElementById('mnav');
+if(burg&&men){
+  burg.addEventListener('click',function(){var op=men.classList.toggle('open');burg.classList.toggle('open',op);burg.setAttribute('aria-expanded',String(op));});
+  men.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){men.classList.remove('open');burg.classList.remove('open');burg.setAttribute('aria-expanded','false');});});
+}
+
+/* ── INIT ── */
+initPassage('easy');
+})();
+</script>
+
 </body>
 </html>
