@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debate Time Calculator — Words to Debate Speech Duration</title>
+  <meta name="description" content="Debate time calculator: convert word count to exact speech duration for BP, LD, Public Forum, World Schools & Parliamentary. Includes debate break calculator, WPM guide & all format time limits.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://wordstotime.netlify.app/word-to-debate-time/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wordstotime.netlify.app/word-to-debate-time/">
+  <meta property="og:title" content="Debate Time Calculator — Words to Debate Speech Duration">
+  <meta property="og:description" content="Free debate speech time calculator for BP, LD, Public Forum, World Schools & Parliamentary. Debate break calculator + WPM guide for all formats.">
+  <meta property="og:image" content="https://wordstotime.netlify.app/og-image.png">
+  <meta property="og:site_name" content="Words to Time">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Debate Time Calculator — Words to Speech Duration">
+  <meta name="twitter:description" content="Calculate debate speech time for BP, LD, PF, World Schools & Parliamentary. Free tool with debate break calculator.">
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9275267797924945" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article",
+   "headline":"Debate Time Calculator — Words to Debate Speech Duration",
+   "description":"Free debate speech time calculator for British Parliamentary, Lincoln-Douglas, Public Forum, World Schools and Parliamentary debate. Includes debate break calculator and WPM guide.",
+   "url":"https://wordstotime.netlify.app/word-to-debate-time/",
+   "publisher":{"@type":"Organization","name":"Words to Time","url":"https://wordstotime.netlify.app/"},
+   "mainEntity":{"@type":"WebApplication","name":"Debate Time Calculator","applicationCategory":"UtilityApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://wordstotime.netlify.app/"},
+    {"@type":"ListItem","position":2,"name":"Speaking Time","item":"https://wordstotime.netlify.app/word-to-speaking-time/"},
+    {"@type":"ListItem","position":3,"name":"Debate Time Calculator","item":"https://wordstotime.netlify.app/word-to-debate-time/"}
+  ]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"How long should a debate speech be?","acceptedAnswer":{"@type":"Answer","text":"Debate speech length depends on the format. British Parliamentary: 7 minutes (700–840 words). World Schools: 8 minutes (800–960 words). Lincoln-Douglas: Constructives 6–7 minutes, Rebuttals 3–4 minutes. Public Forum: Constructives 4 minutes, Summary 3 minutes, Final Focus 2 minutes. Parliamentary (NPDA): Main speeches 8 minutes."}},
+    {"@type":"Question","name":"What is a debate break calculator?","acceptedAnswer":{"@type":"Answer","text":"A debate break calculator helps determine: (1) how many words you need to write to fill your speech time, or (2) in British Parliamentary and World Schools tournaments, which teams advance (break) to elimination rounds based on win/loss records and speaker points. Use the calculator on this page to find the exact word count needed for any debate format at your speaking speed."}},
+    {"@type":"Question","name":"How many words per minute in a debate speech?","acceptedAnswer":{"@type":"Answer","text":"Debate speaking rates vary by format: British Parliamentary: 100–120 WPM (deliberate, clear delivery required). Lincoln-Douglas: 110–125 WPM. Public Forum: 115–130 WPM. World Schools: 100–120 WPM. NPDA Parliamentary: 120–140 WPM. Policy/CX debate can exceed 200 WPM in speed rounds. The recommended pace for most academic debate is 100–130 WPM."}},
+    {"@type":"Question","name":"How long is a BP debate speech?","acceptedAnswer":{"@type":"Answer","text":"A British Parliamentary (BP) debate speech is 7 minutes long. At 100 WPM that is 700 words. At 115 WPM it is 805 words. At 120 WPM it is 840 words. POIs (Points of Information) can be offered from minute 1 to minute 6. The first and last minute are protected time."}},
+    {"@type":"Question","name":"How many words is a 7-minute debate speech?","acceptedAnswer":{"@type":"Answer","text":"A 7-minute debate speech is 700 words at 100 WPM, 805 words at 115 WPM, or 840 words at 120 WPM. For British Parliamentary format, most competitive debaters target 720–800 words to allow for natural pauses and emphasis. Use the word count calculator on this page to check your script fits within 7 minutes."}},
+    {"@type":"Question","name":"What is the average speaking rate for a debate speech?","acceptedAnswer":{"@type":"Answer","text":"The average speaking rate for debate speeches is 100–120 WPM for BP and World Schools formats, and 115–130 WPM for Lincoln-Douglas and Public Forum. Policy debate can range from 130 WPM to 250+ WPM in speed rounds. For most academic debate formats, 110–120 WPM is the recommended pace for clarity and effective delivery."}}
+  ]}
+  </script>
+
+  <style>
+    :root{--primary:#b91c1c;--primary-dark:#991b1b;--primary-light:#fee2e2;--dark:#0f172a;--dark-card:#1e293b;--dark-border:#334155;--bg:#fff5f5;--white:#ffffff;--border:#e2e8f0;--text:#1e293b;--text-muted:#64748b;--text-light:#94a3b8;--success:#10b981;--success-light:#d1fae5;--blue:#2563eb;--blue-light:#dbeafe;--purple:#7c3aed;--purple-light:#ede9fe;--amber:#d97706;--amber-light:#fef3c7;--teal:#0d9488;--teal-light:#ccfbf1;--radius:12px;--radius-sm:8px;--shadow:0 1px 3px rgba(0,0,0,.1);--shadow-md:0 4px 6px rgba(0,0,0,.07);--font:'Inter',-apple-system,sans-serif;--max-w:1100px}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6;font-size:16px}
+    a{color:var(--primary-dark);text-decoration:none}a:hover{text-decoration:underline}
+
+    .site-header{background:var(--dark);position:sticky;top:0;z-index:100;border-bottom:1px solid var(--dark-border)}
+    .header-inner{max-width:var(--max-w);margin:0 auto;padding:0 20px;height:62px;display:flex;align-items:center;justify-content:space-between}
+    .site-logo{font-size:1.2rem;font-weight:800;color:#fff;text-decoration:none;display:flex;align-items:center;gap:8px}
+    .logo-icon{background:var(--primary);color:#fff;width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.9rem}
+    .site-nav{display:flex;align-items:center;gap:4px}
+    .site-nav a{color:#cbd5e1;font-size:.875rem;font-weight:500;padding:6px 12px;border-radius:6px;text-decoration:none;transition:.15s;white-space:nowrap}
+    .site-nav a:hover,.site-nav a.active{background:rgba(255,255,255,.1);color:#fff;text-decoration:none}
+    .nav-cta{background:var(--primary)!important;color:#fff!important;margin-left:8px}
+    .nav-cta:hover{background:var(--primary-dark)!important}
+    .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:6px;flex-direction:column;gap:5px}
+    .nav-toggle span{display:block;width:22px;height:2px;background:#fff;border-radius:2px}
+    @media(max-width:768px){.site-nav{display:none;position:absolute;top:62px;left:0;right:0;background:var(--dark);flex-direction:column;padding:12px 20px 20px;gap:4px;border-bottom:1px solid var(--dark-border)}.site-nav.open{display:flex}.site-nav a{padding:10px 12px;width:100%}.nav-cta{margin-left:0;margin-top:8px}.nav-toggle{display:flex}}
+
+    .breadcrumb{background:var(--white);border-bottom:1px solid var(--border);padding:10px 20px;font-size:.8rem;color:var(--text-muted)}
+    .breadcrumb-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+    .breadcrumb a{color:var(--text-muted)}.breadcrumb a:hover{color:var(--primary-dark)}
+    .breadcrumb-sep{color:var(--text-light)}.breadcrumb-current{color:var(--text);font-weight:500}
+
+    .page-container{max-width:var(--max-w);margin:0 auto;padding:32px 20px 60px;display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start}
+    .main-content{min-width:0}
+    .sidebar{display:flex;flex-direction:column;gap:20px}
+    @media(max-width:900px){.page-container{grid-template-columns:1fr}.sidebar{order:3}}
+
+    /* HERO */
+    .page-hero{background:linear-gradient(135deg,#450a0a 0%,#7f1d1d 50%,#b91c1c 100%);color:#fff;padding:36px 28px;border-radius:var(--radius);margin-bottom:20px;position:relative;overflow:hidden}
+    .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 75% 30%,rgba(252,165,165,.18) 0%,transparent 65%);pointer-events:none}
+    .hero-eyebrow{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#fca5a5;margin-bottom:10px;position:relative}
+    .page-hero h1{font-size:clamp(1.5rem,3.5vw,2rem);font-weight:800;line-height:1.2;margin-bottom:8px;position:relative}
+    .hero-sub{color:#fecaca;font-size:.9rem;margin-bottom:24px;position:relative}
+    .format-pills{display:flex;flex-wrap:wrap;gap:8px;position:relative}
+    .format-pill{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:99px;padding:6px 14px;font-size:.8rem;font-weight:600;cursor:pointer;transition:.15s;color:#fff}
+    .format-pill:hover,.format-pill.active{background:rgba(255,255,255,.25);border-color:rgba(255,255,255,.5)}
+
+    /* CARD */
+    .card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);margin-bottom:20px}
+    .section-title{font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+    .section-title::after{content:'';flex:1;height:2px;background:var(--border);border-radius:2px}
+
+    /* MAIN CALCULATOR */
+    .calc-inputs{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+    @media(max-width:600px){.calc-inputs{grid-template-columns:1fr}}
+    .calc-group label{display:block;font-size:.85rem;font-weight:600;margin-bottom:6px}
+    .calc-input{width:100%;padding:10px 14px;border:2px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font);font-size:1rem;font-weight:600;transition:.15s}
+    .calc-input:focus{outline:none;border-color:var(--primary)}
+    .calc-select{width:100%;padding:10px 14px;border:2px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font);font-size:.92rem;background:var(--white);cursor:pointer;transition:.15s}
+    .calc-select:focus{outline:none;border-color:var(--primary)}
+    .calc-result{background:linear-gradient(135deg,#450a0a,#991b1b);color:#fff;border-radius:var(--radius-sm);padding:20px;text-align:center;margin-bottom:16px}
+    .cr-main{font-size:3rem;font-weight:800;color:#fff;line-height:1}
+    .cr-sub{font-size:.8rem;color:#fca5a5;text-transform:uppercase;letter-spacing:.08em;margin-top:4px}
+    .cr-detail{display:flex;justify-content:center;gap:24px;margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,.15);flex-wrap:wrap}
+    .cr-item .cr-v{font-size:.95rem;font-weight:700;color:#fff}
+    .cr-item .cr-l{font-size:.68rem;color:#fca5a5;text-transform:uppercase}
+    .fit-bar-wrap{margin-top:12px}
+    .fit-bar-label{display:flex;justify-content:space-between;font-size:.75rem;margin-bottom:4px}
+    .fit-bar-label .fb-left{color:#fca5a5}
+    .fit-bar-label .fb-right{font-weight:700}
+    .fit-bar{background:rgba(255,255,255,.15);border-radius:99px;height:8px;overflow:hidden}
+    .fit-bar-fill{height:100%;border-radius:99px;transition:width .4s ease;background:linear-gradient(90deg,#4ade80,#22c55e)}
+    .fit-bar-fill.over{background:linear-gradient(90deg,#fbbf24,#ef4444)}
+    .fit-status{font-size:.82rem;margin-top:8px;font-weight:600}
+    .fit-status.ok{color:#4ade80}
+    .fit-status.over{color:#fbbf24}
+
+    /* FORMAT CARDS */
+    .format-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+    .fmt-card{border:2px solid var(--border);border-radius:var(--radius-sm);padding:14px;background:var(--white);cursor:pointer;transition:.15s}
+    .fmt-card:hover{border-color:var(--primary);box-shadow:var(--shadow)}
+    .fmt-card.selected{border-color:var(--primary);background:var(--primary-light)}
+    .fmt-name{font-size:.9rem;font-weight:700;color:var(--text);margin-bottom:4px}
+    .fmt-time{font-size:1.3rem;font-weight:800;color:var(--primary-dark);margin-bottom:4px}
+    .fmt-words{font-size:.76rem;color:var(--text-muted);margin-bottom:6px}
+    .fmt-wpm{font-size:.72rem;background:var(--primary-light);color:var(--primary-dark);padding:2px 8px;border-radius:99px;font-weight:600;display:inline-block}
+
+    /* TABLE */
+    .table-wrap{overflow-x:auto;border-radius:var(--radius-sm);border:1px solid var(--border)}
+    .data-table{width:100%;border-collapse:collapse;font-size:.85rem}
+    .data-table thead tr{background:var(--dark)}
+    .data-table thead th{padding:9px 11px;color:#e2e8f0;font-weight:600;text-align:left;font-size:.77rem;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
+    .data-table tbody tr{border-bottom:1px solid var(--border);transition:background .1s}
+    .data-table tbody tr:hover{background:#fff5f5}
+    .data-table tbody tr.row-group{background:#f8fafc}
+    .data-table tbody tr.row-group td{font-weight:700;color:var(--primary-dark);font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;padding:6px 11px}
+    .data-table tbody tr:last-child{border-bottom:none}
+    .data-table td{padding:8px 11px}
+    .badge{display:inline-block;padding:2px 7px;border-radius:99px;font-size:.7rem;font-weight:700}
+    .badge-bp{background:#dbeafe;color:#1e40af}
+    .badge-ld{background:#dcfce7;color:#166534}
+    .badge-pf{background:#fef3c7;color:#92400e}
+    .badge-ws{background:#ede9fe;color:#5b21b6}
+    .badge-p{background:#fee2e2;color:#991b1b}
+    .table-note{font-size:.74rem;color:var(--text-muted);margin-top:8px}
+
+    /* BREAK CALCULATOR */
+    .break-calc{background:linear-gradient(135deg,#1e1b4b,#312e81,#4338ca);color:#fff;border-radius:var(--radius);padding:24px;margin-bottom:20px}
+    .break-calc h2{font-size:1.1rem;font-weight:700;margin-bottom:6px}
+    .break-calc p{font-size:.85rem;color:#c7d2fe;margin-bottom:20px}
+    .break-inputs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
+    @media(max-width:500px){.break-inputs{grid-template-columns:1fr}}
+    .break-group label{display:block;font-size:.8rem;font-weight:600;color:#c7d2fe;margin-bottom:5px}
+    .break-input{width:100%;padding:9px 12px;background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.2);border-radius:var(--radius-sm);color:#fff;font-family:var(--font);font-size:.92rem;font-weight:600}
+    .break-input:focus{outline:none;border-color:#a5b4fc}
+    .break-result-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+    .br-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:var(--radius-sm);padding:14px;text-align:center}
+    .br-card-time{font-size:1.6rem;font-weight:800;color:#fff;line-height:1}
+    .br-card-label{font-size:.7rem;color:#a5b4fc;text-transform:uppercase;letter-spacing:.08em;margin-top:4px;margin-bottom:2px}
+    .br-card-words{font-size:.8rem;color:#c7d2fe}
+
+    /* INFO BOX */
+    .info-box{border-left:4px solid var(--primary);background:var(--primary-light);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:12px 16px;font-size:.88rem;margin:12px 0;color:var(--dark)}
+    .info-box strong{color:var(--primary-dark)}
+    .info-box.blue{background:var(--blue-light);border-color:var(--blue)}
+    .info-box.blue strong{color:#1d4ed8}
+    .info-box.amber{background:var(--amber-light);border-color:var(--amber)}
+    .info-box.amber strong{color:#92400e}
+    .info-box.purple{background:var(--purple-light);border-color:var(--purple)}
+    .info-box.purple strong{color:var(--purple)}
+    .info-box.teal{background:var(--teal-light);border-color:var(--teal)}
+    .info-box.teal strong{color:#0f766e}
+
+    /* FAQ */
+    .faq-item{border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:10px;overflow:hidden}
+    .faq-question{padding:13px 18px;font-weight:600;font-size:.93rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:var(--white);transition:.15s;gap:12px}
+    .faq-question:hover{background:var(--bg)}
+    .faq-question.open{background:var(--primary-light);color:var(--primary-dark);border-bottom:1px solid var(--border)}
+    .faq-icon{flex-shrink:0;font-size:1.2rem;color:var(--text-muted);transition:transform .2s}
+    .faq-question.open .faq-icon{transform:rotate(45deg);color:var(--primary-dark)}
+    .faq-answer{display:none;padding:13px 18px;font-size:.88rem;line-height:1.75;color:var(--text-muted);background:var(--white)}
+    .faq-answer.open{display:block}
+    .faq-answer a{color:var(--primary-dark)}
+
+    /* TOOLS GRID */
+    .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:10px}
+    .tool-card{background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:13px;text-decoration:none;transition:.15s;display:block}
+    .tool-card:hover{border-color:var(--primary);box-shadow:var(--shadow-md);transform:translateY(-2px);text-decoration:none}
+    .tc-icon{font-size:1.3rem;margin-bottom:5px}
+    .tc-name{font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px}
+    .tc-desc{font-size:.73rem;color:var(--text-muted);line-height:1.4}
+
+    /* PROSE */
+    .prose{font-size:.9rem;color:var(--text-muted);line-height:1.8}
+    .prose p{margin-bottom:12px}
+    .prose strong{color:var(--text)}
+    .prose a{color:var(--primary-dark)}
+    .prose h3{font-size:.97rem;font-weight:700;color:var(--text);margin:16px 0 8px}
+
+    /* AD */
+    .ad-unit{background:var(--white);border:1px dashed var(--border);border-radius:var(--radius-sm);min-height:90px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+
+    /* SIDEBAR */
+    .sidebar-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+    .sidebar-card h3{font-size:.93rem;font-weight:700;color:var(--text);margin-bottom:14px}
+    .ref-table{width:100%;font-size:.8rem;border-collapse:collapse}
+    .ref-table tr{border-bottom:1px solid var(--border)}
+    .ref-table tr:last-child{border-bottom:none}
+    .ref-table td{padding:6px 4px;vertical-align:middle}
+    .ref-table td:first-child{color:var(--text-muted)}
+    .ref-table td:last-child{font-weight:700;text-align:right;color:var(--primary-dark)}
+    .ref-table tr.highlight td{background:var(--primary-light);border-radius:4px}
+    .sidebar-links{list-style:none;display:flex;flex-direction:column;gap:6px}
+    .sidebar-links li a{display:flex;align-items:center;gap:8px;font-size:.83rem;color:var(--text-muted);text-decoration:none;padding:6px 8px;border-radius:6px;transition:.15s}
+    .sidebar-links li a:hover{background:var(--bg);color:var(--primary-dark);text-decoration:none}
+    .sl-icon{width:22px;height:22px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:.68rem;font-weight:700;flex-shrink:0;background:var(--primary-light);color:var(--primary-dark)}
+    .sl-icon.blue{background:var(--blue-light);color:#1e40af}
+    .sl-icon.teal{background:var(--teal-light);color:#0f766e}
+    .sl-icon.amber{background:var(--amber-light);color:#92400e}
+    .sl-icon.purple{background:var(--purple-light);color:var(--purple)}
+
+    /* FOOTER */
+    .site-footer{background:var(--dark);color:#94a3b8;margin-top:60px}
+    .footer-top{max-width:var(--max-w);margin:0 auto;padding:44px 20px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+    .footer-brand .site-logo{margin-bottom:12px}
+    .footer-brand p{font-size:.85rem;line-height:1.75;max-width:300px}
+    .footer-col h4{color:#e2e8f0;font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+    .footer-col ul li a{color:#94a3b8;font-size:.83rem;text-decoration:none;transition:color .15s}
+    .footer-col ul li a:hover{color:#fff;text-decoration:none}
+    .footer-bottom{border-top:1px solid var(--dark-border);max-width:var(--max-w);margin:0 auto;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;font-size:.8rem;flex-wrap:wrap;gap:8px}
+    .footer-bottom a{color:#94a3b8}.footer-bottom a:hover{color:#fff}
+    @media(max-width:768px){.footer-top{grid-template-columns:1fr 1fr}.footer-brand{grid-column:1/-1}}
+    @media(max-width:480px){.footer-top{grid-template-columns:1fr}.format-grid{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><span class="logo-icon">&#9878;</span>WordsToTime</a>
+    <nav class="site-nav" id="mainNav">
+      <a href="/">Home</a>
+      <a href="/words-to-minutes/">Words to Min</a>
+      <a href="/word-to-speaking-time/">Speaking Time</a>
+      <a href="/word-to-debate-time/" class="active">Debate Timer</a>
+      <a href="/speaking-words-per-minute/">WPM Guide</a>
+      <a href="/practice-mode/" class="nav-cta">Practice Mode</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="/">Home</a><span class="breadcrumb-sep">&#8250;</span>
+    <a href="/word-to-speaking-time/">Speaking Time</a><span class="breadcrumb-sep">&#8250;</span>
+    <span class="breadcrumb-current">Debate Time Calculator</span>
+  </div>
+</nav>
+
+<div class="page-container">
+<main class="main-content">
+
+  <!-- HERO -->
+  <div class="page-hero">
+    <div class="hero-eyebrow">&#9878; Debate Speech Timer</div>
+    <h1>Debate Time Calculator</h1>
+    <p class="hero-sub">Convert word count to exact speech duration for every major debate format. Select your format to get started.</p>
+    <div class="format-pills" id="heroFormatPills">
+      <button class="format-pill active" onclick="selectFormat('bp',this)">British Parliamentary</button>
+      <button class="format-pill" onclick="selectFormat('ld',this)">Lincoln-Douglas</button>
+      <button class="format-pill" onclick="selectFormat('pf',this)">Public Forum</button>
+      <button class="format-pill" onclick="selectFormat('ws',this)">World Schools</button>
+      <button class="format-pill" onclick="selectFormat('parli',this)">Parliamentary</button>
+    </div>
+  </div>
+
+  <!-- TOP AD -->
+  <div class="ad-unit" style="margin-bottom:20px">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9275267797924945" data-ad-slot="auto" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <!-- MAIN CALCULATOR -->
+  <div class="card">
+    <h2 class="section-title">&#127919; Debate Speech Time Calculator</h2>
+
+    <div class="calc-inputs">
+      <div class="calc-group">
+        <label for="wordInput">Word Count</label>
+        <input type="number" id="wordInput" class="calc-input" value="750" min="1" max="100000" oninput="updateDebateCalc()">
+      </div>
+      <div class="calc-group">
+        <label for="speechSelect">Debate Format / Speech Type</label>
+        <select id="speechSelect" class="calc-select" onchange="updateDebateCalc()">
+          <optgroup label="&#127462;&#127264; British Parliamentary">
+            <option value="7|110|BP" selected>BP — Main Speech (7 min, 100–120 WPM)</option>
+          </optgroup>
+          <optgroup label="&#127913; Lincoln-Douglas">
+            <option value="6|115|LD">LD — Affirmative Constructive (6 min)</option>
+            <option value="7|115|LD">LD — Negative Constructive (7 min)</option>
+            <option value="4|115|LD">LD — 1st Aff Rebuttal / 1AR (4 min)</option>
+            <option value="6|115|LD">LD — Negative Rebuttal / NR (6 min)</option>
+            <option value="3|115|LD">LD — 2nd Aff Rebuttal / 2AR (3 min)</option>
+          </optgroup>
+          <optgroup label="&#127942; Public Forum">
+            <option value="4|120|PF">PF — Constructive (4 min)</option>
+            <option value="4|120|PF">PF — Rebuttal (4 min)</option>
+            <option value="3|120|PF">PF — Summary (3 min)</option>
+            <option value="2|120|PF">PF — Final Focus (2 min)</option>
+          </optgroup>
+          <optgroup label="&#127758; World Schools">
+            <option value="8|110|WS">World Schools — Main Speech (8 min)</option>
+            <option value="4|110|WS">World Schools — Reply Speech (4 min)</option>
+          </optgroup>
+          <optgroup label="&#127963; Parliamentary (NPDA)">
+            <option value="8|125|Parli">Parli — Prime Minister / PM (8 min)</option>
+            <option value="8|125|Parli">Parli — Leader of Opposition / LO (8 min)</option>
+            <option value="4|125|Parli">Parli — Leader Rebuttal (4 min)</option>
+          </optgroup>
+          <optgroup label="&#127931; Custom WPM">
+            <option value="5|130|Custom">Custom — 5 minutes at 130 WPM</option>
+            <option value="7|130|Custom">Custom — 7 minutes at 130 WPM</option>
+            <option value="8|130|Custom">Custom — 8 minutes at 130 WPM</option>
+            <option value="10|130|Custom">Custom — 10 minutes at 130 WPM</option>
+          </optgroup>
+        </select>
+      </div>
+    </div>
+
+    <div class="calc-result" id="calcResult">
+      <div class="cr-sub">Your 750-word BP speech will take</div>
+      <div class="cr-main" id="crMain">6m 49s</div>
+      <div class="cr-detail" id="crDetail">
+        <div class="cr-item"><div class="cr-v">7m 00s</div><div class="cr-l">Slot Limit</div></div>
+        <div class="cr-item"><div class="cr-v" id="crSlack">+11s buffer</div><div class="cr-l">Buffer Remaining</div></div>
+        <div class="cr-item"><div class="cr-v">110 WPM</div><div class="cr-l">Debate WPM</div></div>
+        <div class="cr-item"><div class="cr-v" id="crIdeal">770 words</div><div class="cr-l">Ideal Word Count</div></div>
+      </div>
+      <div class="fit-bar-wrap" id="fitBarWrap">
+        <div class="fit-bar-label"><span class="fb-left">0%</span><span class="fb-right" id="fbPct">89% used</span></div>
+        <div class="fit-bar"><div class="fit-bar-fill" id="fitBarFill" style="width:89%"></div></div>
+        <div class="fit-status ok" id="fitStatus">&#10003; Fits within the 7-minute slot</div>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <strong>Tip:</strong> For debate speeches, aim for 90–95% of the time limit. This leaves room for pauses, audience reaction, and speaker nerves — which naturally slow delivery on competition day.
+    </div>
+  </div>
+
+  <!-- FORMAT QUICK CARDS -->
+  <div class="card">
+    <h2 class="section-title">&#9200; Debate Format Time Limits</h2>
+    <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:16px">Click a format to load it into the calculator above. Word counts shown at typical WPM for each format.</p>
+    <div class="format-grid">
+      <div class="fmt-card selected" id="card-bp" onclick="selectFormatCard('bp')">
+        <div class="fmt-name">&#127462;&#127264; British Parliamentary</div>
+        <div class="fmt-time">7 minutes</div>
+        <div class="fmt-words">700–840 words per speech</div>
+        <div class="fmt-wpm">100–120 WPM</div>
+      </div>
+      <div class="fmt-card" id="card-ld" onclick="selectFormatCard('ld')">
+        <div class="fmt-name">&#127913; Lincoln-Douglas</div>
+        <div class="fmt-time">3–7 minutes</div>
+        <div class="fmt-words">AC: 690–780w · NC: 805–910w</div>
+        <div class="fmt-wpm">110–125 WPM</div>
+      </div>
+      <div class="fmt-card" id="card-pf" onclick="selectFormatCard('pf')">
+        <div class="fmt-name">&#127942; Public Forum</div>
+        <div class="fmt-time">2–4 minutes</div>
+        <div class="fmt-words">Constructive: 460–520w</div>
+        <div class="fmt-wpm">115–130 WPM</div>
+      </div>
+      <div class="fmt-card" id="card-ws" onclick="selectFormatCard('ws')">
+        <div class="fmt-name">&#127758; World Schools</div>
+        <div class="fmt-time">8 minutes</div>
+        <div class="fmt-words">800–960 words per speech</div>
+        <div class="fmt-wpm">100–120 WPM</div>
+      </div>
+      <div class="fmt-card" id="card-parli" onclick="selectFormatCard('parli')">
+        <div class="fmt-name">&#127963; Parliamentary (NPDA)</div>
+        <div class="fmt-time">8 minutes</div>
+        <div class="fmt-words">960–1,000 words per speech</div>
+        <div class="fmt-wpm">120–130 WPM</div>
+      </div>
+      <div class="fmt-card" id="card-policy" onclick="selectFormatCard('policy')">
+        <div class="fmt-name">&#9876; Policy / Cross-Ex</div>
+        <div class="fmt-time">8 minutes</div>
+        <div class="fmt-words">1,040–1,600+ words</div>
+        <div class="fmt-wpm">130–200+ WPM</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DEBATE BREAK CALCULATOR — addresses 330 impression query -->
+  <div class="break-calc" id="debate-break-calculator">
+    <h2>&#127942; Debate Break Calculator</h2>
+    <p>Calculate the exact word count you need to fill any remaining time in your debate speech. Enter the time remaining and your speaking WPM below.</p>
+    <div class="break-inputs">
+      <div class="break-group">
+        <label for="breakMins">Minutes Remaining in Speech</label>
+        <input type="number" id="breakMins" class="break-input" value="7" min="1" max="30" oninput="updateBreakCalc()">
+      </div>
+      <div class="break-group">
+        <label for="breakWpm">Your Speaking WPM</label>
+        <input type="number" id="breakWpm" class="break-input" value="110" min="60" max="300" oninput="updateBreakCalc()">
+      </div>
+    </div>
+    <div class="break-result-grid" id="breakResultGrid">
+      <div class="br-card"><div class="br-card-time" id="br100">770</div><div class="br-card-label">words needed</div><div class="br-card-words">at your WPM</div></div>
+      <div class="br-card"><div class="br-card-time">840</div><div class="br-card-label">words at 120 WPM</div><div class="br-card-words">above your rate</div></div>
+      <div class="br-card"><div class="br-card-time">910</div><div class="br-card-label">words at 130 WPM</div><div class="br-card-words">fast delivery</div></div>
+      <div class="br-card"><div class="br-card-time" id="br90pct">693</div><div class="br-card-label">words at 90%</div><div class="br-card-words">safe target (w/ pauses)</div></div>
+    </div>
+  </div>
+
+  <!-- FULL FORMAT COMPARISON TABLE -->
+  <div class="card">
+    <h2 class="section-title">&#128203; Full Debate Format Reference Table</h2>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr><th>Format</th><th>Speech Type</th><th>Time Limit</th><th>100 WPM</th><th>115 WPM</th><th>130 WPM</th><th>Notes</th></tr>
+        </thead>
+        <tbody>
+          <tr class="row-group"><td colspan="7">&#127462;&#127264; British Parliamentary (BP)</td></tr>
+          <tr><td><span class="badge badge-bp">BP</span></td><td>All main speeches</td><td><strong>7 min</strong></td><td>700w</td><td>805w</td><td>910w</td><td>POIs minutes 1–6</td></tr>
+          <tr><td><span class="badge badge-bp">BP</span></td><td>Protected time</td><td>1 min each end</td><td colspan="3">—</td><td>No POIs in min 1 &amp; 7</td></tr>
+
+          <tr class="row-group"><td colspan="7">&#127913; Lincoln-Douglas (LD)</td></tr>
+          <tr><td><span class="badge badge-ld">LD</span></td><td>Affirmative Constructive (AC)</td><td><strong>6 min</strong></td><td>600w</td><td>690w</td><td>780w</td><td></td></tr>
+          <tr><td><span class="badge badge-ld">LD</span></td><td>Cross-Examination</td><td>3 min</td><td colspan="3">N/A</td><td>Q&amp;A only</td></tr>
+          <tr><td><span class="badge badge-ld">LD</span></td><td>Negative Constructive (NC)</td><td><strong>7 min</strong></td><td>700w</td><td>805w</td><td>910w</td><td></td></tr>
+          <tr><td><span class="badge badge-ld">LD</span></td><td>1st Affirmative Rebuttal (1AR)</td><td><strong>4 min</strong></td><td>400w</td><td>460w</td><td>520w</td><td></td></tr>
+          <tr><td><span class="badge badge-ld">LD</span></td><td>Negative Rebuttal (NR)</td><td><strong>6 min</strong></td><td>600w</td><td>690w</td><td>780w</td><td></td></tr>
+          <tr><td><span class="badge badge-ld">LD</span></td><td>2nd Affirmative Rebuttal (2AR)</td><td><strong>3 min</strong></td><td>300w</td><td>345w</td><td>390w</td><td></td></tr>
+
+          <tr class="row-group"><td colspan="7">&#127942; Public Forum (PF)</td></tr>
+          <tr><td><span class="badge badge-pf">PF</span></td><td>Constructive</td><td><strong>4 min</strong></td><td>400w</td><td>460w</td><td>520w</td><td></td></tr>
+          <tr><td><span class="badge badge-pf">PF</span></td><td>Crossfire / Cross-Ex</td><td>3 min</td><td colspan="3">N/A</td><td>Q&amp;A only</td></tr>
+          <tr><td><span class="badge badge-pf">PF</span></td><td>Rebuttal</td><td><strong>4 min</strong></td><td>400w</td><td>460w</td><td>520w</td><td></td></tr>
+          <tr><td><span class="badge badge-pf">PF</span></td><td>Summary</td><td><strong>3 min</strong></td><td>300w</td><td>345w</td><td>390w</td><td></td></tr>
+          <tr><td><span class="badge badge-pf">PF</span></td><td>Final Focus</td><td><strong>2 min</strong></td><td>200w</td><td>230w</td><td>260w</td><td></td></tr>
+
+          <tr class="row-group"><td colspan="7">&#127758; World Schools</td></tr>
+          <tr><td><span class="badge badge-ws">WS</span></td><td>Main Speech (all speakers)</td><td><strong>8 min</strong></td><td>800w</td><td>920w</td><td>1,040w</td><td>POIs min 1–7</td></tr>
+          <tr><td><span class="badge badge-ws">WS</span></td><td>Reply Speech</td><td><strong>4 min</strong></td><td>400w</td><td>460w</td><td>520w</td><td>No POIs allowed</td></tr>
+
+          <tr class="row-group"><td colspan="7">&#127963; Parliamentary (NPDA/NPTE)</td></tr>
+          <tr><td><span class="badge badge-p">Parli</span></td><td>Prime Minister / Gov Lead</td><td><strong>8 min</strong></td><td>800w</td><td>920w</td><td>1,040w</td><td></td></tr>
+          <tr><td><span class="badge badge-p">Parli</span></td><td>Leader of Opposition</td><td><strong>8 min</strong></td><td>800w</td><td>920w</td><td>1,040w</td><td></td></tr>
+          <tr><td><span class="badge badge-p">Parli</span></td><td>Rebuttal speeches</td><td><strong>4 min</strong></td><td>400w</td><td>460w</td><td>520w</td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">Word counts are for writing/preparation purposes. Actual delivery times vary by individual speaking rate. Use the calculator above for your personal WPM. Cross-Examination and POI time not counted in word counts.</p>
+  </div>
+
+  <!-- MID AD -->
+  <div class="ad-unit" style="margin-bottom:20px">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9275267797924945" data-ad-slot="auto" data-ad-format="rectangle" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <!-- GUIDE -->
+  <div class="card">
+    <h2 class="section-title">&#128218; Debate Speech Timing Guide</h2>
+    <div class="prose">
+      <h3>How many words per minute in a debate speech?</h3>
+      <p>Debate speaking rates differ significantly by format. <strong>British Parliamentary and World Schools</strong> speakers typically deliver 100–120 WPM — slower than a TED Talk (163 WPM) because clarity, argument structure and judge comprehension are paramount. <strong>Lincoln-Douglas</strong> debaters average 110–125 WPM. <strong>Public Forum</strong> runs slightly faster at 115–130 WPM. <strong>Policy/Cross-Ex</strong> debate is a unique exception — competitive rounds can reach 200–250+ WPM in "spreading" (speed-reading arguments), though many leagues discourage this practice. Check your personal WPM using the <a href="/speaking-words-per-minute/">WPM self-test</a>.</p>
+
+      <h3>What is a debate break calculator?</h3>
+      <p>In competitive debate, <strong>"breaking"</strong> means advancing from preliminary rounds to elimination (knockout) rounds — similar to advancing in a tournament bracket. A debate break calculator determines how many wins or speaker points a team needs across preliminary rounds to qualify for elimination rounds. Our <a href="#debate-break-calculator">Debate Break Calculator above</a> solves a different problem: it calculates the <strong>exact word count you need to fill your remaining speech time</strong> — critical for last-minute adjustments during prep time. If you need a tournament bracket break calculator (teams advancing to finals), that is a separate tool specific to the tournament format (BP typically breaks top 8–16 teams from octofinals).</p>
+
+      <div class="info-box blue">
+        <strong>BP Break Standard:</strong> In a British Parliamentary tournament with 6 preliminary rounds, typically the top 8–16 teams break (advance). Teams earn 0–3 points per round based on placement (1st = 3 pts, 2nd = 2 pts, 3rd = 1 pt, 4th = 0 pts). To break in a standard 6-round tournament, teams usually need 12–14 points out of 18 maximum.
+      </div>
+
+      <h3>How long should a debate speech be?</h3>
+      <p>Always write to <strong>90–95% of your allocated time limit</strong> — never aim for 100%. Nerves, emphasis, audience reactions, and POIs (Points of Information) will naturally slow your delivery on the day. For a 7-minute BP speech at 110 WPM, target <strong>650–700 words</strong> (rather than the full 770-word maximum). The calculator above shows your percentage of time used. Toastmasters recommends 120–160 WPM for public speeches; debate formats are slower to maximize judge clarity. See our full <a href="/speaking-words-per-minute/">speaking WPM guide</a> for more context.</p>
+
+      <div class="info-box amber">
+        <strong>POI (Point of Information) Time:</strong> In BP and World Schools, opposing speakers may offer POIs during protected speaking time (minutes 1–7 in BP). Accepting and responding to a POI adds 15–30 seconds per POI to your effective speaking time. Plan for 2–3 POIs per speech and write 30–60 words of "POI buffer" into your script.
+      </div>
+
+      <h3>Average speaking rate for debate vs. other contexts</h3>
+      <p>Most academic debate formats require <strong>slower delivery than general public speaking</strong>. While conversational speech averages 150 WPM and TED Talks average 163 WPM, competitive debate speeches run at 100–130 WPM because judges must evaluate complex arguments in real time. Policy debate is the exception — some competitive rounds involve "spreading" at 200–300 WPM, which is controversial and increasingly restricted in high school leagues. Use the <a href="/word-to-speaking-time/">speaking time calculator</a> for non-debate speech preparation.</p>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="card">
+    <h2 class="section-title">&#10067; Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="faqToggle(this)">What is a debate break calculator?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">A <strong>debate break calculator</strong> has two meanings: (1) <strong>Tournament break:</strong> Calculating how many wins/speaker points a team needs to advance (break) to elimination rounds in BP or World Schools tournaments. In a 6-round BP tournament, teams typically need 12–14 points to break to the top 8. (2) <strong>Speech break calculator:</strong> Our tool above — calculating the word count needed to fill any remaining speech time. Enter your minutes remaining and speaking WPM in the <a href="#debate-break-calculator">Debate Break Calculator</a> section above.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="faqToggle(this)">How many words per minute in a debate speech?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">Debate speaking rates by format: <strong>BP/World Schools:</strong> 100–120 WPM (deliberate clarity for judges). <strong>Lincoln-Douglas:</strong> 110–125 WPM. <strong>Public Forum:</strong> 115–130 WPM. <strong>Parliamentary (NPDA):</strong> 120–130 WPM. <strong>Policy/Cross-Ex:</strong> 130–250+ WPM (speed rounds). The average across all academic formats is approximately 110–120 WPM. Use our <a href="/speaking-words-per-minute/">WPM self-test</a> to measure your personal speaking rate.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="faqToggle(this)">How long should a debate speech be?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">Debate speech lengths by format: <strong>British Parliamentary:</strong> 7 minutes (700–840 words). <strong>World Schools:</strong> 8 minutes main / 4 minutes reply. <strong>Lincoln-Douglas:</strong> Constructives 6–7 min, Rebuttals 3–4 min. <strong>Public Forum:</strong> Constructive 4 min, Rebuttal 4 min, Summary 3 min, Final Focus 2 min. <strong>Parliamentary:</strong> 8 minutes. Always target 90–95% of the time limit to allow for natural pauses and POI responses. Use the calculator on this page for exact word counts.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="faqToggle(this)">How long is a BP debate speech?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">A British Parliamentary (BP) speech is <strong>7 minutes long</strong>. At 100 WPM that is 700 words; at 115 WPM it is 805 words; at 120 WPM it is 840 words. The first and last minute are protected — no POIs may be offered. POIs may be offered in minutes 1–6. Most competitive BP debaters target 730–780 words to allow for pauses and POI responses. For prep time, use the calculator to calculate time remaining per argument.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="faqToggle(this)">How many words is a 7-minute debate speech?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">A 7-minute debate speech is: <strong>700 words</strong> at 100 WPM, <strong>770 words</strong> at 110 WPM, <strong>805 words</strong> at 115 WPM, or <strong>840 words</strong> at 120 WPM. For BP format, target 720–780 words (90–95% of limit). Use the word count input above and the calculator will show whether your script fits. For other speech lengths, see our <a href="/word-to-speaking-time/">speaking time calculator</a> or <a href="/7-minute-speech-word-count/">7-minute speech guide</a>.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="faqToggle(this)">How long do debate rounds last on average?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">A full British Parliamentary round lasts approximately 60–75 minutes (8 speeches × 7 min + prep time + floor questions). A Lincoln-Douglas round is ~45–55 minutes. Public Forum rounds are ~40–50 minutes. Parliamentary (NPDA) rounds are 60–70 minutes. Policy rounds run 90–120 minutes including cross-examinations. Tournament preparation time (15 minutes per round) is additional.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="faqToggle(this)">What is the average speaking rate for a debate speech?<span class="faq-icon">+</span></div>
+      <div class="faq-answer">The average speaking rate across competitive academic debate formats is <strong>110–120 WPM</strong> — significantly slower than general public speaking (130 WPM formal, 163 WPM TED Talk). This slower pace ensures judges can evaluate arguments clearly. For BP and World Schools, 100–120 WPM is standard. Lincoln-Douglas: 110–125 WPM. Public Forum: 115–130 WPM. Use the <a href="/speaking-words-per-minute/">WPM guide and self-test</a> to find your natural pace.</div>
+    </div>
+  </div>
+
+  <!-- TOOLS GRID -->
+  <div class="card">
+    <h2 class="section-title">&#128295; Related Calculators</h2>
+    <div class="tools-grid">
+      <a href="/word-to-speaking-time/" class="tool-card"><div class="tc-icon">&#127908;</div><div class="tc-name">Speaking Time</div><div class="tc-desc">General word count to speech time</div></a>
+      <a href="/word-to-public-speaking-time/" class="tool-card"><div class="tc-icon">&#127919;</div><div class="tc-name">Public Speaking</div><div class="tc-desc">Formal presentation timer</div></a>
+      <a href="/word-to-speech-length/" class="tool-card"><div class="tc-icon">&#128203;</div><div class="tc-name">Speech Length</div><div class="tc-desc">Does your script fit your slot?</div></a>
+      <a href="/speaking-words-per-minute/" class="tool-card"><div class="tc-icon">&#128202;</div><div class="tc-name">WPM Guide + Test</div><div class="tc-desc">Measure your speaking speed</div></a>
+      <a href="/words-to-minutes/" class="tool-card"><div class="tc-icon">&#9201;</div><div class="tc-name">Words to Minutes</div><div class="tc-desc">Universal word count timer</div></a>
+      <a href="/7-minute-speech-word-count/" class="tool-card"><div class="tc-icon">&#55303;&#56375;</div><div class="tc-name">7-Min Speech</div><div class="tc-desc">Word count for 7 minutes</div></a>
+      <a href="/8-minute-speech-word-count/" class="tool-card"><div class="tc-icon">&#55303;&#56376;</div><div class="tc-name">8-Min Speech</div><div class="tc-desc">Word count for 8 minutes</div></a>
+      <a href="/practice-mode/" class="tool-card"><div class="tc-icon">&#9654;</div><div class="tc-name">Practice Mode</div><div class="tc-desc">Live timer for debate rehearsal</div></a>
+    </div>
+  </div>
+
+</main>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="sidebar-card">
+    <h3>&#9878; Debate Format Quick Ref</h3>
+    <table class="ref-table">
+      <tr class="highlight"><td>&#127462;&#127264; BP Speech</td><td>7 min · 700–840w</td></tr>
+      <tr><td>&#127758; World Schools</td><td>8 min · 800–960w</td></tr>
+      <tr><td>&#127963; Parli (NPDA)</td><td>8 min · 800–960w</td></tr>
+      <tr><td>&#127913; LD Constructive</td><td>6–7 min · 690–910w</td></tr>
+      <tr><td>&#127913; LD Rebuttal</td><td>3–4 min · 345–460w</td></tr>
+      <tr><td>&#127942; PF Constructive</td><td>4 min · 460–520w</td></tr>
+      <tr><td>&#127942; PF Summary</td><td>3 min · 345–390w</td></tr>
+      <tr><td>&#127942; PF Final Focus</td><td>2 min · 230–260w</td></tr>
+    </table>
+    <p style="font-size:.7rem;color:var(--text-light);margin-top:10px">At 115–130 WPM. Use calculator for your WPM.</p>
+  </div>
+
+  <div class="ad-unit" style="min-height:250px">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9275267797924945" data-ad-slot="auto" data-ad-format="rectangle" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <div class="sidebar-card">
+    <h3>&#127908; Speech Calculators</h3>
+    <ul class="sidebar-links">
+      <li><a href="/word-to-speaking-time/"><span class="sl-icon">&#127908;</span>Speaking Time</a></li>
+      <li><a href="/word-to-public-speaking-time/"><span class="sl-icon teal">&#127919;</span>Public Speaking</a></li>
+      <li><a href="/word-to-speech-length/"><span class="sl-icon blue">&#128203;</span>Speech Length</a></li>
+      <li><a href="/words-to-minutes/"><span class="sl-icon amber">&#9201;</span>Words to Min</a></li>
+      <li><a href="/speaking-words-per-minute/"><span class="sl-icon teal">WPM</span>WPM Guide</a></li>
+      <li><a href="/practice-mode/"><span class="sl-icon" style="background:var(--success-light);color:#065f46">&#9654;</span>Practice Mode</a></li>
+      <li><a href="/word-to-presentation-time/"><span class="sl-icon purple">&#128250;</span>Presentation</a></li>
+    </ul>
+  </div>
+
+  <div class="ad-unit" style="min-height:250px">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9275267797924945" data-ad-slot="auto" data-ad-format="rectangle" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <div class="sidebar-card">
+    <h3>&#128203; Speech Word Counts</h3>
+    <ul class="sidebar-links">
+      <li><a href="/4-minute-speech-word-count/"><span class="sl-icon">4m</span>4-Min Speech</a></li>
+      <li><a href="/5-minute-speech-word-count/"><span class="sl-icon">5m</span>5-Min Speech</a></li>
+      <li><a href="/7-minute-speech-word-count/"><span class="sl-icon">7m</span>7-Min Speech</a></li>
+      <li><a href="/8-minute-speech-word-count/"><span class="sl-icon">8m</span>8-Min Speech</a></li>
+      <li><a href="/10-minute-speech-word-count/"><span class="sl-icon">10m</span>10-Min Speech</a></li>
+    </ul>
+  </div>
+</aside>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="/" class="site-logo"><span class="logo-icon">&#9878;</span>WordsToTime</a>
+      <p>Free tools to convert word count to speaking time, reading time and speech duration. Debate time calculator for BP, LD, PF, World Schools and Parliamentary formats.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Calculators</h4>
+      <ul>
+        <li><a href="/words-to-minutes/">Words to Minutes</a></li>
+        <li><a href="/word-to-reading-time/">Reading Time</a></li>
+        <li><a href="/word-to-speaking-time/">Speaking Time</a></li>
+        <li><a href="/word-to-debate-time/">Debate Timer</a></li>
+        <li><a href="/word-to-speech-length/">Speech Length</a></li>
+        <li><a href="/word-to-typing-time/">Typing Time</a></li>
+        <li><a href="/word-to-presentation-time/">Presentation Time</a></li>
+        <li><a href="/practice-mode/">Practice Mode</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Debate Formats</h4>
+      <ul>
+        <li><a href="/word-to-debate-time/#bp">British Parliamentary</a></li>
+        <li><a href="/word-to-debate-time/#ld">Lincoln-Douglas</a></li>
+        <li><a href="/word-to-debate-time/#pf">Public Forum</a></li>
+        <li><a href="/word-to-debate-time/#ws">World Schools</a></li>
+        <li><a href="/word-to-debate-time/#parli">Parliamentary</a></li>
+        <li><a href="/debate-break-calculator/">Break Calculator</a></li>
+        <li><a href="/speaking-words-per-minute/">WPM Guide</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Speech Guides</h4>
+      <ul>
+        <li><a href="/4-minute-speech-word-count/">4-Min Speech</a></li>
+        <li><a href="/5-minute-speech-word-count/">5-Min Speech</a></li>
+        <li><a href="/7-minute-speech-word-count/">7-Min Speech</a></li>
+        <li><a href="/8-minute-speech-word-count/">8-Min Speech</a></li>
+        <li><a href="/10-minute-speech-word-count/">10-Min Speech</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/privacy/">Privacy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&#169; 2026 WordsToTime.netlify.app &mdash; Free Debate &amp; Speech Time Tools</span>
+    <span><a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a> &middot; <a href="/about/">About</a></span>
+  </div>
+</footer>
+
+<script>
+// NAV TOGGLE
+document.getElementById('navToggle').addEventListener('click',function(){document.getElementById('mainNav').classList.toggle('open');});
+
+// FORMAT DATA
+var FORMATS = {
+  bp:     {mins:7,  wpm:110, name:'BP Main Speech'},
+  ld_ac:  {mins:6,  wpm:115, name:'LD Affirmative Constructive'},
+  ld_nc:  {mins:7,  wpm:115, name:'LD Negative Constructive'},
+  ld_1ar: {mins:4,  wpm:115, name:'LD 1st Aff Rebuttal'},
+  ld_nr:  {mins:6,  wpm:115, name:'LD Negative Rebuttal'},
+  ld_2ar: {mins:3,  wpm:115, name:'LD 2nd Aff Rebuttal'},
+  pf_c:   {mins:4,  wpm:120, name:'PF Constructive'},
+  pf_r:   {mins:4,  wpm:120, name:'PF Rebuttal'},
+  pf_s:   {mins:3,  wpm:120, name:'PF Summary'},
+  pf_ff:  {mins:2,  wpm:120, name:'PF Final Focus'},
+  ws:     {mins:8,  wpm:110, name:'World Schools Main'},
+  ws_r:   {mins:4,  wpm:110, name:'World Schools Reply'},
+  parli:  {mins:8,  wpm:125, name:'Parliamentary Main'},
+  parli_r:{mins:4,  wpm:125, name:'Parliamentary Rebuttal'},
+  policy: {mins:8,  wpm:160, name:'Policy Constructive'},
+  c5_130: {mins:5,  wpm:130, name:'Custom 5min'},
+  c7_130: {mins:7,  wpm:130, name:'Custom 7min'},
+  c8_130: {mins:8,  wpm:130, name:'Custom 8min'},
+  c10_130:{mins:10, wpm:130, name:'Custom 10min'},
+};
+
+var currentMins=7, currentWpm=110;
+
+function fmtTimeSec(totalSec){
+  var m=Math.floor(totalSec/60),s=totalSec%60;
+  return m+'m '+(s<10?'0'+s:s)+'s';
+}
+
+function updateDebateCalc(){
+  var words = parseInt(document.getElementById('wordInput').value)||0;
+  var sel = document.getElementById('speechSelect').value.split('|');
+  var slotMins = parseInt(sel[0]);
+  var wpm = parseInt(sel[1]);
+  var slotSec = slotMins*60;
+  var speechSec = Math.round((words/wpm)*60);
+  var pct = Math.min((speechSec/slotSec)*100, 100);
+  var actualPct = (speechSec/slotSec)*100;
+  var over = speechSec > slotSec;
+  var diff = Math.abs(slotSec - speechSec);
+  var slackStr = over ? '+'+fmtTimeSec(diff)+' OVER' : '-'+fmtTimeSec(diff)+' buffer';
+  document.getElementById('crMain').textContent = fmtTimeSec(speechSec);
+  document.querySelector('.cr-sub').textContent = 'Your '+words+'-word '+sel[2]+' speech will take';
+  document.getElementById('crSlack').textContent = slackStr;
+  document.getElementById('crIdeal').textContent = Math.round(slotMins*wpm*0.92)+' words';
+  document.querySelector('.cr-detail .cr-item:first-child .cr-v').textContent = slotMins+'m 00s';
+  document.querySelector('.cr-detail .cr-item:nth-child(3) .cr-v').textContent = wpm+' WPM';
+  document.getElementById('fbPct').textContent = Math.round(actualPct)+'% used';
+  document.getElementById('fitBarFill').style.width = Math.min(actualPct,100)+'%';
+  if(over){
+    document.getElementById('fitBarFill').className='fit-bar-fill over';
+    document.getElementById('fitStatus').className='fit-status over';
+    document.getElementById('fitStatus').textContent='&#9888; Exceeds the '+slotMins+'-minute slot by '+fmtTimeSec(diff)';
+  } else {
+    document.getElementById('fitBarFill').className='fit-bar-fill';
+    document.getElementById('fitStatus').className='fit-status ok';
+    document.getElementById('fitStatus').textContent='&#10003; Fits within the '+slotMins+'-minute slot';
+  }
+}
+
+function selectFormat(fmt,btn){
+  document.querySelectorAll('.format-pill').forEach(function(p){p.classList.remove('active');});
+  btn.classList.add('active');
+  var map={bp:'7|110|BP',ld:'6|115|LD',pf:'4|120|PF',ws:'8|110|WS',parli:'8|125|Parli'};
+  if(map[fmt]){
+    document.getElementById('speechSelect').value=map[fmt];
+    updateDebateCalc();
+  }
+}
+
+function selectFormatCard(fmt){
+  document.querySelectorAll('.fmt-card').forEach(function(c){c.classList.remove('selected');});
+  document.getElementById('card-'+fmt).classList.add('selected');
+  var mapSelect={
+    bp:'7|110|BP',ld:'6|115|LD',pf:'4|120|PF',
+    ws:'8|110|WS',parli:'8|125|Parli',policy:'8|160|Policy'
+  };
+  if(mapSelect[fmt]){
+    document.getElementById('speechSelect').value=mapSelect[fmt];
+    window.scrollTo({top:document.querySelector('.calc-result').getBoundingClientRect().top+window.scrollY-100,behavior:'smooth'});
+    updateDebateCalc();
+  }
+}
+
+function updateBreakCalc(){
+  var mins = parseInt(document.getElementById('breakMins').value)||7;
+  var wpm  = parseInt(document.getElementById('breakWpm').value)||110;
+  var words = Math.round(mins*wpm);
+  var w90   = Math.round(mins*wpm*0.90);
+  var w120  = Math.round(mins*120);
+  var w130  = Math.round(mins*130);
+  document.getElementById('br100').textContent = words;
+  document.querySelectorAll('.br-card')[1].querySelector('.br-card-time').textContent = w120;
+  document.querySelectorAll('.br-card')[2].querySelector('.br-card-time').textContent = w130;
+  document.getElementById('br90pct').textContent = w90;
+}
+
+// FAQ
+function faqToggle(el){
+  var a=el.nextElementSibling,o=el.classList.contains('open');
+  document.querySelectorAll('.faq-question').forEach(function(q){q.classList.remove('open');});
+  document.querySelectorAll('.faq-answer').forEach(function(ans){ans.classList.remove('open');});
+  if(!o){el.classList.add('open');a.classList.add('open');}
+}
+
+// INIT
+updateDebateCalc();
+updateBreakCalc();
+</script>
+</body>
+</html>
