@@ -147,12 +147,6 @@
   status = 301
   force  = true
 
-[[redirects]]
-  from   = "/word-to-debate-time"
-  to     = "/word-to-debate-time/"
-  status = 301
-  force  = true
-
 # Catch-all 404
 [[redirects]]
   from   = "/*"
