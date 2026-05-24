@@ -1,4 +1,4 @@
-# netlify.toml — WordsToTime v6.0
+# netlify.toml — WordsToTime v6.1 (SEO Fix — Trailing Slash)
 # NO [build] section — static files served from repository root
 # Netlify settings: Build command = (empty) · Publish directory = .
 
@@ -20,7 +20,250 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# ─── 301 REDIRECTS (22 total) ───────────────────────────────
+# ─── TRAILING SLASH FIXES ────────────────────────────────────
+
+[[redirects]]
+  from   = "/words-to-minutes"
+  to     = "/words-to-minutes/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/word-to-reading-time"
+  to     = "/word-to-reading-time/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/word-to-speaking-time"
+  to     = "/word-to-speaking-time/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/word-to-speech-length"
+  to     = "/word-to-speech-length/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/word-to-public-speaking-time"
+  to     = "/word-to-public-speaking-time/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/word-to-presentation-time"
+  to     = "/word-to-presentation-time/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/word-to-debate-time"
+  to     = "/word-to-debate-time/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/word-to-typing-time"
+  to     = "/word-to-typing-time/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/speaking-words-per-minute"
+  to     = "/speaking-words-per-minute/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/practice-mode"
+  to     = "/practice-mode/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/reading-speed-test"
+  to     = "/reading-speed-test/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/2-minute-speech-word-count"
+  to     = "/2-minute-speech-word-count/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/3-minute-speech-word-count"
+  to     = "/3-minute-speech-word-count/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/4-minute-speech-word-count"
+  to     = "/4-minute-speech-word-count/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/5-minute-speech-word-count"
+  to     = "/5-minute-speech-word-count/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/6-minute-speech-word-count"
+  to     = "/6-minute-speech-word-count/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/7-minute-speech-word-count"
+  to     = "/7-minute-speech-word-count/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/10-minute-speech-word-count"
+  to     = "/10-minute-speech-word-count/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/15-minute-speech-word-count"
+  to     = "/15-minute-speech-word-count/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/20-minute-speech-word-count"
+  to     = "/20-minute-speech-word-count/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/200-words-to-minutes"
+  to     = "/200-words-to-minutes/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/250-words-to-minutes"
+  to     = "/250-words-to-minutes/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/300-words-to-minutes"
+  to     = "/300-words-to-minutes/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/400-words-to-minutes"
+  to     = "/400-words-to-minutes/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/500-words-to-minutes"
+  to     = "/500-words-to-minutes/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/600-words-to-minutes"
+  to     = "/600-words-to-minutes/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/700-words-to-minutes"
+  to     = "/700-words-to-minutes/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/750-words-to-minutes"
+  to     = "/750-words-to-minutes/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/800-words-to-minutes"
+  to     = "/800-words-to-minutes/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/900-words-to-minutes"
+  to     = "/900-words-to-minutes/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/1000-words-to-minutes"
+  to     = "/1000-words-to-minutes/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/1300-words-to-minutes"
+  to     = "/1300-words-to-minutes/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/1500-words-to-minutes"
+  to     = "/1500-words-to-minutes/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/2000-words-to-minutes"
+  to     = "/2000-words-to-minutes/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/2500-words-to-minutes"
+  to     = "/2500-words-to-minutes/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/palabras-a-minutos"
+  to     = "/palabras-a-minutos/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/lesezeit-rechner"
+  to     = "/lesezeit-rechner/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/about"
+  to     = "/about/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/privacy"
+  to     = "/privacy/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/terms"
+  to     = "/terms/"
+  status = 301
+  force  = true
+
+# ─── OLD URL → NEW URL 301 REDIRECTS ────────────────────────
+
 [[redirects]]
   from   = "/words-to-time/"
   to     = "/"
@@ -147,8 +390,7 @@
   status = 301
   force  = true
 
-
-# Catch-all 404
+# ─── Catch-all 404 ──────────────────────────────────────────
 [[redirects]]
   from   = "/*"
   to     = "/404.html"
