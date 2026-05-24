@@ -1,4 +1,4 @@
-# netlify.toml — WordsToTime v6.1 (SEO Fix)
+# netlify.toml — WordsToTime v6.1 (Fixed)
 # NO [build] section — static files served from repository root
 # Netlify settings: Build command = (empty) · Publish directory = .
 
@@ -19,9 +19,6 @@
   for = "/js/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
-
-# ─── TRAILING SLASH FIXES (sirf GSC error wale pages) ───────
-# Yeh sirf woh 6 pages hain jo GSC mein "Page with redirect" error mein the
 
 [[redirects]]
   from   = "/words-to-minutes"
@@ -52,14 +49,6 @@
   to     = "/about/"
   status = 301
   force  = true
-
-[[redirects]]
-  from   = "/speech-length-calculator"
-  to     = "/word-to-speech-length/"
-  status = 301
-  force  = true
-
-# ─── OLD URL → NEW URL 301 REDIRECTS ────────────────────────
 
 [[redirects]]
   from   = "/words-to-time/"
@@ -187,7 +176,6 @@
   status = 301
   force  = true
 
-# ─── Catch-all 404 ──────────────────────────────────────────
 [[redirects]]
   from   = "/*"
   to     = "/404.html"
