@@ -1,7 +1,3 @@
-# netlify.toml — WordsToTime v6.1 (Fixed)
-# NO [build] section — static files served from repository root
-# Netlify settings: Build command = (empty) · Publish directory = .
-
 [[headers]]
   for = "/*"
   [headers.values]
@@ -19,36 +15,6 @@
   for = "/js/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
-
-[[redirects]]
-  from   = "/words-to-minutes"
-  to     = "/words-to-minutes/"
-  status = 301
-  force  = true
-
-[[redirects]]
-  from   = "/word-to-debate-time"
-  to     = "/word-to-debate-time/"
-  status = 301
-  force  = true
-
-[[redirects]]
-  from   = "/word-to-typing-time"
-  to     = "/word-to-typing-time/"
-  status = 301
-  force  = true
-
-[[redirects]]
-  from   = "/word-to-public-speaking-time"
-  to     = "/word-to-public-speaking-time/"
-  status = 301
-  force  = true
-
-[[redirects]]
-  from   = "/about"
-  to     = "/about/"
-  status = 301
-  force  = true
 
 [[redirects]]
   from   = "/words-to-time/"
