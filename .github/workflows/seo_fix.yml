@@ -1,0 +1,25 @@
+name: Run SEO Fix
+
+on:
+  workflow_dispatch:
+
+jobs:
+  seo-fix:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run SEO fix script
+        run: python3 seo_fix.py
+
+      - name: Commit and push changes
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "seo: unique aggregateRating (44 pages), SWPM title+meta, Source→Reference, homepage H1+hrefs, about noindex"
+          git push
