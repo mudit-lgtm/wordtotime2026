@@ -1,5 +1,39 @@
+# wordstotime.netlify.app — robots policy
+# Allow major search + AI crawlers on all content. Disallow only admin/api.
+
+User-agent: Googlebot
+Allow: /
+Disallow: /admin
+Disallow: /api/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /admin
+Disallow: /api/
+
+User-agent: GPTBot
+Allow: /
+Disallow: /admin
+Disallow: /api/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /admin
+Disallow: /api/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /admin
+Disallow: /api/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /admin
+Disallow: /api/
+
 User-agent: *
 Allow: /
-Disallow:
+Disallow: /admin
+Disallow: /api/
 
 Sitemap: https://wordstotime.netlify.app/sitemap.xml
